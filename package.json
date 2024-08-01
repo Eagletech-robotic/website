@@ -3,10 +3,9 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject"
+        "start": "vite",
+        "build": "vite build",
+        "serve": "vite preview"
     },
     "eslintConfig": {
         "extends": [
@@ -32,15 +31,20 @@
         "@testing-library/user-event": "^14.5.2",
         "@types/jest": "^29.5.12",
         "@types/node": "^22.0.2",
-        "@types/react": "^18.0.0",
-        "@types/react-dom": "^18.0.0",
+        "@types/react": "^18.3.3",
+        "@types/react-dom": "^18.3.0",
+        "@vitejs/plugin-react": "^4.3.1",
+        "raw-loader": "^4.0.2",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
         "react-markdown": "^9.0.1",
         "react-router-dom": "^6.26.0",
-        "react-scripts": "5.0.1",
         "remark-gfm": "^4.0.0",
         "typescript": "^5.5.4",
+        "vite": "^5.3.5",
+        "vite-plugin-commonjs": "^0.10.1",
+        "vite-plugin-svgr": "^4.2.0",
+        "vite-tsconfig-paths": "^4.3.2",
         "web-vitals": "^4.2.2"
     }
 }
