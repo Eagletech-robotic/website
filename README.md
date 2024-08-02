@@ -23,14 +23,27 @@
 
 Once you are sastified with your changes, you can commit them to synchronise them with the remote repository.
 
-#### Using interface
+* #### Using interface
 
 1. Stage the files you want to commit.
 2. Add a commit message describing what you changed (necessary).
 3. Press "Commit & Push", then "Sync".
 
-#### Using command line
+* #### Using command line
 
 1. Run `git add .` to stage every file, or `git add [path/to/your/file]` to add a specific file.
 2. Run `git commit -m "<your-commit-message>"` to add a commit message (necessary).
 3. Finally, run `git push origin <your-branch-name>`, replacing <your-branch-name> with the appropriate branch (usually "main").
+<br/>
+
+## How to make changes to the blog
+
+> Note: the following recommandations and rules are not all required for the program to run but are imposed for your commits to be preserved. This means some things may work without following the rules below but that does not mean you should do them.
+
+Once your development server is launched, you can freely edit any file in the `src/assets` directory. However, make sure to follow the following rules.
+
+Put any and **only** markdown files in the `src/assets/blog-posts/<any-subfolder>` (you are free to create any subfolder you like, but try to stay organized).
+
+Put any other **static** file (images, videos, svgs, etc...) in the `src/assets/images/<any-subfolder>` folder. If you need to add any dynamic files (such as code or other), please refer to [this](#How-to-make-changes-to-the-source-code) section.
+
+## How to make changes to the source code
