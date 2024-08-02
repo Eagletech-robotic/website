@@ -7,12 +7,6 @@
         "build": "vite build",
         "serve": "vite preview"
     },
-    "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest"
-        ]
-    },
     "browserslist": {
         "production": [
             ">0.2%",
@@ -21,8 +15,7 @@
         ],
         "development": [
             "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
+            "last 1 firefox version"
         ]
     },
     "dependencies": {
@@ -34,7 +27,6 @@
         "@types/react": "^18.3.3",
         "@types/react-dom": "^18.3.0",
         "@vitejs/plugin-react": "^4.3.1",
-        "raw-loader": "^4.0.2",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
         "react-markdown": "^9.0.1",
@@ -43,8 +35,8 @@
         "typescript": "^5.5.4",
         "vite": "^5.3.5",
         "vite-plugin-commonjs": "^0.10.1",
+        "vite-plugin-pages": "^0.32.3",
         "vite-plugin-svgr": "^4.2.0",
-        "vite-tsconfig-paths": "^4.3.2",
-        "web-vitals": "^4.2.2"
+        "vite-tsconfig-paths": "^4.3.2"
     }
 }

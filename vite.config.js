@@ -1,12 +1,12 @@
-import path from 'path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import path from 'path'
 
 export default defineConfig({
     base: './',
     plugins: [react()],
     server: {
-        open: true, // automatically open the app in the browser
+        open: true,
         port: 3000,
     },
     resolve: {
@@ -17,4 +17,5 @@ export default defineConfig({
     optimizeDeps: {
         force: true,
     },
+    assetsInclude: ['**/*.md'], // Treat .md files as assets
 })
