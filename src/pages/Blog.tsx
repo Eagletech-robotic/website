@@ -12,10 +12,8 @@ export default function Blog() {
             <h2>Our blogs:</h2>
             <br></br>
             {markdowns.map((markdown, index) => (
-                <ul style={{ border: '2px solid black' }}>
-                    <Markdown key={index} remarkPlugins={[remarkGfm]}>
-                        {markdown.content}
-                    </Markdown>
+                <ul key={index} style={{ border: '2px solid black' }}>
+                    <Markdown remarkPlugins={[remarkGfm]}>{markdown.content}</Markdown>
                 </ul>
             ))}
         </>
