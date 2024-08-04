@@ -1,30 +1,27 @@
-import Markdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
-import remarkNormalizeHeadings from 'remark-normalize-headings'
-import remarkMath from 'remark-math'
-import rehypeKatex from 'rehype-katex'
-import 'katex/dist/katex.min.css'
+import * as React from 'react'
 
-import { loadMarkdownFiles } from '../utilities/manageMarkdownFiles'
+import { getBlogPosts } from '../utilities/markdown'
 
 export default function Blog() {
-    let markdowns = loadMarkdownFiles()
+    const [posts, setPosts] = React.useState<string[]>([])
+    React.useEffect(() => {
+        void (async () => {
+            const blogPosts = await getBlogPosts()
+            setPosts(blogPosts)
+        })()
+    }, [])
 
     return (
         <>
             <h1>Blog Page</h1>
             <h2>Our blogs:</h2>
             <br></br>
-            {markdowns.map((markdown, index) => (
-                <ul key={index} style={{ border: '2px solid black' }}>
-                    <Markdown
-                        remarkPlugins={[remarkGfm, remarkNormalizeHeadings, remarkMath]}
-                        rehypePlugins={[rehypeKatex]}
-                    >
-                        {markdown.content}
-                    </Markdown>
-                </ul>
-            ))}
+
+            <ul>
+                {posts.map((__html, index) => (
+                    <li key={index} dangerouslySetInnerHTML={{ __html }} style={{ border: '2px solid black' }}></li>
+                ))}
+            </ul>
         </>
     )
 }
