@@ -7,6 +7,7 @@ import remarkFrontmatter from 'remark-frontmatter'
 import remarkRehype from 'remark-rehype'
 import rehypeStringify from 'rehype-stringify'
 import { VFile } from 'vfile'
+import { matter } from 'vfile-matter'
 
 export async function getBlogPosts(): Promise<string[]> {
     const markdowns = loadMarkdownFiles()
@@ -20,11 +21,11 @@ export async function getBlogPosts(): Promise<string[]> {
             .use(remarkMath)
             .use(remarkFrontmatter)
             .use(rehypeStringify)
+            .use(() => (_tree: any, file: VFile) => matter(file))
             .process(markdown.content)
     )
 
     const vfiles = await Promise.all(promises)
-
     const posts = vfiles.map((vfile) => vfile.toString())
 
     return posts
