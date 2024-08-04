@@ -17,11 +17,9 @@ export default function Blog() {
             <h2>Our blogs:</h2>
             <br></br>
 
-            <ul>
-                {posts.map((__html, index) => (
-                    <li key={index} dangerouslySetInnerHTML={{ __html }} style={{ border: '2px solid black' }}></li>
-                ))}
-            </ul>
+            {posts.map((__html, index) => (
+                <ul key={index} dangerouslySetInnerHTML={{ __html }} style={{ border: '2px solid black' }} />
+            ))}
         </>
     )
 }
