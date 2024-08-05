@@ -1,18 +1,11 @@
-import * as React from 'react'
-import { getBlogPosts } from '../utilities/markdown'
+import { getBlogPostsAsync } from '../utilities/markdown'
 import 'katex/dist/katex.min.css'
 import { NavLink } from 'react-router-dom'
 
 export default function Blog() {
-    const [posts, setPosts] = React.useState<BlogPost[]>([])
-    React.useEffect(() => {
-        void (async () => {
-            const blogPosts = await getBlogPosts()
-            setPosts(blogPosts)
-        })()
-    }, [])
+    const blogPosts = getBlogPostsAsync()
 
-    posts.sort((a: BlogPost, b: BlogPost) => {
+    blogPosts.sort((a: BlogPost, b: BlogPost) => {
         const dateA = a.post.data.matter?.date || '1970-01-01'
         const dateB = b.post.data.matter?.date || '1970-01-01'
 
@@ -29,7 +22,7 @@ export default function Blog() {
             <h2>Our blogs:</h2>
             <br></br>
 
-            {posts.map((blogPost) => (
+            {blogPosts.map((blogPost) => (
                 <NavLink to={`posts/${blogPost.id}`} key={blogPost.id} style={{ textDecoration: 'none' }}>
                     <ul
                         dangerouslySetInnerHTML={{ __html: blogPost.post.value }}

@@ -9,8 +9,21 @@ import rehypeKatex from 'rehype-katex'
 import rehypeStringify from 'rehype-stringify'
 import { matter } from 'vfile-matter'
 import { VFile } from 'remark-rehype/lib'
+import React from 'react'
 
-export async function getBlogPosts(): Promise<BlogPost[]> {
+export function getBlogPostsAsync(): BlogPost[] {
+    const [blogPosts, setBlogPosts] = React.useState<BlogPost[]>([])
+    React.useEffect(() => {
+        void (async () => {
+            const blogPosts = await getBlogPosts()
+            setBlogPosts(blogPosts)
+        })()
+    }, [])
+
+    return blogPosts
+}
+
+async function getBlogPosts(): Promise<BlogPost[]> {
     const markdowns = loadMarkdownFiles()
 
     const promises: Array<Promise<BlogPost>> = markdowns.map(async (markdown) => {
