@@ -11,11 +11,11 @@ import { matter } from 'vfile-matter'
 import { VFile } from 'remark-rehype/lib'
 import React from 'react'
 
-export function getBlogPostsAsync(): BlogPost[] {
+export function useBlogPosts(): BlogPost[] {
     const [blogPosts, setBlogPosts] = React.useState<BlogPost[]>([])
     React.useEffect(() => {
         void (async () => {
-            const blogPosts = await getBlogPosts()
+            const blogPosts = await fetchBlogPosts()
             setBlogPosts(blogPosts)
         })()
     }, [])
@@ -23,7 +23,16 @@ export function getBlogPostsAsync(): BlogPost[] {
     return blogPosts
 }
 
-async function getBlogPosts(): Promise<BlogPost[]> {
+export async function getBlogPostById(id: string): Promise<BlogPost | null> {
+    const blogPosts = await fetchBlogPosts()
+    for (const blogPost of blogPosts) {
+        if (blogPost.id === id) return blogPost
+    }
+
+    return null
+}
+
+async function fetchBlogPosts(): Promise<BlogPost[]> {
     const markdowns = loadMarkdownFiles()
 
     const promises: Array<Promise<BlogPost>> = markdowns.map(async (markdown) => {

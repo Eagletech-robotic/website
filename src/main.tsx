@@ -4,6 +4,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import About from './pages/About'
 import Blog from './pages/Blog'
 import Root from './Root'
+import Post, { loader as postLoader } from './pages/Post'
+import 'katex/dist/katex.min.css'
 
 const router = createBrowserRouter([
     {
@@ -17,11 +19,11 @@ const router = createBrowserRouter([
             {
                 path: '/blog',
                 element: <Blog />,
-                children: [
-                    {
-                        path: 'posts/:postId',
-                    },
-                ],
+            },
+            {
+                path: '/blog/posts/:postId',
+                element: <Post />,
+                loader: postLoader,
             },
         ],
     },

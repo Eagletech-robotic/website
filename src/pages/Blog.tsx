@@ -1,9 +1,8 @@
-import { getBlogPostsAsync } from '../utilities/markdown'
-import 'katex/dist/katex.min.css'
+import { useBlogPosts } from '../utilities/markdown'
 import { NavLink } from 'react-router-dom'
 
 export default function Blog() {
-    const blogPosts = getBlogPostsAsync()
+    const blogPosts = useBlogPosts()
 
     blogPosts.sort((a: BlogPost, b: BlogPost) => {
         const dateA = a.post.data.matter?.date || '1970-01-01'
