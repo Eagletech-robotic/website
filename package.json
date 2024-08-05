@@ -38,7 +38,6 @@
         "remark-frontmatter": "^5.0.0",
         "remark-gfm": "^4.0.0",
         "remark-math": "^6.0.0",
-        "remark-normalize-headings": "^4.0.0",
         "remark-parse": "^11.0.0",
         "remark-rehype": "^11.1.0",
         "typescript": "^5.5.4",

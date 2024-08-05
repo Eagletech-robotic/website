@@ -1578,14 +1578,6 @@ markdown-table@^3.0.0:
   resolved "https://registry.yarnpkg.com/markdown-table/-/markdown-table-3.0.3.tgz#e6331d30e493127e031dd385488b5bd326e4a6bd"
   integrity sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==
 
-mdast-normalize-headings@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/mdast-normalize-headings/-/mdast-normalize-headings-4.0.0.tgz#8c766984ed6dea088e9ed60d89790f67c9eec629"
-  integrity sha512-PlUAiR4x49XGYLoyEoQYbqJfO6MdcGt5Uq/0ivZvAUv55YABk8psT6177lhng6hAwTF64P6CjXrE8Aew8oqSAQ==
-  dependencies:
-    "@types/mdast" "^4.0.0"
-    unist-util-visit "^5.0.0"
-
 mdast-util-find-and-replace@^3.0.0:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/mdast-util-find-and-replace/-/mdast-util-find-and-replace-3.0.1.tgz#a6fc7b62f0994e973490e45262e4bc07607b04e0"
@@ -2360,14 +2352,6 @@ remark-math@^6.0.0:
     mdast-util-math "^3.0.0"
     micromark-extension-math "^3.0.0"
     unified "^11.0.0"
-
-remark-normalize-headings@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/remark-normalize-headings/-/remark-normalize-headings-4.0.0.tgz#94a94f2e7f8e3711463989fa444d48a1576eb65a"
-  integrity sha512-fSE2hJxQlqxEsiB/Oni3UcERQ0IbnUuO3RNmQd4LjgEaknek0I//fK05wgFrKP/wYhWEWA+hgm1MHkddpPDcJQ==
-  dependencies:
-    "@types/mdast" "^4.0.0"
-    mdast-normalize-headings "^4.0.0"
 
 remark-parse@^11.0.0:
   version "11.0.0"

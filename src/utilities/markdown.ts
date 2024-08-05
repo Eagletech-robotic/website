@@ -2,7 +2,6 @@ import { unified } from 'unified'
 import remarkParse from 'remark-parse'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
-import remarkNormalizeHeadings from 'remark-normalize-headings'
 import remarkFrontmatter from 'remark-frontmatter'
 import remarkRehype from 'remark-rehype'
 import rehypeKatex from 'rehype-katex'
@@ -40,7 +39,6 @@ async function fetchBlogPosts(): Promise<BlogPost[]> {
             .use(remarkParse)
             .use(remarkRehype)
             .use(remarkGfm)
-            .use(remarkNormalizeHeadings)
             .use(remarkMath)
             .use(remarkFrontmatter)
             .use(rehypeKatex)
