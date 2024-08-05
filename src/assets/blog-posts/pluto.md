@@ -1,6 +1,6 @@
 ---
 title: 'Pluto'
-date: '2024-08-01'
+author: 'Me... Hi'
 ---
 
 ## Pluto
