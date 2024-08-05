@@ -21,14 +21,19 @@ export default function Blog() {
             <h2>Our blogs:</h2>
             <br></br>
 
-            {blogPosts.map((blogPost) => (
-                <NavLink to={`posts/${blogPost.id}`} key={blogPost.id} style={{ textDecoration: 'none' }}>
-                    <ul
-                        dangerouslySetInnerHTML={{ __html: blogPost.post.value }}
-                        style={{ border: '2px solid black' }}
-                    />
-                </NavLink>
-            ))}
+            {blogPosts.map((blogPost) => {
+                const synopsis = blogPost.post.data.matter?.synopsis
+                let textToDisplay = synopsis ? synopsis : blogPost.post.value
+
+                return (
+                    <NavLink to={`posts/${blogPost.id}`} key={blogPost.id} style={{ textDecoration: 'none' }}>
+                        <ul
+                            dangerouslySetInnerHTML={{ __html: textToDisplay }}
+                            style={{ border: '2px solid black', maxHeight: '12rem', overflow: 'hidden' }}
+                        />
+                    </NavLink>
+                )
+            })}
         </>
     )
 }
