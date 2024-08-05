@@ -1,6 +1,7 @@
 ---
 title: ''
 date: '2024-08-01'
+draft: false
 ---
 
 # Hi!

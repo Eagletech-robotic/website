@@ -35,7 +35,7 @@ export async function getBlogPostById(id: string): Promise<BlogPost | null> {
 async function fetchBlogPosts(): Promise<BlogPost[]> {
     const markdowns = loadMarkdownFiles()
 
-    const promises: Array<Promise<BlogPost>> = markdowns.map(async (markdown) => {
+    const promises: Array<Promise<BlogPost | null>> = markdowns.map(async (markdown) => {
         const post = unified()
             .use(remarkParse)
             .use(remarkRehype)
@@ -49,11 +49,24 @@ async function fetchBlogPosts(): Promise<BlogPost[]> {
             .process(markdown.content) as Promise<Post>
 
         const blogPost = toBlogPost(await post, markdown.path)
-        return blogPost
+
+        if (shouldDisplay(blogPost)) return blogPost
+        else return null
     })
 
-    const blogPosts = await Promise.all(promises)
+    const blogPosts = (await Promise.all(promises)).filter((item) => item != null)
     return blogPosts
+}
+
+function shouldDisplay(post: BlogPost): boolean {
+    const isDevelopment = import.meta.env.VITE_SHOW_DRAFTS === 'true'
+
+    let displayPost = true
+    if (post.post.data.matter?.draft) {
+        displayPost = isDevelopment
+    }
+
+    return displayPost
 }
 
 function toBlogPost(post: Post, path: string): BlogPost {

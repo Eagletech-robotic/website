@@ -2,6 +2,7 @@ interface FrontMatter {
     title?: string
     date?: string
     author?: string
+    draft?: boolean
 }
 
 interface BlogPost {
