@@ -1,5 +1,6 @@
 import * as React from 'react'
 import { getBlogPosts } from '../utilities/markdown'
+import 'katex/dist/katex.min.css'
 
 export default function Blog() {
     const [posts, setPosts] = React.useState<PostFile[]>([])

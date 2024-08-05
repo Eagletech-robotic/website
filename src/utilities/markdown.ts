@@ -5,6 +5,7 @@ import remarkMath from 'remark-math'
 import remarkNormalizeHeadings from 'remark-normalize-headings'
 import remarkFrontmatter from 'remark-frontmatter'
 import remarkRehype from 'remark-rehype'
+import rehypeKatex from 'rehype-katex'
 import rehypeStringify from 'rehype-stringify'
 import { matter } from 'vfile-matter'
 import { VFile } from 'remark-rehype/lib'
@@ -21,6 +22,7 @@ export async function getBlogPosts(): Promise<PostFile[]> {
                 .use(remarkNormalizeHeadings)
                 .use(remarkMath)
                 .use(remarkFrontmatter)
+                .use(rehypeKatex)
                 .use(rehypeStringify)
                 .use(() => (_tree: any, file: VFile) => matter(file))
                 .process(markdown.content) as Promise<PostFile>
