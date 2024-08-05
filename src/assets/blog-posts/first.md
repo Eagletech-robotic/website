@@ -1,3 +1,8 @@
+---
+title: 'first'
+date: '2024-08-01'
+---
+
 # Hi!
 
 This is the **first** markdown file _ever_ uploaded as a test!

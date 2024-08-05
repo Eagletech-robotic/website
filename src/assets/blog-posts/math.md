@@ -1,3 +1,8 @@
+---
+title: 'math'
+date: '2024-08-04'
+---
+
 # Can you write Math?
 
 > Answer: Yes you can!

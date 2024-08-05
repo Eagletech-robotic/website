@@ -6,29 +6,28 @@ import remarkNormalizeHeadings from 'remark-normalize-headings'
 import remarkFrontmatter from 'remark-frontmatter'
 import remarkRehype from 'remark-rehype'
 import rehypeStringify from 'rehype-stringify'
-import { VFile } from 'vfile'
 import { matter } from 'vfile-matter'
+import { VFile } from 'remark-rehype/lib'
 
-export async function getBlogPosts(): Promise<string[]> {
+export async function getBlogPosts(): Promise<PostFile[]> {
     const markdowns = loadMarkdownFiles()
 
-    const promises: Array<Promise<VFile>> = markdowns.map((markdown) =>
-        unified()
-            .use(remarkParse)
-            .use(remarkRehype)
-            .use(remarkGfm)
-            .use(remarkNormalizeHeadings)
-            .use(remarkMath)
-            .use(remarkFrontmatter)
-            .use(rehypeStringify)
-            .use(() => (_tree: any, file: VFile) => matter(file))
-            .process(markdown.content)
+    const promises: Array<Promise<PostFile>> = markdowns.map(
+        (markdown) =>
+            unified()
+                .use(remarkParse)
+                .use(remarkRehype)
+                .use(remarkGfm)
+                .use(remarkNormalizeHeadings)
+                .use(remarkMath)
+                .use(remarkFrontmatter)
+                .use(rehypeStringify)
+                .use(() => (_tree: any, file: VFile) => matter(file))
+                .process(markdown.content) as Promise<PostFile>
     )
 
-    const vfiles = await Promise.all(promises)
-    const posts = vfiles.map((vfile) => vfile.toString())
-
-    return posts
+    const postFiles = await Promise.all(promises)
+    return postFiles
 }
 
 function loadMarkdownFiles(): { path: string; content: string }[] {

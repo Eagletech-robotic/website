@@ -1,3 +1,8 @@
+---
+title: 'Pluto'
+date: '2024-08-01'
+---
+
 ## Pluto
 
 Pluto is a dwarf planet in the Kuiper belt.
