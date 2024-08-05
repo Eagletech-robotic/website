@@ -3,7 +3,12 @@ interface FrontMatter {
     date?: string
 }
 
-interface PostFile {
+interface BlogPost {
+    post: Post
+    id: string
+}
+
+interface Post {
     data: {
         matter?: FrontMatter
     }

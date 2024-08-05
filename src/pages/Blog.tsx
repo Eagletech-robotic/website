@@ -1,9 +1,10 @@
 import * as React from 'react'
 import { getBlogPosts } from '../utilities/markdown'
 import 'katex/dist/katex.min.css'
+import { NavLink } from 'react-router-dom'
 
 export default function Blog() {
-    const [posts, setPosts] = React.useState<PostFile[]>([])
+    const [posts, setPosts] = React.useState<BlogPost[]>([])
     React.useEffect(() => {
         void (async () => {
             const blogPosts = await getBlogPosts()
@@ -11,9 +12,9 @@ export default function Blog() {
         })()
     }, [])
 
-    posts.sort((a: PostFile, b: PostFile) => {
-        const dateA = a.data.matter?.date || '1970-01-01'
-        const dateB = b.data.matter?.date || '1970-01-01'
+    posts.sort((a: BlogPost, b: BlogPost) => {
+        const dateA = a.post.data.matter?.date || '1970-01-01'
+        const dateB = b.post.data.matter?.date || '1970-01-01'
 
         if (dateA > dateB) {
             return -1
@@ -28,8 +29,13 @@ export default function Blog() {
             <h2>Our blogs:</h2>
             <br></br>
 
-            {posts.map((__html, index) => (
-                <ul key={index} dangerouslySetInnerHTML={{ __html }} style={{ border: '2px solid black' }} />
+            {posts.map((blogPost) => (
+                <NavLink to={`posts/${blogPost.id}`} key={blogPost.id} style={{ textDecoration: 'none' }}>
+                    <ul
+                        dangerouslySetInnerHTML={{ __html: blogPost.post.value }}
+                        style={{ border: '2px solid black' }}
+                    />
+                </NavLink>
             ))}
         </>
     )
