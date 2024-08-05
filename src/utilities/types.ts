@@ -1,6 +1,7 @@
 interface FrontMatter {
     title?: string
     date?: string
+    author?: string
 }
 
 interface BlogPost {

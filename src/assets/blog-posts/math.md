@@ -1,6 +1,7 @@
 ---
 title: 'math'
 date: '2024-08-04'
+author: 'Thibault & others'
 ---
 
 # Can you write Math?

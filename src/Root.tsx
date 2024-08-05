@@ -7,7 +7,7 @@ export default function Root() {
                 <NavLink to="about">About </NavLink>
                 <NavLink to="blog">Blog</NavLink>
             </div>
-            <div style={{ backgroundColor: 'lightblue' }}>
+            <div style={{ backgroundColor: 'lightblue', overflow: 'hidden' }}>
                 <Outlet />
             </div>
         </>
