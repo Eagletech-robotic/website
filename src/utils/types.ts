@@ -16,4 +16,5 @@ interface Post {
         matter?: FrontMatter
     }
     value: string
+    path: string
 }

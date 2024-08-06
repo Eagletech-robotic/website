@@ -1,4 +1,4 @@
-export function loadMarkdownFiles(): { path: string; content: string }[] {
+export function loadMarkdownFiles(): Post[] {
     const markdownFiles = import.meta.glob('/src/assets/blog-posts/**/*.md', {
         import: 'default',
         query: 'raw',
@@ -10,7 +10,8 @@ export function loadMarkdownFiles(): { path: string; content: string }[] {
         const content = markdownFiles[path]
         posts.push({
             path,
-            content: content as string,
+            value: content as string,
+            data: {},
         })
     }
 

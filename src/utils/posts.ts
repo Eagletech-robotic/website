@@ -59,10 +59,10 @@ export async function getBlogPostById(id: string): Promise<BlogPost | null> {
 }
 
 async function fetchBlogPosts(): Promise<BlogPost[]> {
-    const markdowns = loadMarkdownFiles()
+    const markdowns: Post[] = loadMarkdownFiles()
 
     const promises: Array<Promise<BlogPost | null>> = markdowns.map(async (markdown) => {
-        const post = unified()
+        const vfile = unified()
             .use(remarkParse)
             .use(remarkRehype)
             .use(remarkGfm)
@@ -71,7 +71,13 @@ async function fetchBlogPosts(): Promise<BlogPost[]> {
             .use(rehypeKatex)
             .use(rehypeStringify)
             .use(() => (_tree: any, file: VFile) => matter(file))
-            .process(markdown.content) as Promise<Post>
+            .process(markdown.value)
+
+        const post: Post = {
+            data: (await vfile).data as any,
+            value: (await vfile).value as string,
+            path: markdown.path,
+        }
 
         const blogPost = toBlogPost(await post, markdown.path)
 
