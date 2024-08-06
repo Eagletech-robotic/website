@@ -1,10 +1,14 @@
 .header {
+    position: sticky;
+    top: 0;
+
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
     padding: 1.5rem;
     gap: 1rem;
     border-bottom: 2px solid black;
+    font-weight: 600;
 
     @media (min-width: 600px) {
         flex-direction: row;
@@ -28,10 +32,7 @@
 
 .button.active {
     border-color: var(--primary-color);
-
-    span {
-        color: var(--primary-color);
-    }
+    color: var(--primary-color);
 }
 
 .button span {
@@ -42,21 +43,25 @@
 .button:hover:not(.external) {
     border-color: var(--primary-color);
 
-    span {
-        color: var(--primary-color);
-        transform: scale(1.2);
-    }
-}
-
-.button.external:hover span {
+    color: var(--primary-color);
     transform: scale(1.2);
 }
 
-.button.external {
-    align-content: center;
-    border: none;
+.button.external:hover {
+    transform: scale(1.2);
+    gap: 7px;
+}
 
-    span {
-        text-decoration: underline;
+.button.external {
+    display: flex;
+    border: none;
+    gap: 6px;
+
+    align-self: center;
+
+    img {
+        align-self: center;
+        height: 0.8rem;
+        width: auto;
     }
 }
