@@ -3,6 +3,7 @@ import PostSummary from '../components/PostSummary'
 import { useBlogPosts } from '../utils/posts'
 import './blog.css'
 import coupeDeRobotiqueLogo from '/images/CDR-logo.jpg'
+import eagleTechLogo from '/favicon.ico'
 
 export default function Blog() {
     const blogPosts = useBlogPosts()
@@ -33,19 +34,19 @@ export default function Blog() {
                     about <i>various</i> things concerning our club. You can expect to find content about:
                     <ul>
                         <li>
-                            <b>Mechanics:</b> our robot and its current state; problems we had, how we fixed them,
+                            🛠️ <b>Mechanics:</b> our robot and its current state; problems we had, how we fixed them,
                             etc...
                         </li>
                         <li>
-                            <b>Programming:</b> similar things. We will probably post about our code and algorithms the
-                            most.
+                            🖥️ <b>Programming:</b> similar things. We will probably post about our code and algorithms
+                            the most.
                         </li>
                         <li>
-                            <b>Our club</b> in general. For example, at the end of the year, we might write a blog post
-                            about how the competition unfolded.
+                            <img src={eagleTechLogo} className="inline" /> <b>Our club</b> in general. For example, at
+                            the end of the year, we might write a blog post about how the competition unfolded.
                         </li>
                         <li>
-                            <b>Side projects</b> and other stuff.
+                            🤷 <b>Side projects</b> and other stuff.
                         </li>
                     </ul>
                 </span>

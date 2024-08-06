@@ -25,7 +25,7 @@
     margin-bottom: 1rem;
 }
 
-.blog img {
+.blog img:not(.inline) {
     display: block;
     background-color: white;
     padding: 1rem 4rem;
@@ -36,6 +36,12 @@
     @media (min-width: 600px) {
         width: 60%;
     }
+}
+
+.blog img.inline {
+    height: 1rem;
+    width: auto;
+    vertical-align: middle;
 }
 
 .blog li {
