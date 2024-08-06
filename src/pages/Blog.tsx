@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import PostSummary from '../components/PostSummary'
+import PostSummary from '../components/postSummary'
 import { useBlogPosts } from '../utils/posts'
 import './blog.css'
 import coupeDeRobotiqueLogo from '/images/CDR-logo.jpg'
@@ -51,7 +51,6 @@ export default function Blog() {
                     </ul>
                 </span>
             </div>
-            <br></br>
 
             {blogPosts.map((blogPost, index) => (
                 <PostSummary blogPost={blogPost} key={index} />

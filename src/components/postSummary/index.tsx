@@ -1,9 +1,6 @@
 import { NavLink } from 'react-router-dom'
-import { checkFrontMatter } from '../utils/posts'
-
-function Container({ children }: { children: React.ReactNode }) {
-    return <div style={{ border: '2px solid black', maxHeight: '12rem', overflow: 'hidden' }}>{children}</div>
-}
+import { checkFrontMatter } from '../../utils/posts'
+import Container from './Container'
 
 export default function PostSummary({ blogPost }: { blogPost: BlogPost }) {
     const { result, isError } = checkFrontMatter(blogPost.post)
