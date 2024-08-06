@@ -30,7 +30,7 @@
     cursor: pointer;
     font-size: 1rem;
 
-    transition: 0.3s cubic-bezier(0, 0.04, 0, 1.01);
+    transition: var(--hover-transition-duration) var(--hover-transition-timing-function);
 }
 
 .button.active {
@@ -40,19 +40,18 @@
 
 .button span {
     display: inline-block;
-    transition: transform 0.3s cubic-bezier(0, 0.04, 0, 1.01);
+    transition: transform var(--hover-transition-duration) var(--hover-transition-timing-function);
 }
 
 .button:hover:not(.external) {
     border-color: var(--primary-color);
 
     color: var(--primary-color);
-    transform: scale(1.15);
+    transform: var(--hover-transform);
 }
 
 .button.external:hover {
-    transform: scale(1.15);
-    gap: 7px;
+    transform: var(--hover-transform);
 }
 
 .button.external {
