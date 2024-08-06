@@ -16,10 +16,19 @@ export async function loader({ params }: any): Promise<BlogPost> {
 export default function Post() {
     const post = useLoaderData() as BlogPost
 
-    const { result, isError } = checkFrontMatter(post.post.data.matter)
+    const { result, isError } = checkFrontMatter(post.post)
 
     if (isError) {
-        return result.map((error, index) => <div key={index}>{error}</div>)
+        return (
+            <div>
+                {post.post.path}
+                {result.map((error, index) => (
+                    <div key={index} style={{ marginLeft: '2rem', color: 'red' }}>
+                        {error}
+                    </div>
+                ))}
+            </div>
+        )
     }
 
     const { author, title, date } = result

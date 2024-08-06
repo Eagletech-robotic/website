@@ -6,12 +6,13 @@ function Container({ children }: { children: React.ReactNode }) {
 }
 
 export default function PostSummary({ blogPost }: { blogPost: BlogPost }) {
-    const { result, isError } = checkFrontMatter(blogPost.post.data.matter)
+    const { result, isError } = checkFrontMatter(blogPost.post)
     if (isError)
         return (
             <Container>
+                <div>{blogPost.post.path}</div>
                 {result.map((error, index) => (
-                    <div key={index} style={{ color: 'red' }}>
+                    <div key={index} style={{ color: 'red', marginLeft: '2rem' }}>
                         {error}
                     </div>
                 ))}
@@ -23,7 +24,7 @@ export default function PostSummary({ blogPost }: { blogPost: BlogPost }) {
     return (
         <Container>
             <NavLink to={`posts/${blogPost.id}`} style={{ textDecoration: 'none' }}>
-                <div dangerouslySetInnerHTML={{ __html: summary }}></div>
+                <div>{summary}</div>
             </NavLink>
         </Container>
     )

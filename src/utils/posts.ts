@@ -12,9 +12,9 @@ import React from 'react'
 import { loadMarkdownFiles } from './markdown'
 
 export function checkFrontMatter(
-    frontMatter: FrontMatter | undefined
+    post: Post
 ): { result: string[]; isError: true } | { result: Required<FrontMatter>; isError: false } {
-    const { author, date, summary, title, draft } = frontMatter || {}
+    const { author, date, summary, title, draft } = post.data.matter || {}
 
     const errors: string[] = []
     const pushError = (error: string) => {
