@@ -3,7 +3,7 @@ title: 'math'
 date: '2024-08-04'
 author: 'Thibault & others'
 summary: 'Do you think you can write math on this blog? Well, yes you can! This post will show you a few little equations in Latex... Just for you.'
-draft: true
+draft: false
 ---
 
 # Can you write Math?
