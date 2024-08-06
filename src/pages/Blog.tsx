@@ -1,5 +1,5 @@
 import PostSummary from '../components/PostSummary'
-import { useBlogPosts } from '../utils/markdown'
+import { useBlogPosts } from '../utils/posts'
 
 export default function Blog() {
     const blogPosts = useBlogPosts()

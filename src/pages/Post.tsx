@@ -1,6 +1,5 @@
 import { useLoaderData } from 'react-router-dom'
-import { checkFrontMatter } from '../utils/posts'
-import { getBlogPostById } from '../utils/markdown'
+import { checkFrontMatter, getBlogPostById } from '../utils/posts'
 
 export async function loader({ params }: any): Promise<BlogPost> {
     const post = await getBlogPostById(params.postId)
