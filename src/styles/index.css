@@ -1,7 +1,10 @@
 :root {
-    --text-color: #000;
+    --text-color: #202020;
+    --light-text-color: #6c6c6c;
     --primary-color: #23a7cf;
-    --background-color: #fff;
+    --background-color: #f5f5f5;
+
+    --content-line-height: 1.6;
 }
 
 body {
