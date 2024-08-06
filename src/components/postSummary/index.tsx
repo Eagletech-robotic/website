@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import { checkFrontMatter } from '../../utils/posts'
 import Container from './Container'
+import { isoToFullDate } from '../../utils/date'
 
 export default function PostSummary({ blogPost }: { blogPost: BlogPost }) {
     const { result, isError } = checkFrontMatter(blogPost.post)
@@ -24,7 +25,7 @@ export default function PostSummary({ blogPost }: { blogPost: BlogPost }) {
                 <h2>{result.title}</h2>
                 <div className="summary">{result.summary}</div>
                 <div className="footer">
-                    {result.date} · {result.author}
+                    {isoToFullDate(result.date)} · {result.author}
                 </div>
             </Container>
         </NavLink>
