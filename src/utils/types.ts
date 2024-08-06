@@ -2,7 +2,7 @@ interface FrontMatter {
     title?: string
     date?: string
     author?: string
-    synopsis?: string
+    summary?: string
     draft?: boolean
 }
 
