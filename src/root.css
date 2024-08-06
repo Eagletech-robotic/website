@@ -60,11 +60,11 @@
     border: none;
     gap: 6px;
 
-    align-self: center;
+    align-items: center;
 
     img {
         align-self: center;
-        height: 0.8rem;
-        width: auto;
+        width: 1.4rem;
+        height: auto;
     }
 }

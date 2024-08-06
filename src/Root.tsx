@@ -1,20 +1,20 @@
 import { NavLink, Outlet } from 'react-router-dom'
 import './root.css'
-import linkOut from '../public/images/link-out.svg'
+import githubLogo from '/images/github-mark.svg'
 
 export default function Root() {
     return (
         <>
             <div className="header">
                 <NavLink to="about" className="button">
-                    About
+                    🔎 About
                 </NavLink>
                 <NavLink to="blog" className="button">
-                    Blog
+                    📝 Blog
                 </NavLink>
                 <a href="https://github.com/Eagletech-robotic" className="button external">
+                    <img src={githubLogo} />
                     Github
-                    <img src={linkOut} />
                 </a>
             </div>
             <Outlet />
