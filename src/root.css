@@ -5,6 +5,7 @@
     flex-direction: column;
     top: 0;
 
+    overflow: hidden;
     padding: 1.5rem;
     gap: 1rem;
 
@@ -30,7 +31,7 @@
     cursor: pointer;
     font-size: 1rem;
 
-    transition: var(--hover-transition-duration) var(--hover-transition-timing-function);
+    transition: 0.3s var(--hover-transition-timing-function);
 }
 
 .button.active {
@@ -40,18 +41,18 @@
 
 .button span {
     display: inline-block;
-    transition: transform var(--hover-transition-duration) var(--hover-transition-timing-function);
+    transition: transform 0.3s var(--hover-transition-timing-function);
 }
 
 .button:hover:not(.external) {
     border-color: var(--primary-color);
 
     color: var(--primary-color);
-    transform: var(--hover-transform);
+    transform: scale(1.15);
 }
 
 .button.external:hover {
-    transform: var(--hover-transform);
+    transform: scale(1.15);
 }
 
 .button.external {

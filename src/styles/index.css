@@ -6,10 +6,9 @@
     --border-color: #eee;
 
     --content-line-height: 1.6;
+    --border-radius: 12px;
 
-    --hover-transform: scale(1.15);
     --hover-transition-timing-function: cubic-bezier(0, 0.04, 0, 1.01);
-    --hover-transition-duration: 0.3s;
 }
 
 body {

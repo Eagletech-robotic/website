@@ -52,6 +52,8 @@ export default function Blog() {
                 </span>
             </div>
 
+            <br></br>
+
             {blogPosts.map((blogPost, index) => (
                 <PostSummary blogPost={blogPost} key={index} />
             ))}

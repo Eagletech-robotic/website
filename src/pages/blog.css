@@ -30,7 +30,7 @@
     background-color: white;
     padding: 1rem 4rem;
     margin: 0.5rem auto;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     width: 100%;
 
     @media (min-width: 600px) {
