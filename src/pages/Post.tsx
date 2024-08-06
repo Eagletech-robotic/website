@@ -1,5 +1,6 @@
 import { useLoaderData } from 'react-router-dom'
-import { getBlogPostById } from '../utilities/markdown'
+import { checkFrontMatter } from '../utils/posts'
+import { getBlogPostById } from '../utils/markdown'
 
 export async function loader({ params }: any): Promise<BlogPost> {
     const post = await getBlogPostById(params.postId)
@@ -15,35 +16,24 @@ export async function loader({ params }: any): Promise<BlogPost> {
 
 export default function Post() {
     const post = useLoaderData() as BlogPost
-    const matter = post.post.data.matter
 
-    const titleJsx = matter?.title ? (
-        <h1 style={{ fontSize: '5rem', marginBottom: 0 }}>{matter?.title}</h1>
-    ) : (
-        <h1 style={{ fontSize: '5rem', marginBottom: 0, fontStyle: 'italic' }}>No Title</h1>
-    )
+    const { result, isError } = checkFrontMatter(post.post.data.matter)
 
-    const authorJsx = matter?.author ? (
-        <div>
-            By<div style={{ fontStyle: 'italic' }}>{matter?.author}</div>
-        </div>
-    ) : (
-        <div style={{ fontStyle: 'italic' }}>Author not specified</div>
-    )
+    if (isError) {
+        return result.map((error, index) => <div key={index}>{error}</div>)
+    }
 
-    const dateJsx = matter?.date ? (
-        <div style={{ fontStyle: 'italic' }}>{matter.date}</div>
-    ) : (
-        <div style={{ fontStyle: 'italic' }}>No date specified</div>
-    )
+    const { author, title, date } = result
 
     return (
         <>
             <div style={{ textAlign: 'center' }}>
-                {titleJsx}
-                {authorJsx}
+                <h1 style={{ fontSize: '5rem', marginBottom: 0 }}>{title}</h1>
+                <div>
+                    By<div style={{ fontStyle: 'italic' }}>{author}</div>
+                </div>
                 <br></br>
-                {dateJsx}
+                <div style={{ fontStyle: 'italic' }}>{date}</div>
             </div>
             <br></br>
             <br></br>
