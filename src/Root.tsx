@@ -17,9 +17,7 @@ export default function Root() {
                     <img src={linkOut} />
                 </a>
             </div>
-            <div style={{ backgroundColor: 'lightblue', overflow: 'hidden' }}>
-                <Outlet />
-            </div>
+            <Outlet />
         </>
     )
 }
