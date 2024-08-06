@@ -5,7 +5,10 @@ import About from './pages/About'
 import Blog from './pages/Blog'
 import Root from './Root'
 import Post, { loader as postLoader } from './pages/Post'
+
 import 'katex/dist/katex.min.css'
+import './styles/reset.css'
+import './styles/index.css'
 
 const router = createBrowserRouter([
     {

@@ -1,0 +1,11 @@
+:root {
+    --text-color: #000;
+}
+
+body {
+    color: var(--text-color);
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
