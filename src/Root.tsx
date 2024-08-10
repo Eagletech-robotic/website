@@ -1,5 +1,4 @@
 import { Outlet } from 'react-router-dom'
-import './root.css'
 import githubLogo from '/images/github-mark.svg'
 import { GlobalStyle } from './styles/commonStyles'
 import { ExternalLinkButton, Header, NavLinkButton } from './rootStyles'
