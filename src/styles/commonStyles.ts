@@ -22,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
         font-style: normal;
     }
 
-    a:visited {
+    a {
         color: inherit;
     }
 
