@@ -1,15 +1,6 @@
 import styled from 'styled-components'
 import { borderRadius, contentLineHeight, lightTextColor } from '../../styles/commonStyles'
 
-export const StyledBlog = styled.div`
-    line-height: ${contentLineHeight};
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 1rem;
-    margin-top: 3rem;
-    max-width: 700px;
-`
-
 export const Title = styled.h1`
     font-size: 2rem;
     font-weight: bold;

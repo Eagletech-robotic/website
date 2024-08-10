@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 export const textColor = '#202020'
 export const lightTextColor = '#6c6c6c'
@@ -33,4 +33,13 @@ export const GlobalStyle = createGlobalStyle`
     i {
         font-style: italic;
     }
+`
+
+export const Page = styled.div`
+    line-height: ${contentLineHeight};
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1rem;
+    margin-top: 3rem;
+    max-width: 700px;
 `

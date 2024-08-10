@@ -3,7 +3,8 @@ import PostSummary from '../../components/postSummary'
 import { useBlogPosts } from '../../utils/posts'
 import coupeDeRobotiqueLogo from '/images/CDR-logo.jpg'
 import eagleTechLogo from '/favicon.ico'
-import { InlineImage, Intro, StyledBlog, Title } from './styles'
+import { InlineImage, Intro, Title } from './styles'
+import { Page } from '../../styles/commonStyles'
 
 export default function Blog() {
     const blogPosts = useBlogPosts()
@@ -15,7 +16,7 @@ export default function Blog() {
     })
 
     return (
-        <StyledBlog>
+        <Page>
             <Title>The EagleTech Blog 🔥</Title>
             <Intro>
                 <p>Hi. This is our blog page 📖.</p>
@@ -54,6 +55,6 @@ export default function Blog() {
             {blogPosts.map((blogPost, index) => (
                 <PostSummary blogPost={blogPost} key={index} />
             ))}
-        </StyledBlog>
+        </Page>
     )
 }
