@@ -8,6 +8,7 @@ export const borderColor = '#eee'
 
 export const contentLineHeight = '1.6'
 export const borderRadius = '12px'
+export const blogMaxWidth = '700px'
 
 export const hoverTransitionTimingFunction = 'cubic-bezier(0, 0.04, 0, 1.01)'
 
@@ -35,11 +36,8 @@ export const GlobalStyle = createGlobalStyle`
     }
 `
 
-export const Page = styled.div`
+export const PageStructure = styled.div`
     line-height: ${contentLineHeight};
-    margin-left: auto;
-    margin-right: auto;
     padding: 0 1rem;
     margin-top: 3rem;
-    max-width: 700px;
 `

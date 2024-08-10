@@ -1,5 +1,10 @@
 import styled from 'styled-components'
-import { borderRadius, contentLineHeight, lightTextColor } from '../../styles/commonStyles'
+import { blogMaxWidth, borderRadius, lightTextColor } from '../../styles/commonStyles'
+
+export const Page = styled.div`
+    margin: auto;
+    max-width: ${blogMaxWidth};
+`
 
 export const Title = styled.h1`
     font-size: 2rem;
