@@ -11,9 +11,9 @@ summary: Présentation de Mini Eagle, un robot expérimental conçu pour tester 
 
 Le règlement de la prochaine [Coupe de France de Robotique 2025](https://www.coupederobotique.fr/) n'ayant pas encore été publié, nous ne pouvons pas encore démarrer la conception de notre robot principal. Alors, comment essayer d'avancer pendant ces vacances d'été ? Nous avons décidé de nous lancer dans la conception d'un robot miniature, Mini Eagle, qui nous permettra de tester des idées et des concepts pour la future compétition.
 
-![Vue arrière du robot Mini-Eagle](/src/assets/images/20240810-mini-eagle/vue-arriere.jpg)
+![Vue arrière du robot Mini-Eagle](/blog-images/20240810-mini-eagle/vue-arriere.jpg)
 
-![Vue de profil du robot Mini-Eagle](/src/assets/images/20240810-mini-eagle/vue-profil.jpg)
+![Vue de profil du robot Mini-Eagle](/blog-images/20240810-mini-eagle/vue-profil.jpg)
 
 ## Objectifs
 
