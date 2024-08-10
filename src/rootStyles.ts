@@ -8,6 +8,7 @@ export const Header = styled.div`
     justify-content: space-evenly;
     flex-direction: column;
     top: 0;
+    z-index: 999;
 
     overflow: hidden;
     padding: 1.5rem;
