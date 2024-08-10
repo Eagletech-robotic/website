@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import About from './pages/About'
 import Blog from './pages/Blog'
 import Root from './Root'
-import Post, { loader as postLoader } from './pages/Post'
+import Post, { loader as postLoader } from './pages/Post/index'
 
 import 'katex/dist/katex.min.css'
 import './styles/reset.css'

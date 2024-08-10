@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { blogMaxWidth, borderRadius, lightTextColor } from '../../styles/commonStyles'
 
 export const Page = styled.div`
-    margin: auto;
+    margin: 0 auto;
     max-width: ${blogMaxWidth};
 `
 

@@ -6,21 +6,30 @@ export const primaryColor = '#23a7cf'
 export const backgroundColor = '#f5f5f5'
 export const borderColor = '#eee'
 
+export const breakpoints = {
+    tablet: '680px',
+    desktop: '1024px',
+}
+
 export const contentLineHeight = '1.6'
 export const borderRadius = '12px'
-export const blogMaxWidth = '700px'
+export const blogMaxWidth = '750px'
 
 export const hoverTransitionTimingFunction = 'cubic-bezier(0, 0.04, 0, 1.01)'
 
 export const GlobalStyle = createGlobalStyle`
     body {
-        background-color: ${backgroundColor};
+        /*background-color: white;*/
 
         color: ${textColor};
         font-family: 'Poppins', 'Roboto', sans-serif;
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
+
+        @media (min-width: ${breakpoints.tablet}) {
+            background-color: ${backgroundColor}; 
+        }
     }
 
     a {
