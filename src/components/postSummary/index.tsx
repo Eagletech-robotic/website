@@ -1,33 +1,30 @@
-import { NavLink } from 'react-router-dom'
 import { checkFrontMatter } from '../../utils/posts'
-import Container from './Container'
 import { isoToFullDate } from '../../utils/date'
+import { Container, ErrorInfo, Footer, StyledPostSummary, Summary, Title } from './styles'
 
 export default function PostSummary({ blogPost }: { blogPost: BlogPost }) {
     const { result, isError } = checkFrontMatter(blogPost.post)
     if (isError)
         return (
-            <NavLink to={`posts/${blogPost.id}`} style={{ textDecoration: 'none' }}>
+            <StyledPostSummary to={`posts/${blogPost.id}`}>
                 <Container>
                     <div>{blogPost.post.path}</div>
                     {result.map((error, index) => (
-                        <div key={index} style={{ color: 'red', marginLeft: '2rem' }}>
-                            {error}
-                        </div>
+                        <ErrorInfo key={index}>{error}</ErrorInfo>
                     ))}
                 </Container>
-            </NavLink>
+            </StyledPostSummary>
         )
 
     return (
-        <NavLink to={`posts/${blogPost.id}`} style={{ textDecoration: 'none' }}>
+        <StyledPostSummary to={`posts/${blogPost.id}`}>
             <Container>
-                <h2>{result.title}</h2>
-                <div className="summary">{result.summary}</div>
-                <div className="footer">
+                <Title>{result.title}</Title>
+                <Summary>{result.summary}</Summary>
+                <Footer>
                     {isoToFullDate(result.date)} · {result.author}
-                </div>
+                </Footer>
             </Container>
-        </NavLink>
+        </StyledPostSummary>
     )
 }
