@@ -12,17 +12,6 @@ export const borderRadius = '12px'
 export const hoverTransitionTimingFunction = 'cubic-bezier(0, 0.04, 0, 1.01)'
 
 export const GlobalStyle = createGlobalStyle`
-    :root {
-        --light-text-color: #6c6c6c;
-        --primary-color: #23a7cf;
-        --border-color: #eee;
-
-        --content-line-height: 1.6;
-        --border-radius: 12px;
-
-        --hover-transition-timing-function: cubic-bezier(0, 0.04, 0, 1.01);
-    }
-
     body {
         background-color: ${backgroundColor};
 
@@ -33,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
         font-style: normal;
     }
 
-    a:visited {
+    a {
         color: inherit;
     }
 

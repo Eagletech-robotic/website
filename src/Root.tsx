@@ -1,25 +1,21 @@
-import { NavLink, Outlet } from 'react-router-dom'
-import './root.css'
+import { Outlet } from 'react-router-dom'
 import githubLogo from '/images/github-mark.svg'
 import { GlobalStyle } from './styles/commonStyles'
+import { ExternalLinkButton, Header, NavLinkButton } from './rootStyles'
 
 export default function Root() {
     return (
         <>
             <GlobalStyle />
-            
-            <div className="header">
-                <NavLink to="about" className="button">
-                    🔎 About
-                </NavLink>
-                <NavLink to="blog" className="button">
-                    📝 Blog
-                </NavLink>
-                <a href="https://github.com/Eagletech-robotic" className="button external">
+
+            <Header>
+                <NavLinkButton to="about">🔎 About</NavLinkButton>
+                <NavLinkButton to="blog">📝 Blog</NavLinkButton>
+                <ExternalLinkButton href="https://github.com/Eagletech-robotic">
                     <img src={githubLogo} />
                     Github
-                </a>
-            </div>
+                </ExternalLinkButton>
+            </Header>
 
             <Outlet />
         </>
