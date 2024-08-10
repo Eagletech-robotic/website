@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { borderColor, borderRadius, hoverTransitionTimingFunction } from '../../styles/commonStyles'
+import { borderColor, borderRadius, hoverTransitionTimingFunction, lightTextColor } from '../../styles/commonStyles'
 import { Link } from 'react-router-dom'
 
 export const StyledPostSummary = styled(Link)`
@@ -37,11 +37,11 @@ export const Title = styled.h2`
 
 export const Summary = styled.div`
     font-size: 14px;
-    color: var(--light-text-color);
+    color: ${lightTextColor};
     margin: 8px 0;
 `
 
 export const Footer = styled.div`
     font-size: 10px;
-    color: var(--light-text-color);
+    color: ${lightTextColor};
 `
