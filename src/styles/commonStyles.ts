@@ -19,7 +19,7 @@ export const hoverTransitionTimingFunction = 'cubic-bezier(0, 0.04, 0, 1.01)'
 
 export const GlobalStyle = createGlobalStyle`
     body {
-        /*background-color: white;*/
+        background-color: white;
 
         color: ${textColor};
         font-family: 'Poppins', 'Roboto', sans-serif;
