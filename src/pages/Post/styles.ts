@@ -35,7 +35,7 @@ export const Header = styled.div`
 `
 
 export const Title = styled.h1`
-    font-weight: bold;
+    font-weight: 900;
     font-size: 2rem;
     line-height: 1.2;
 
