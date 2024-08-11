@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { blogMaxWidth, borderRadius, lightTextColor } from '../../styles/commonStyles'
+import { blogMaxWidth, borderRadius, colors } from '../../styles/commonStyles'
 
 export const Page = styled.div`
     margin: 0 auto;
@@ -22,7 +22,7 @@ export const Intro = styled.div`
     flex-direction: column;
 
     margin: 1rem 0 2rem;
-    color: ${lightTextColor};
+    color: ${colors.textLight};
     font-size: 1rem;
 
     p {

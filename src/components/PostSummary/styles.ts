@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { borderColor, borderRadius, hoverTransitionTimingFunction, lightTextColor } from '../../styles/commonStyles'
+import { colors, borderRadius, hoverTransitionTimingFunction } from '../../styles/commonStyles'
 import { Link } from 'react-router-dom'
 
 export const StyledPostSummary = styled(Link)`
@@ -11,7 +11,7 @@ export const Container = styled.div`
     margin-bottom: 1.5rem;
 
     background-color: white;
-    border: 1px solid ${borderColor};
+    border: 1px solid ${colors.border};
     border-radius: ${borderRadius};
 
     transition: 0.3s ${hoverTransitionTimingFunction};
@@ -37,11 +37,11 @@ export const Title = styled.h2`
 
 export const Summary = styled.div`
     font-size: 14px;
-    color: ${lightTextColor};
+    color: ${colors.textLight};
     margin: 8px 0;
 `
 
 export const Footer = styled.div`
     font-size: 10px;
-    color: ${lightTextColor};
+    color: ${colors.textLight};
 `

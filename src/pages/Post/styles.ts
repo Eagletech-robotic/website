@@ -1,14 +1,5 @@
 import styled from 'styled-components'
-import {
-    backgroundColor,
-    blogMaxWidth,
-    borderColor,
-    borderRadius,
-    breakpoints,
-    lightTextColor,
-    primaryColor,
-    textColor,
-} from '../../styles/commonStyles'
+import { colors, blogMaxWidth, borderRadius, breakpoints } from '../../styles/commonStyles'
 
 export const Page = styled.div`
     padding: 0;
@@ -46,7 +37,7 @@ export const Title = styled.h1`
 
 export const Info = styled.div`
     display: block;
-    color: ${lightTextColor};
+    color: ${colors.textLight};
 `
 export const AuthorContainer = styled.div`
     margin: 1rem 0;
@@ -61,7 +52,7 @@ export const DateText = styled.div`
 `
 
 export const Separator = styled.hr`
-    border: 2px solid ${primaryColor};
+    border: 2px solid ${colors.primary};
     border-radius: ${borderRadius};
 `
 
@@ -124,22 +115,22 @@ export const Content = styled.div`
         width: 100%;
 
         border-radius: ${borderRadius};
-        border: 1px solid ${borderColor};
+        border: 1px solid ${colors.border};
     }
 
     a {
-        color: ${lightTextColor};
+        color: ${colors.textLight};
         text-underline-offset: 4px;
 
         transition: 100ms cubic-bezier(0.68, 0.04, 0.65, 0.98);
 
         &:hover {
-            color: ${textColor};
+            color: ${colors.text};
         }
     }
 
     hr {
-        border: 1px solid ${backgroundColor};
+        border: 1px solid ${colors.background};
         border-radius: ${borderRadius};
         margin: 28px 0;
     }

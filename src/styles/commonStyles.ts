@@ -1,14 +1,22 @@
-import styled, { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle, css } from 'styled-components'
 
-export const textColor = '#202020'
-export const lightTextColor = '#6c6c6c'
-export const primaryColor = '#23a7cf'
-export const backgroundColor = '#f5f5f5'
-export const borderColor = '#eee'
+export const colors = {
+    text: '#202020',
+    textLight: '#6c6c6c',
+    primary: '#23a7cf',
+    background: '#f5f5f5',
+    backgroundHeader: '#fcfcfc',
+    border: '#eee',
+}
 
 export const breakpoints = {
     tablet: '680px',
     desktop: '1024px',
+}
+
+export const zIndices = {
+    header: 10,
+    menuMobile: 20,
 }
 
 export const contentLineHeight = '1.6'
@@ -21,14 +29,14 @@ export const GlobalStyle = createGlobalStyle`
     body {
         background-color: white;
 
-        color: ${textColor};
+        color: ${colors.text};
         font-family: 'Poppins', 'Roboto', sans-serif;
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
 
         @media (min-width: ${breakpoints.tablet}) {
-            background-color: ${backgroundColor}; 
+            background-color: ${colors.background}; 
         }
     }
 
@@ -50,3 +58,11 @@ export const PageStructure = styled.div`
     padding: 0 1rem;
     margin-top: 3rem;
 `
+
+export const mixin = {
+    centerElement: css`
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    `,
+}

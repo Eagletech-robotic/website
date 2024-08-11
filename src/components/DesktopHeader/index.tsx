@@ -1,19 +1,21 @@
-import { ExternalLinkButton, Links, Logo, NavLinkButton, StyledHeader } from './styles'
+import { ExternalLinkButton, GitHubLogo, Links, LogoLink, LogoImage, NavLinkButton, StyledHeader, Logo } from './styles'
 import githubLogo from '/images/github-mark.svg'
 import logo from '/logo.png'
 
-export function Header(): JSX.Element {
+export function DesktopHeader(): JSX.Element {
     return (
         <StyledHeader>
-            <Logo to="/">
-                <img src={logo} />
+            <Logo>
+                <LogoLink to="/">
+                    <LogoImage src={logo} />
+                </LogoLink>
             </Logo>
 
             <Links>
                 <NavLinkButton to="about">🔎 About</NavLinkButton>
                 <NavLinkButton to="blog">📝 Blog</NavLinkButton>
                 <ExternalLinkButton href="https://github.com/Eagletech-robotic">
-                    <img src={githubLogo} />
+                    <GitHubLogo src={githubLogo} />
                     Github
                 </ExternalLinkButton>
             </Links>
