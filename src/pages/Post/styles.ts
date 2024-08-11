@@ -96,17 +96,25 @@ export const Content = styled.div`
         font-size: 1.5rem;
     }
 
+    strong {
+        font-weight: bold;
+    }
+
+    em {
+        font-style: italic;
+    }
+
     ul {
         margin-bottom: 1rem;
     }
 
-    ul li {
+    ul > li {
         list-style: disc;
         margin-left: 1.15em;
         margin-bottom: 0.35rem;
     }
 
-    ol li {
+    ol > li {
         list-style: decimal;
         margin-left: 1.15em;
         margin-bottom: 0.35rem;
