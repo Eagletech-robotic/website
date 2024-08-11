@@ -12,7 +12,6 @@ export const StyledHeader = styled.div`
     z-index: ${zIndices.header};
 
     ${mixin.centerElement};
-    position: relative;
 
     background-color: ${colors.backgroundHeader};
     box-shadow: 0px 1px 15px 0px;
