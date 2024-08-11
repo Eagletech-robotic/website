@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom'
-import PostSummary from '../../components/postSummary'
+import PostSummary from '../../components/PostSummary'
 import { useBlogPosts } from '../../utils/posts'
 import coupeDeRobotiqueLogo from '/images/CDR-logo.jpg'
-import eagleTechLogo from '/favicon.ico'
+import eagleTechLogo from '/logo.png'
 import { InlineImage, Intro, Page, Title } from './styles'
 import { PageStructure } from '../../styles/commonStyles'
 
