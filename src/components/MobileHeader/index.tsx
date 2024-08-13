@@ -7,6 +7,9 @@ import {
     StyledHeader,
     Menu,
     StyledBurgerIcon,
+    ButtonsContainer,
+    OpaqueBackground,
+    ButtonsSeparator,
 } from './styles'
 import githubLogo from '/images/github-mark.svg'
 import logo from '/logo.png'
@@ -42,14 +45,23 @@ export function MobileHeader(): JSX.Element {
             />
 
             {menuVisible && (
-                <Menu ref={refMenu}>
-                    <NavLinkButton to="about">🔎 About</NavLinkButton>
-                    <NavLinkButton to="blog">📝 Blog</NavLinkButton>
-                    <ExternalLinkButton href="https://github.com/Eagletech-robotic">
-                        <GitHubLogo src={githubLogo} />
-                        Github
-                    </ExternalLinkButton>
-                </Menu>
+                <>
+                    <OpaqueBackground />
+
+                    <Menu ref={refMenu}>
+                        <ButtonsContainer>
+                            <NavLinkButton to="about">🔎 About</NavLinkButton>
+                            <NavLinkButton to="blog">📝 Blog</NavLinkButton>
+
+                            <ButtonsSeparator />
+
+                            <ExternalLinkButton href="https://github.com/Eagletech-robotic">
+                                <GitHubLogo src={githubLogo} />
+                                Github
+                            </ExternalLinkButton>
+                        </ButtonsContainer>
+                    </Menu>
+                </>
             )}
         </StyledHeader>
     )

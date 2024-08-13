@@ -15,6 +15,7 @@ export const breakpoints = {
 }
 
 export const zIndices = {
+    contentCover: 5,
     header: 10,
     menuMobile: 20,
 }

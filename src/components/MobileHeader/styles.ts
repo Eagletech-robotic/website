@@ -59,17 +59,38 @@ export const LogoImage = styled.img`
     width: auto;
 `
 
+export const OpaqueBackground = styled.div`
+    z-index: ${zIndices.contentCover};
+    position: fixed;
+    top: ${headerHeight.mobile};
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+`
+
 export const Menu = styled.div`
     z-index: ${zIndices.menuMobile};
     position: fixed;
     left: 0;
-    width: 80vw;
+    width: 70vw;
     max-width: 30rem;
     top: ${headerHeight.mobile};
     height: 100%;
+    background-color: ${colors.backgroundHeader};
+`
+
+export const ButtonsContainer = styled.div`
     display: flex;
     flex-direction: column;
-    background-color: #fff;
+    gap: 1rem;
+    padding: 2rem;
+`
+
+export const ButtonsSeparator = styled.div`
+    border: 2px solid ${colors.text};
+    border-radius: 4px;
+    margin: 1rem 0;
 `
 
 const buttonStyles = css`
@@ -80,16 +101,11 @@ const buttonStyles = css`
 export const NavLinkButton = styled(NavLink)`
     ${buttonStyles}
 
-    border: 2px solid black;
-    border-radius: 2rem;
-
     &.active {
-        border-color: ${colors.primary};
         color: ${colors.primary};
     }
 
     &:hover {
-        border-color: ${colors.primary};
         color: ${colors.primary};
     }
 `
