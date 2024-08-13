@@ -1,6 +1,6 @@
 import { ExternalLinkButton, GitHubLogo, Links, LogoLink, LogoImage, NavLinkButton, StyledHeader, Logo } from './styles'
 import githubLogo from '/images/github-mark.svg'
-import logo from '/logo.png'
+import logo from '/images/logo.png'
 
 export function DesktopHeader(): JSX.Element {
     return (

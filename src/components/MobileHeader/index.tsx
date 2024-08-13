@@ -1,3 +1,4 @@
+import { InlineLogo } from '../../styles/inlineLogo'
 import {
     ExternalLinkButton,
     GitHubLogo,
@@ -32,6 +33,10 @@ export function MobileHeader(): JSX.Element {
         })
     }, [menuVisible])
 
+    const handleLinkClick = () => {
+        setMenuVisible(false)
+    }
+
     return (
         <StyledHeader>
             <LogoLink to="/">
@@ -50,8 +55,15 @@ export function MobileHeader(): JSX.Element {
 
                     <Menu ref={refMenu}>
                         <ButtonsContainer>
-                            <NavLinkButton to="about">🔎 About</NavLinkButton>
-                            <NavLinkButton to="blog">📝 Blog</NavLinkButton>
+                            <NavLinkButton to="/" onClick={handleLinkClick}>
+                                <InlineLogo /> Home
+                            </NavLinkButton>
+                            <NavLinkButton to="about" onClick={handleLinkClick}>
+                                🔎 About
+                            </NavLinkButton>
+                            <NavLinkButton to="blog" onClick={handleLinkClick}>
+                                📝 Blog
+                            </NavLinkButton>
 
                             <ButtonsSeparator />
 

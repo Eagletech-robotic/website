@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { blogMaxWidth, borderRadius, colors } from '../../styles/commonStyles'
+import { InlineLogo } from '../../styles/inlineLogo'
 
 export const Page = styled.div`
     margin: 0 auto;
@@ -9,12 +10,6 @@ export const Page = styled.div`
 export const Title = styled.h1`
     font-size: 2rem;
     font-weight: bold;
-`
-
-export const InlineImage = styled.img`
-    height: 1rem;
-    width: auto;
-    vertical-align: middle;
 `
 
 export const Intro = styled.div`
@@ -33,7 +28,7 @@ export const Intro = styled.div`
         list-style: disc inside;
     }
 
-    img:not(${InlineImage}) {
+    img:not(${InlineLogo}) {
         display: block;
         background-color: white;
         padding: 1rem 4rem;
