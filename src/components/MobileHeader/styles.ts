@@ -1,14 +1,12 @@
 import { NavLink } from 'react-router-dom'
 import styled, { css } from 'styled-components'
-import { breakpoints, colors, mixin, zIndices } from '../../styles/commonStyles'
+import { breakpoints, colors, headerHeight, mixin, zIndices } from '../../styles/commonStyles'
 import BurgerIcon from './BurgerIcon'
-
-const headerHeight = '3rem'
 
 export const StyledHeader = styled.div`
     position: sticky;
     top: 0;
-    height: ${headerHeight};
+    height: ${headerHeight.mobile};
     z-index: ${zIndices.header};
 
     ${mixin.centerElement};
@@ -28,7 +26,7 @@ export const StyledBurgerIcon = styled(BurgerIcon)`
     left: 0;
     top: 0;
     height: 100%;
-    padding: 0.5rem;
+    padding: 1rem;
     padding-right: 1.5rem;
 
     cursor: pointer;
@@ -67,7 +65,7 @@ export const Menu = styled.div`
     left: 0;
     width: 80vw;
     max-width: 30rem;
-    top: ${headerHeight};
+    top: ${headerHeight.mobile};
     height: 100%;
     display: flex;
     flex-direction: column;

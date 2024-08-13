@@ -1,11 +1,18 @@
 import { NavLink } from 'react-router-dom'
 import styled, { css } from 'styled-components'
-import { breakpoints, colors, hoverTransitionTimingFunction, mixin, zIndices } from '../../styles/commonStyles'
+import {
+    breakpoints,
+    colors,
+    headerHeight,
+    hoverTransitionTimingFunction,
+    mixin,
+    zIndices,
+} from '../../styles/commonStyles'
 
 export const StyledHeader = styled.div`
     position: sticky;
     top: 0;
-    height: 6rem;
+    height: ${headerHeight.desktop};
     z-index: ${zIndices.header};
 
     display: flex;

@@ -19,6 +19,11 @@ export const zIndices = {
     menuMobile: 20,
 }
 
+export const headerHeight = {
+    mobile: '4rem',
+    desktop: '6rem',
+}
+
 export const contentLineHeight = '1.6'
 export const borderRadius = '12px'
 export const blogMaxWidth = '750px'

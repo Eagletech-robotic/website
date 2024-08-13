@@ -3,7 +3,13 @@ import { hoverTransitionTimingFunction } from '../../styles/commonStyles'
 
 export const MenuIcon = styled.div`
     align-content: center;
-    cursor: pointer;
+
+    svg {
+        height: 100%;
+        width: 100%;
+        max-height: 28px;
+        max-width: 28px;
+    }
 `
 
 export const Line = styled.rect<{ open: boolean }>`
