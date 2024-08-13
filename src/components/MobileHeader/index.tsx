@@ -13,7 +13,7 @@ import {
     ButtonsSeparator,
 } from './styles'
 import githubLogo from '/images/github-mark.svg'
-import logo from '/logo.png'
+import logo from '/images/logo.png'
 import * as React from 'react'
 
 export function MobileHeader(): JSX.Element {
