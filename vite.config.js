@@ -18,4 +18,7 @@ export default defineConfig({
         force: true,
     },
     assetsInclude: ['**/*.md'], // Treat .md files as assets
+    build: {
+        outDir: 'build',
+    },
 })

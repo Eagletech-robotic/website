@@ -5,10 +5,8 @@ import {
     breakpoints,
     colors,
     fontSizes,
-    hoverTransitionTimingFunction,
 } from '../../styles/commonStyles'
 import { InlineLogo } from '../../styles/inlineLogo'
-import { Link } from 'react-router-dom'
 
 export const Page = styled.div`
     margin: 0 auto;
