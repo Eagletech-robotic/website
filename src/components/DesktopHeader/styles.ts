@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import {
     breakpoints,
     colors,
-    headerBorder,
+    fontSizes,
     headerHeight,
     headerShadow,
     hoverTransitionTimingFunction,
@@ -25,7 +25,6 @@ export const StyledHeader = styled.div`
 
     background-color: ${colors.backgroundHeader};
     box-shadow: ${headerShadow};
-    border-bottom: ${headerBorder};
     font-weight: 600;
 
     @media not (min-width: ${breakpoints.desktop}) {
@@ -39,7 +38,7 @@ const linkStyles = css`
 
     text-decoration: none;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: ${fontSizes.desktop.content};
 
     transition: 0.3s ${hoverTransitionTimingFunction};
 

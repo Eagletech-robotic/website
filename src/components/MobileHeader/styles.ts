@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import {
     breakpoints,
     colors,
-    headerBorder,
+    fontSizes,
     headerHeight,
     headerShadow,
     mixin,
@@ -23,7 +23,6 @@ export const StyledHeader = styled.div`
 
     background-color: ${colors.backgroundHeader};
     box-shadow: 0px 1px 15px 0px;
-    border-bottom: 1px solid black;
     font-weight: 600;
 
     @media (min-width: ${breakpoints.desktop}) {
@@ -43,12 +42,8 @@ export const StyledBurgerIcon = styled(BurgerIcon)`
 `
 
 const linkStyles = css`
-    text-align: center;
-    align-content: center;
-
-    text-decoration: none;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: ${fontSizes.mobile.content};
 `
 
 export const Logo = styled.div`
@@ -85,11 +80,10 @@ export const Menu = styled.div`
     top: ${headerHeight.mobile};
     left: 0;
 
-    width: 70vw;
+    width: 60vw;
     max-width: 30rem;
     height: calc(100% - ${headerHeight.mobile});
 
-    border: ${headerBorder};
     box-shadow: ${headerShadow};
     border-radius: 0 2rem 2rem 0;
     background-color: ${colors.backgroundHeader};
@@ -113,7 +107,11 @@ export const ButtonsSeparator = styled.div`
 
 const buttonStyles = css`
     ${linkStyles};
-    padding: 1rem 3rem;
+    text-align: center;
+    align-items: center;
+    margin: 1rem 0;
+
+    text-decoration: none;
 `
 
 export const NavLinkButton = styled(NavLink)`
