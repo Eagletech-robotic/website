@@ -1,5 +1,11 @@
 import styled from 'styled-components'
-import { colors, borderRadius, hoverTransitionTimingFunction } from '../../styles/commonStyles'
+import {
+    colors,
+    borderRadius,
+    hoverTransitionTimingFunction,
+    fontSizes,
+    breakpoints,
+} from '../../styles/commonStyles'
 import { Link } from 'react-router-dom'
 
 export const StyledPostSummary = styled(Link)`
@@ -31,17 +37,29 @@ export const ErrorInfo = styled.div`
 `
 
 export const Title = styled.h2`
-    font-size: 1.5rem;
+    font-size: ${fontSizes.mobile.heading2};
     font-weight: bold;
+
+    @media (min-width: ${breakpoints.tablet}) {
+        font-size: ${fontSizes.desktop.heading2};
+    }
 `
 
 export const Summary = styled.div`
-    font-size: 14px;
-    color: ${colors.textLight};
+    font-size: ${fontSizes.mobile.content};
+    color: ${colors.text};
     margin: 8px 0;
+
+    @media (min-width: ${breakpoints.tablet}) {
+        font-size: ${fontSizes.desktop.content};
+    }
 `
 
 export const Footer = styled.div`
-    font-size: 10px;
+    font-size: ${fontSizes.mobile.small};
     color: ${colors.textLight};
+
+    @media (min-width: ${breakpoints.tablet}) {
+        font-size: ${fontSizes.desktop.small};
+    }
 `

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled, { createGlobalStyle, css } from 'styled-components'
 
 export const colors = {
@@ -38,7 +39,7 @@ export const fontSizes = {
         heading1: '2rem',
         heading2: '1.5rem',
         content: '1rem',
-        small: '0.875rem',
+        small: '1rem',
     },
 }
 
@@ -57,10 +58,12 @@ export const GlobalStyle = createGlobalStyle`
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
+        font-size: ${fontSizes.mobile.content};
         word-break: break-word;
 
         @media (min-width: ${breakpoints.tablet}) {
             background-color: ${colors.background}; 
+            font-size: ${fontSizes.desktop.content};
         }
     }
 
@@ -77,16 +80,35 @@ export const GlobalStyle = createGlobalStyle`
     }
 `
 
-export const PageStructure = styled.div`
-    line-height: ${contentLineHeight};
-    padding: 0 1rem;
-    margin-top: 3rem;
-`
-
 export const mixin = {
     centerElement: css`
         display: flex;
         justify-content: center;
         align-items: center;
     `,
+
+    linkStyle: css`
+        color: ${colors.textLight};
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        transition: 0.1s ${hoverTransitionTimingFunction};
+
+        &:hover {
+            color: ${colors.text};
+        }
+    `,
 }
+
+export const PageStructure = styled.div`
+    line-height: ${contentLineHeight};
+    padding: 0 1rem;
+    margin-top: 3rem;
+`
+
+export const StyledLink = styled(Link)`
+    ${mixin.linkStyle}
+`
+
+export const StyledA = styled.a`
+    ${mixin.linkStyle}
+`

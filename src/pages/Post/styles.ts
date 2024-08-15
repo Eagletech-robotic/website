@@ -5,6 +5,7 @@ import {
     borderRadius,
     breakpoints,
     fontSizes,
+    mixin,
 } from '../../styles/commonStyles'
 
 export const Page = styled.div`
@@ -139,14 +140,7 @@ export const Content = styled.div`
     }
 
     a {
-        color: ${colors.textLight};
-        text-underline-offset: 4px;
-
-        transition: 100ms cubic-bezier(0.68, 0.04, 0.65, 0.98);
-
-        &:hover {
-            color: ${colors.text};
-        }
+        ${mixin.linkStyle}
     }
 
     hr {

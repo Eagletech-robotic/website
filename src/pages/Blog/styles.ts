@@ -1,6 +1,14 @@
 import styled from 'styled-components'
-import { blogMaxWidth, borderRadius, colors } from '../../styles/commonStyles'
+import {
+    blogMaxWidth,
+    borderRadius,
+    breakpoints,
+    colors,
+    fontSizes,
+    hoverTransitionTimingFunction,
+} from '../../styles/commonStyles'
 import { InlineLogo } from '../../styles/inlineLogo'
+import { Link } from 'react-router-dom'
 
 export const Page = styled.div`
     margin: 0 auto;
@@ -18,7 +26,11 @@ export const Intro = styled.div`
 
     margin: 1rem 0 2rem;
     color: ${colors.textLight};
-    font-size: 1rem;
+    font-size: ${fontSizes.mobile.content};
+
+    @media (min-width: ${breakpoints.tablet}) {
+        font-size: ${fontSizes.desktop.content};
+    }
 
     p {
         margin-bottom: 1rem;

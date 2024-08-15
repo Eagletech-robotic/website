@@ -1,9 +1,8 @@
-import { Link } from 'react-router-dom'
 import PostSummary from '../../components/PostSummary'
 import { useBlogPosts } from '../../utils/posts'
 import coupeDeRobotiqueLogo from '/images/CDR-logo.jpg'
 import { Intro, Page, Title } from './styles'
-import { PageStructure } from '../../styles/commonStyles'
+import { PageStructure, StyledA, StyledLink } from '../../styles/commonStyles'
 import { InlineLogo } from '../../styles/inlineLogo'
 
 export default function Blog() {
@@ -25,10 +24,12 @@ export default function Blog() {
                     <p>
                         As you may have seen, we are a new robotics club based in south of France.
                         The 2024-25 season will be our <b>first</b> time competing at the{' '}
-                        <a href="https://www.coupederobotique.fr/">Coupe de Robotique</a> national
-                        competition.
+                        <StyledA href="https://www.coupederobotique.fr/">
+                            Coupe de Robotique
+                        </StyledA>{' '}
+                        national competition.
                         <img src={coupeDeRobotiqueLogo}></img>
-                        Visit our <Link to="/about">about page</Link> to learn more!
+                        Visit our <StyledLink to="/about">about page</StyledLink> to learn more!
                     </p>
 
                     <p>
