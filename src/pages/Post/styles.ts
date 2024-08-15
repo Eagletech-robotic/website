@@ -32,6 +32,8 @@ export const Header = styled.div`
 `
 
 export const Title = styled.h1`
+    margin-bottom: 1rem;
+
     font-weight: bold;
     font-size: ${fontSizes.mobile.title};
     line-height: 1.2;
@@ -52,10 +54,10 @@ export const Info = styled.div`
     }
 `
 export const AuthorContainer = styled.div`
-    margin: 0.5rem 0;
+    margin-bottom: 0.5rem;
 
     @media (min-width: ${breakpoints.tablet}) {
-        margin: 1rem 0;
+        margin-bottom: 1rem;
     }
 `
 

@@ -52,6 +52,7 @@ export const headerShadow = '0px 0px 15px 0px black'
 
 export const GlobalStyle = createGlobalStyle`
     body {
+        overflow-y: scroll;
         background-color: white;
 
         color: ${colors.text};
@@ -66,6 +67,23 @@ export const GlobalStyle = createGlobalStyle`
             background-color: ${colors.background}; 
             font-size: ${fontSizes.desktop.content};
         }
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: none;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #888;
+        border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
     }
 
     a {
