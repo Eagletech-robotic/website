@@ -1,5 +1,11 @@
 import styled from 'styled-components'
-import { colors, blogMaxWidth, borderRadius, breakpoints } from '../../styles/commonStyles'
+import {
+    colors,
+    blogMaxWidth,
+    borderRadius,
+    breakpoints,
+    fontSizes,
+} from '../../styles/commonStyles'
 
 export const Page = styled.div`
     padding: 0;
@@ -20,24 +26,29 @@ export const ErrorInfo = styled.div`
 export const Header = styled.div`
     display: flex;
     flex-direction: column;
-    text-align: center;
 
     margin-bottom: 3rem;
 `
 
 export const Title = styled.h1`
-    font-weight: 900;
-    font-size: 2rem;
+    font-weight: bold;
+    font-size: ${fontSizes.mobile.title};
     line-height: 1.2;
 
     @media (min-width: ${breakpoints.tablet}) {
-        font-size: 3rem;
+        font-size: ${fontSizes.desktop.title};
     }
 `
 
 export const Info = styled.div`
+    font-size: ${fontSizes.mobile.small};
     display: block;
+    text-align: center;
     color: ${colors.textLight};
+
+    @media (min-width: ${breakpoints.tablet}) {
+        font-size: ${fontSizes.desktop.small};
+    }
 `
 export const AuthorContainer = styled.div`
     margin: 1rem 0;
@@ -57,34 +68,47 @@ export const Separator = styled.hr`
 `
 
 export const Content = styled.div`
-    font-size: 18px;
+    font-size: ${fontSizes.mobile.content};
+
+    @media (min-width: ${breakpoints.tablet}) {
+        font-size: ${fontSizes.desktop.content};
+    }
 
     p {
-        margin-bottom: 1rem;
+        margin-bottom: 1em;
     }
 
     h1,
     h2,
     h3 {
-        margin: 1.2em 0 0.8em;
+        margin: 1.5em 0 1em;
         font-weight: bold;
         line-height: 1.2;
     }
 
     h1 {
-        font-size: 2rem;
+        text-align: center;
+        font-size: ${fontSizes.mobile.heading1};
+
+        @media (min-width: ${breakpoints.tablet}) {
+            font-size: ${fontSizes.desktop.heading1};
+        }
 
         &:not(:first-child)::before {
             content: '';
             display: block;
-            margin: 1.5rem 0;
+            margin: 1em 0;
             height: 2px;
             background-color: #ddd;
         }
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: ${fontSizes.mobile.heading2};
+
+        @media (min-width: ${breakpoints.tablet}) {
+            font-size: ${fontSizes.desktop.heading2};
+        }
     }
 
     strong {
@@ -95,20 +119,16 @@ export const Content = styled.div`
         font-style: italic;
     }
 
-    ul {
-        margin-bottom: 1rem;
-    }
-
     ul > li {
         list-style: disc;
-        margin-left: 1.15em;
-        margin-bottom: 0.35rem;
+        margin-left: 2.5em;
+        margin-bottom: 0.5em;
     }
 
     ol > li {
         list-style: decimal;
-        margin-left: 1.15em;
-        margin-bottom: 0.35rem;
+        margin-left: 2.5em;
+        margin-bottom: 0.5em;
     }
 
     img {

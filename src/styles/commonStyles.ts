@@ -25,6 +25,23 @@ export const headerHeight = {
     desktop: '6rem',
 }
 
+export const fontSizes = {
+    desktop: {
+        title: '3rem',
+        heading1: '2rem',
+        heading2: '1.5rem',
+        content: '1.125rem',
+        small: '1rem',
+    },
+    mobile: {
+        title: '2.5rem',
+        heading1: '2rem',
+        heading2: '1.5rem',
+        content: '1rem',
+        small: '0.875rem',
+    },
+}
+
 export const contentLineHeight = '1.6'
 export const borderRadius = '12px'
 export const blogMaxWidth = '750px'
@@ -40,6 +57,7 @@ export const GlobalStyle = createGlobalStyle`
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
+        word-break: break-word;
 
         @media (min-width: ${breakpoints.tablet}) {
             background-color: ${colors.background}; 
