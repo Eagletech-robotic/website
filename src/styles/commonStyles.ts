@@ -35,8 +35,8 @@ export const fontSizes = {
         small: '1rem',
     },
     mobile: {
-        title: '2.5rem',
-        heading1: '2rem',
+        title: '2.25rem',
+        heading1: '1.75rem',
         heading2: '1.5rem',
         content: '1rem',
         small: '1rem',
