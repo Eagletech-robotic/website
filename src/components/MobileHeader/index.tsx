@@ -1,3 +1,4 @@
+import { CSSProperties } from 'styled-components'
 import { InlineLogo } from '../../styles/inlineLogo'
 import {
     ExternalLinkButton,
@@ -37,6 +38,10 @@ export function MobileHeader(): JSX.Element {
         setMenuVisible(false)
     }
 
+    const isVisibleStyle: CSSProperties = !menuVisible
+        ? { transform: 'translateX(-100%)', visibility: 'hidden' }
+        : {}
+
     return (
         <StyledHeader>
             <LogoLink to="/">
@@ -49,32 +54,30 @@ export function MobileHeader(): JSX.Element {
                 onClick={() => setMenuVisible(!menuVisible)}
             />
 
-            {menuVisible && (
-                <>
-                    <OpaqueBackground />
+            <>
+                <OpaqueBackground style={isVisibleStyle} />
 
-                    <Menu ref={refMenu}>
-                        <ButtonsContainer>
-                            <NavLinkButton to="/" onClick={handleLinkClick}>
-                                <InlineLogo /> Home
-                            </NavLinkButton>
-                            <NavLinkButton to="about" onClick={handleLinkClick}>
-                                🔎 About
-                            </NavLinkButton>
-                            <NavLinkButton to="blog" onClick={handleLinkClick}>
-                                📝 Blog
-                            </NavLinkButton>
+                <Menu ref={refMenu} style={isVisibleStyle}>
+                    <ButtonsContainer>
+                        <NavLinkButton to="/" onClick={handleLinkClick}>
+                            <InlineLogo /> Home
+                        </NavLinkButton>
+                        <NavLinkButton to="about" onClick={handleLinkClick}>
+                            🔎 About
+                        </NavLinkButton>
+                        <NavLinkButton to="blog" onClick={handleLinkClick}>
+                            📝 Blog
+                        </NavLinkButton>
 
-                            <ButtonsSeparator />
+                        <ButtonsSeparator />
 
-                            <ExternalLinkButton href="https://github.com/Eagletech-robotic">
-                                <GitHubLogo src={githubLogo} />
-                                Github
-                            </ExternalLinkButton>
-                        </ButtonsContainer>
-                    </Menu>
-                </>
-            )}
+                        <ExternalLinkButton href="https://github.com/Eagletech-robotic">
+                            <GitHubLogo src={githubLogo} />
+                            Github
+                        </ExternalLinkButton>
+                    </ButtonsContainer>
+                </Menu>
+            </>
         </StyledHeader>
     )
 }

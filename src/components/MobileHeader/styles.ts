@@ -1,7 +1,17 @@
 import { NavLink } from 'react-router-dom'
 import styled, { css } from 'styled-components'
-import { breakpoints, colors, headerHeight, mixin, zIndices } from '../../styles/commonStyles'
+import {
+    breakpoints,
+    colors,
+    headerBorder,
+    headerHeight,
+    headerShadow,
+    mixin,
+    zIndices,
+} from '../../styles/commonStyles'
 import BurgerIcon from './BurgerIcon'
+
+const menuPadding = '2rem'
 
 export const StyledHeader = styled.div`
     position: sticky;
@@ -72,25 +82,33 @@ export const OpaqueBackground = styled.div`
 export const Menu = styled.div`
     z-index: ${zIndices.menuMobile};
     position: fixed;
+    top: ${headerHeight.mobile};
     left: 0;
+
     width: 70vw;
     max-width: 30rem;
-    top: ${headerHeight.mobile};
-    height: 100%;
+    height: calc(100% - ${headerHeight.mobile});
+
+    border: ${headerBorder};
+    box-shadow: ${headerShadow};
+    border-radius: 0 2rem 2rem 0;
     background-color: ${colors.backgroundHeader};
+    transition: 0.3s cubic-bezier(0.33, 1, 0.67, 1);
 `
 
 export const ButtonsContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 2rem;
+    padding: ${menuPadding};
 `
 
 export const ButtonsSeparator = styled.div`
+    position: relative;
     border: 2px solid ${colors.text};
-    border-radius: 4px;
+    border-radius: 0 4px 4px 0;
     margin: 1rem 0;
+    left: -${menuPadding};
 `
 
 const buttonStyles = css`

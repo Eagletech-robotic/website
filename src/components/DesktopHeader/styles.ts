@@ -3,7 +3,9 @@ import styled, { css } from 'styled-components'
 import {
     breakpoints,
     colors,
+    headerBorder,
     headerHeight,
+    headerShadow,
     hoverTransitionTimingFunction,
     mixin,
     zIndices,
@@ -22,8 +24,8 @@ export const StyledHeader = styled.div`
     gap: 1rem;
 
     background-color: ${colors.backgroundHeader};
-    box-shadow: 0px 1px 15px 0px;
-    border-bottom: 1px solid black;
+    box-shadow: ${headerShadow};
+    border-bottom: ${headerBorder};
     font-weight: 600;
 
     @media not (min-width: ${breakpoints.desktop}) {

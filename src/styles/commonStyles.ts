@@ -49,6 +49,9 @@ export const blogMaxWidth = '750px'
 
 export const hoverTransitionTimingFunction = 'cubic-bezier(0, 0.04, 0, 1.01)'
 
+export const headerShadow = '0px 0px 15px 0px black'
+export const headerBorder = `1px solid black`
+
 export const GlobalStyle = createGlobalStyle`
     body {
         background-color: white;
