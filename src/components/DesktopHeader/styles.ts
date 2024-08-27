@@ -38,12 +38,12 @@ const linkStyles = css`
 
     text-decoration: none;
     cursor: pointer;
-    font-size: ${fontSizes.desktop.content};
+    font-size: ${fontSizes.desktop.small};
 
     transition: 0.3s ${hoverTransitionTimingFunction};
 
     &:hover {
-        transform: scale(1.15);
+        transform: scale(1.1);
     }
 `
 
