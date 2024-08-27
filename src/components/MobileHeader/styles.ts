@@ -13,9 +13,17 @@ import BurgerIcon from './BurgerIcon'
 
 const menuPadding = '2rem'
 
-export const StyledHeader = styled.div`
+export const HeaderContainer = styled.div`
     position: sticky;
     top: 0;
+
+    @media (min-width: ${breakpoints.desktop}) {
+        display: none;
+    }
+`
+
+export const StyledHeader = styled.div`
+    position: relative;
     height: ${headerHeight.mobile};
     z-index: ${zIndices.header};
 
@@ -23,11 +31,6 @@ export const StyledHeader = styled.div`
 
     background-color: ${colors.backgroundHeader};
     box-shadow: 0px 1px 15px 0px;
-    font-weight: 600;
-
-    @media (min-width: ${breakpoints.desktop}) {
-        display: none;
-    }
 `
 
 export const StyledBurgerIcon = styled(BurgerIcon)`
@@ -87,6 +90,7 @@ export const Menu = styled.div`
     box-shadow: ${headerShadow};
     border-radius: 0 2rem 2rem 0;
     background-color: ${colors.backgroundHeader};
+    font-weight: 600;
     transition: 0.3s cubic-bezier(0.33, 1, 0.67, 1);
 `
 

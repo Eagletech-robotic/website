@@ -12,6 +12,7 @@ import {
     ButtonsContainer,
     OpaqueBackground,
     ButtonsSeparator,
+    HeaderContainer,
 } from './styles'
 import githubLogo from '/images/github-mark.svg'
 import logo from '/images/logo.png'
@@ -43,41 +44,40 @@ export function MobileHeader(): JSX.Element {
         : {}
 
     return (
-        <StyledHeader>
-            <LogoLink to="/">
-                <LogoImage src={logo} />
-            </LogoLink>
+        <HeaderContainer>
+            <StyledHeader>
+                <LogoLink to="/">
+                    <LogoImage src={logo} />
+                </LogoLink>
 
-            <StyledBurgerIcon
-                ref={refIcon}
-                open={menuVisible}
-                onClick={() => setMenuVisible(!menuVisible)}
-            />
+                <StyledBurgerIcon
+                    ref={refIcon}
+                    open={menuVisible}
+                    onClick={() => setMenuVisible(!menuVisible)}
+                />
+            </StyledHeader>
 
-            <>
-                <OpaqueBackground style={isVisibleStyle} />
+            <OpaqueBackground style={isVisibleStyle} />
+            <Menu ref={refMenu} style={isVisibleStyle}>
+                <ButtonsContainer>
+                    <NavLinkButton to="/" onClick={handleLinkClick}>
+                        <InlineLogo /> Home
+                    </NavLinkButton>
+                    <NavLinkButton to="about" onClick={handleLinkClick}>
+                        🔎 About
+                    </NavLinkButton>
+                    <NavLinkButton to="blog" onClick={handleLinkClick}>
+                        📝 Blog
+                    </NavLinkButton>
 
-                <Menu ref={refMenu} style={isVisibleStyle}>
-                    <ButtonsContainer>
-                        <NavLinkButton to="/" onClick={handleLinkClick}>
-                            <InlineLogo /> Home
-                        </NavLinkButton>
-                        <NavLinkButton to="about" onClick={handleLinkClick}>
-                            🔎 About
-                        </NavLinkButton>
-                        <NavLinkButton to="blog" onClick={handleLinkClick}>
-                            📝 Blog
-                        </NavLinkButton>
+                    <ButtonsSeparator />
 
-                        <ButtonsSeparator />
-
-                        <ExternalLinkButton href="https://github.com/Eagletech-robotic">
-                            <GitHubLogo src={githubLogo} />
-                            Github
-                        </ExternalLinkButton>
-                    </ButtonsContainer>
-                </Menu>
-            </>
-        </StyledHeader>
+                    <ExternalLinkButton href="https://github.com/Eagletech-robotic">
+                        <GitHubLogo src={githubLogo} />
+                        Github
+                    </ExternalLinkButton>
+                </ButtonsContainer>
+            </Menu>
+        </HeaderContainer>
     )
 }
