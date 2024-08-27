@@ -38,7 +38,7 @@ const linkStyles = css`
 
     text-decoration: none;
     cursor: pointer;
-    font-size: ${fontSizes.desktop.small};
+    font-size: ${fontSizes.desktop.content};
 
     transition: 0.3s ${hoverTransitionTimingFunction};
 

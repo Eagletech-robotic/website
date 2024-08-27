@@ -13,8 +13,8 @@ export const StyledPostSummary = styled(Link)`
 `
 
 export const Container = styled.div`
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
 
     background-color: white;
     border: 1px solid ${colors.border};
@@ -23,11 +23,11 @@ export const Container = styled.div`
     transition: 0.3s ${hoverTransitionTimingFunction};
 
     &:hover {
-        transform: scale(1.05);
+        transform: scale(1.03);
     }
 
     &:active {
-        transform: scale(0.95);
+        transform: scale(0.97);
     }
 `
 
@@ -47,7 +47,7 @@ export const Title = styled.h2`
 
 export const Summary = styled.div`
     font-size: ${fontSizes.mobile.content};
-    color: ${colors.text};
+    color: ${colors.textLight};
     margin: 8px 0;
 
     @media (min-width: ${breakpoints.tablet}) {

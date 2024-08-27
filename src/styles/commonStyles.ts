@@ -32,14 +32,14 @@ export const fontSizes = {
         heading1: '2rem',
         heading2: '1.5rem',
         content: '1.125rem',
-        small: '1rem',
+        small: '0.9rem',
     },
     mobile: {
         title: '2.25rem',
         heading1: '1.75rem',
         heading2: '1.5rem',
         content: '1rem',
-        small: '1rem',
+        small: '0.85rem',
     },
 }
 
