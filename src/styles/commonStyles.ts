@@ -110,7 +110,7 @@ export const mixin = {
         color: ${colors.textLight};
         text-decoration: underline;
         text-underline-offset: 4px;
-        transition: 0.1s ${hoverTransitionTimingFunction};
+        transition: 0.2s ${hoverTransitionTimingFunction};
 
         &:hover {
             color: ${colors.text};
