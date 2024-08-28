@@ -6,6 +6,7 @@ import remarkFrontmatter from 'remark-frontmatter'
 import remarkRehype from 'remark-rehype'
 import rehypeKatex from 'rehype-katex'
 import rehypeStringify from 'rehype-stringify'
+import rehypePrettyCode from 'rehype-pretty-code'
 import { matter } from 'vfile-matter'
 import { VFile } from 'remark-rehype/lib'
 import React from 'react'
@@ -31,7 +32,13 @@ export function checkFrontMatter(
         return { result: errors, isError: true }
     } else {
         return {
-            result: { author: author!, date: date!, summary: summary!, title: title!, draft: draft! },
+            result: {
+                author: author!,
+                date: date!,
+                summary: summary!,
+                title: title!,
+                draft: draft!,
+            },
             isError: false,
         }
     }
@@ -64,11 +71,15 @@ async function fetchBlogPosts(): Promise<BlogPost[]> {
     const promises: Array<Promise<BlogPost | null>> = markdowns.map(async (markdown) => {
         const vfile = unified()
             .use(remarkParse)
-            .use(remarkRehype)
             .use(remarkGfm)
             .use(remarkMath)
             .use(remarkFrontmatter)
+            .use(remarkRehype)
             .use(rehypeKatex)
+            .use(rehypePrettyCode, {
+                defaultLang: 'plaintext',
+                theme: 'dark-plus'
+            })
             .use(rehypeStringify)
             .use(() => (_tree: any, file: VFile) => matter(file))
             .process(markdown.value)
