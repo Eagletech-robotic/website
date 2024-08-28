@@ -75,6 +75,17 @@ const CodeStyles = css`
         }
     }
 
+    code [data-highlighted-chars] {
+        border-radius: 0.25em;
+        background-color: #aaa5;
+    }
+
+    code [data-highlighted-line] {
+        border-radius: 0.25em;
+        width: fit-content;
+        background-color: #88d5;
+    }
+
     figcaption {
         display: none;
     }

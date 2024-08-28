@@ -16,7 +16,7 @@ Hey, watch our [Github](https://github.com/Eagletech-robotic/website)!
 `This is inline Rust code!{:rs}`
 And,
 
-```tsx title="Code Block!" {2} /remark/
+```tsx title="Code Block!" {2-4} /remark/
 // This is a block of tsx code to test and to show off the syntax highlighting!
 import * as React from 'react'
 import { unified } from 'unified'
