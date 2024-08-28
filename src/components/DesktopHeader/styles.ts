@@ -35,15 +35,20 @@ export const StyledHeader = styled.div`
 const linkStyles = css`
     text-align: center;
     align-content: center;
+    height: 100%;
+    padding: 0 2rem;
 
     text-decoration: none;
     cursor: pointer;
     font-size: ${fontSizes.desktop.content};
+    transition: 0.5s ${hoverTransitionTimingFunction};
+`
 
-    transition: 0.3s ${hoverTransitionTimingFunction};
+const scaleOnHoverLinkStyles = css`
+    ${linkStyles};
 
     &:hover {
-        transform: scale(1.1);
+        transform: scale(1.125);
     }
 `
 
@@ -53,7 +58,7 @@ export const Logo = styled.div`
 `
 
 export const LogoLink = styled(NavLink)`
-    ${linkStyles};
+    ${scaleOnHoverLinkStyles};
     height: 100%;
     padding: 0.75rem 3rem;
 `
@@ -72,16 +77,10 @@ export const Links = styled.div`
     gap: 1rem;
 `
 
-const buttonStyles = css`
-    ${linkStyles};
-    padding: 1rem 3rem;
-`
-
 export const NavLinkButton = styled(NavLink)`
-    ${buttonStyles}
+    ${linkStyles}
 
-    border: 2px solid black;
-    border-radius: 2rem;
+    position: relative;
 
     &.active {
         border-color: ${colors.primary};
@@ -89,13 +88,30 @@ export const NavLinkButton = styled(NavLink)`
     }
 
     &:hover {
-        border-color: ${colors.primary};
         color: ${colors.primary};
+
+        &::after {
+            width: 100%;
+        }
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 4px;
+
+        border-radius: 2px;
+        background: ${colors.primary};
+        transition: width 0.5s ${hoverTransitionTimingFunction} 0s;
     }
 `
 
 export const ExternalLinkButton = styled.a`
-    ${buttonStyles}
+    ${scaleOnHoverLinkStyles}
 
     display: flex;
     border: none;
@@ -103,6 +119,10 @@ export const ExternalLinkButton = styled.a`
 
     justify-content: center;
     align-items: center;
+
+    &:hover {
+        transform: scale(1.1);
+    }
 `
 
 export const GitHubLogo = styled.img`

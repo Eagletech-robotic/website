@@ -6,6 +6,7 @@ import {
     fontSizes,
     headerHeight,
     headerShadow,
+    hoverTransitionTimingFunction,
     mixin,
     zIndices,
 } from '../../styles/commonStyles'
@@ -91,7 +92,7 @@ export const Menu = styled.div`
     border-radius: 0 2rem 2rem 0;
     background-color: ${colors.backgroundHeader};
     font-weight: 600;
-    transition: 0.3s cubic-bezier(0.33, 1, 0.67, 1);
+    transition: 0.5s ${hoverTransitionTimingFunction};
 `
 
 export const ButtonsContainer = styled.div`

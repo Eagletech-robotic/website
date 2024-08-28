@@ -23,7 +23,7 @@ export const zIndices = {
 
 export const headerHeight = {
     mobile: '4rem',
-    desktop: '6rem',
+    desktop: '5rem',
 }
 
 export const fontSizes = {
@@ -47,7 +47,7 @@ export const contentLineHeight = '1.6'
 export const borderRadius = '12px'
 export const blogMaxWidth = '750px'
 
-export const hoverTransitionTimingFunction = 'cubic-bezier(0, 0.04, 0, 1.01)'
+export const hoverTransitionTimingFunction = 'cubic-bezier(0.25, 0.8, 0.24, 1)'
 export const headerShadow = '0px 0px 15px 0px black'
 
 export const GlobalStyle = createGlobalStyle`
