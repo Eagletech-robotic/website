@@ -50,11 +50,12 @@ const CodeStyles = css`
         overflow-x: auto;
 
         font-family: 'Fira Code', monospace;
-        line-height: ${codeLineHeight};
+        line-height: ${codeLineHeight.mobile};
         font-size: ${fontSizes.mobile.small};
 
         @media (min-width: ${breakpoints.tablet}) {
             font-size: ${fontSizes.desktop.content};
+            line-height: ${codeLineHeight.desktop};
         }
     }
 

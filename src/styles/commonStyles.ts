@@ -45,7 +45,10 @@ export const fontSizes = {
 }
 
 export const contentLineHeight = '1.6'
-export const codeLineHeight = '1.4'
+export const codeLineHeight = {
+    desktop: '1.6',
+    mobile: '1.4',
+}
 export const borderRadius = '12px'
 export const blogMaxWidth = '750px'
 
