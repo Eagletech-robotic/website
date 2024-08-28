@@ -2,6 +2,7 @@ import { useLoaderData } from 'react-router-dom'
 import { checkFrontMatter, getBlogPostById } from '../../utils/posts'
 import { Author, AuthorContainer, Content, DateText, ErrorInfo, Header, Info, Page, Separator, Title } from './styles'
 import { PageStructure } from '../../styles/commonStyles'
+import { isoToFullDate } from '../../utils/date'
 
 export async function loader({ params }: any): Promise<BlogPost> {
     const post = await getBlogPostById(params.postId)
@@ -40,10 +41,10 @@ export default function Post() {
                     <Title>{title}</Title>
                     <Info>
                         <AuthorContainer>
-                            By
+                            Par
                             <Author>{author}</Author>
                         </AuthorContainer>
-                        <DateText>{date}</DateText>
+                        <DateText>{isoToFullDate(date)}</DateText>
                     </Info>
                 </Header>
 

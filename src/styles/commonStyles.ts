@@ -40,11 +40,12 @@ export const fontSizes = {
         heading1: '1.75rem',
         heading2: '1.5rem',
         content: '1rem',
-        small: '0.85rem',
+        small: '0.88rem',
     },
 }
 
 export const contentLineHeight = '1.6'
+export const codeLineHeight = '1.4'
 export const borderRadius = '12px'
 export const blogMaxWidth = '750px'
 
