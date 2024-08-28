@@ -17,7 +17,7 @@ Hey, watch our [Github](https://github.com/Eagletech-robotic/website)!
 And,
 
 ```tsx title="Code Block!" {2} /remark/
-// This is a block tsx code
+// This is a block of tsx code to test and to show off the syntax highlighting!
 import * as React from 'react'
 import { unified } from 'unified'
 import remarkParse from 'remark-parse'

@@ -6,6 +6,7 @@ import {
     breakpoints,
     fontSizes,
     mixin,
+    codeLineHeight,
 } from '../../styles/commonStyles'
 
 const CodeStyles = css`
@@ -31,13 +32,24 @@ const CodeStyles = css`
     }
 
     pre {
-        padding: 1em 1.5em;
+        padding: 0.5em 0.5em;
+
+        @media (min-width: ${breakpoints.tablet}) {
+            padding: 1em 1.5em;
+        }
     }
 
     code {
-        overflow-x: auto;
-        font-family: 'Fira Code', monospace;
         padding: 0.3em 0.5em;
+        overflow-x: auto;
+
+        font-family: 'Fira Code', monospace;
+        line-height: ${codeLineHeight};
+        font-size: ${fontSizes.mobile.small};
+
+        @media (min-width: ${breakpoints.tablet}) {
+            font-size: ${fontSizes.desktop.content};
+        }
     }
 
     code[data-line-numbers] {
@@ -50,13 +62,45 @@ const CodeStyles = css`
 
         display: inline-block;
         width: 0.75rem;
-        margin-right: 2.25rem;
+        margin-right: 1.75em;
         text-align: right;
         color: gray;
+
+        @media (min-width: ${breakpoints.tablet}) {
+            margin-right: 2.25em;
+        }
     }
 
     figcaption {
         display: none;
+    }
+
+    // Disable copy button for inline code
+    .rehype-pretty-copy:not(pre .rehype-pretty-copy) {
+        display: none;
+    }
+
+    .rehype-pretty-copy {
+        top: 0;
+        right: 0;
+        margin: 0;
+        border: none;
+        background-color: transparent;
+
+        padding: 0.5em;
+        box-sizing: content-box;
+        height: 1.5em;
+        width: 1.5em;
+        cursor: pointer;
+
+        .ready {
+            background-image: url(/images/copy-icon.svg);
+        }
+
+        .ready,
+        .success {
+            background-repeat: no-repeat;
+        }
     }
 `
 
