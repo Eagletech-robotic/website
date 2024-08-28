@@ -16,8 +16,8 @@ Hey, watch our [Github](https://github.com/Eagletech-robotic/website)!
 `This is inline Rust code!{:rs}`
 And,
 
-```tsx {2} /remark/
-//this is a block tsx code
+```tsx title="Code Block!" caption="with a caption!" {2} /remark/
+// This is a block tsx code
 import * as React from 'react'
 import { unified } from 'unified'
 import remarkParse from 'remark-parse'

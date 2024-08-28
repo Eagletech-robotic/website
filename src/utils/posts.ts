@@ -1,4 +1,4 @@
-import { unified } from 'unified'
+import { Plugin, unified } from 'unified'
 import remarkParse from 'remark-parse'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
@@ -7,6 +7,7 @@ import remarkRehype from 'remark-rehype'
 import rehypeKatex from 'rehype-katex'
 import rehypeStringify from 'rehype-stringify'
 import rehypePrettyCode from 'rehype-pretty-code'
+import { visit } from 'unist-util-visit'
 import { matter } from 'vfile-matter'
 import { VFile } from 'remark-rehype/lib'
 import React from 'react'
@@ -78,8 +79,9 @@ async function fetchBlogPosts(): Promise<BlogPost[]> {
             .use(rehypeKatex)
             .use(rehypePrettyCode, {
                 defaultLang: 'plaintext',
-                theme: 'dark-plus'
+                theme: 'dark-plus',
             })
+            .use(addLineNumbers)
             .use(rehypeStringify)
             .use(() => (_tree: any, file: VFile) => matter(file))
             .process(markdown.value)
@@ -98,6 +100,19 @@ async function fetchBlogPosts(): Promise<BlogPost[]> {
 
     const blogPosts = (await Promise.all(promises)).filter((item) => item != null)
     return blogPosts
+}
+
+function addLineNumbers() {
+    return (tree: any) => {
+        visit(tree, 'element', (node) => {
+            if (node.tagName === 'pre' && node.children[0]?.tagName === 'code') {
+                node.children[0].properties = {
+                    ...node.children[0].properties,
+                    'data-line-numbers': true,
+                }
+            }
+        })
+    }
 }
 
 function shouldDisplay(post: BlogPost): boolean {

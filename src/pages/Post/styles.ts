@@ -145,6 +145,37 @@ export const Content = styled.div`
         border: 1px solid ${colors.border};
     }
 
+    pre {
+        overflow-x: auto;
+        padding: 1em 1.5em;
+    }
+
+    code {
+        font-family: 'Fira Code', monospace;
+        padding: 0.2em 0.4em;
+    }
+
+    code[data-line-numbers] {
+        counter-reset: line;
+    }
+
+    code[data-line-numbers] > [data-line]::before {
+        counter-increment: line;
+        content: counter(line);
+
+        display: inline-block;
+        width: 0.75rem;
+        margin-right: 2.25rem;
+        text-align: right;
+        color: gray;
+    }
+
+    figcaption {
+        text-align: center;
+        background-color: black;
+        color: white;
+    }
+
     a {
         ${mixin.linkStyle}
     }
