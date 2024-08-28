@@ -31,9 +31,10 @@ export const StyledHeader = styled.div`
 `
 
 export const HeaderContainer = styled.div`
-    display: flex;
-    justify-content: space-between;
-    width: calc(50% + ${blogMaxWidth} / 2);
+    display: grid;
+    grid-template-columns: 1fr ${blogMaxWidth} 1fr;
+    grid-template-rows: ${headerHeight.desktop};
+    width: 100%;
     height: 100%;
 `
 
@@ -56,6 +57,7 @@ const scaleOnHover = css`
 `
 
 export const Logo = styled.div`
+    height: 100%;
     margin: 0 auto;
     ${mixin.centerElement};
 `
