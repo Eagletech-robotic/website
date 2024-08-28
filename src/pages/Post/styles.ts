@@ -52,6 +52,10 @@ const CodeStyles = css`
         }
     }
 
+    code:not(pre code) {
+        border-radius: ${borderRadius};
+    }
+
     code[data-line-numbers] {
         counter-reset: line;
     }

@@ -52,7 +52,7 @@ export const blogMaxWidth = '750px'
 export const hoverTransitionTimingFunction = 'cubic-bezier(0.25, 0.8, 0.24, 1)'
 export const headerShadow = '0px 0px 15px 0px black'
 
-export const GlobalStyle = createGlobalStyle`
+const styles = css`
     body {
         overflow-y: scroll;
         background-color: white;
@@ -66,8 +66,26 @@ export const GlobalStyle = createGlobalStyle`
         word-break: break-word;
 
         @media (min-width: ${breakpoints.tablet}) {
-            background-color: ${colors.background}; 
+            background-color: ${colors.background};
             font-size: ${fontSizes.desktop.content};
+        }
+    }
+
+    ::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 2px;
+        background-color: #888;
+
+        &:hover {
+            background-color: #555;
         }
     }
 
@@ -83,6 +101,8 @@ export const GlobalStyle = createGlobalStyle`
         font-style: italic;
     }
 `
+
+export const GlobalStyle = createGlobalStyle`${styles}`
 
 export const mixin = {
     centerElement: css`
