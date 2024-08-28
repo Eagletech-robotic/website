@@ -15,6 +15,7 @@ import BurgerIcon from './BurgerIcon'
 const menuPadding = '2rem'
 
 export const HeaderContainer = styled.div`
+    z-index: ${zIndices.headerContainer};
     position: sticky;
     top: 0;
 

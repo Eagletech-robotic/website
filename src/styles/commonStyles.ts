@@ -16,9 +16,10 @@ export const breakpoints = {
 }
 
 export const zIndices = {
-    contentCover: 5,
-    header: 10,
-    menuMobile: 9,
+    headerContainer: 20,
+    contentCover: 25,
+    menuMobile: 30,
+    header: 35,
 }
 
 export const headerHeight = {
