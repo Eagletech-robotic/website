@@ -69,23 +69,6 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
 
-    ::-webkit-scrollbar {
-        width: 10px;
-    }
-
-    ::-webkit-scrollbar-track {
-        background: none;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background: #888;
-        border-radius: 5px;
-    }
-
-    ::-webkit-scrollbar-thumb:hover {
-        background: #555;
-    }
-
     a {
         color: inherit;
     }

@@ -154,4 +154,8 @@ export const Content = styled.div`
         border-radius: ${borderRadius};
         margin: 28px 0;
     }
+
+    .katex-display {
+        overflow-x: auto;
+    }
 `
