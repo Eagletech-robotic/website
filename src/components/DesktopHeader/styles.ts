@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import styled, { css } from 'styled-components'
 import {
+    blogMaxWidth,
     breakpoints,
     colors,
     fontSizes,
@@ -18,9 +19,6 @@ export const StyledHeader = styled.div`
     z-index: ${zIndices.header};
 
     display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    overflow: hidden;
     gap: 1rem;
 
     background-color: ${colors.backgroundHeader};
@@ -30,6 +28,13 @@ export const StyledHeader = styled.div`
     @media not (min-width: ${breakpoints.desktop}) {
         display: none;
     }
+`
+
+export const HeaderContainer = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: calc(50% + ${blogMaxWidth} / 2);
+    height: 100%;
 `
 
 const linkStyles = css`
@@ -44,23 +49,24 @@ const linkStyles = css`
     transition: 0.5s ${hoverTransitionTimingFunction};
 `
 
-const scaleOnHoverLinkStyles = css`
-    ${linkStyles};
-
+const scaleOnHover = css`
     &:hover {
         transform: scale(1.125);
     }
 `
 
 export const Logo = styled.div`
-    flex-grow: 1;
+    margin: 0 auto;
     ${mixin.centerElement};
 `
 
 export const LogoLink = styled(NavLink)`
-    ${scaleOnHoverLinkStyles};
+    ${linkStyles}
+    ${scaleOnHover}
+
     height: 100%;
     padding: 0.75rem 3rem;
+    margin: 0 auto;
 `
 
 export const LogoImage = styled.img`
@@ -69,11 +75,9 @@ export const LogoImage = styled.img`
 `
 
 export const Links = styled.div`
-    flex-grow: 2;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: row;
+    justify-content: space-between;
+    width: ${blogMaxWidth};
     gap: 1rem;
 `
 
@@ -111,7 +115,8 @@ export const NavLinkButton = styled(NavLink)`
 `
 
 export const ExternalLinkButton = styled.a`
-    ${scaleOnHoverLinkStyles}
+    ${linkStyles}
+    ${scaleOnHover}
 
     display: flex;
     border: none;
