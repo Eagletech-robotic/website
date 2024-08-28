@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import {
     colors,
     blogMaxWidth,
@@ -7,6 +7,58 @@ import {
     fontSizes,
     mixin,
 } from '../../styles/commonStyles'
+
+const CodeStyles = css`
+    figure {
+        overflow: hidden;
+        border-radius: ${borderRadius};
+        margin-bottom: 1em;
+    }
+
+    [data-rehype-pretty-code-title] {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5em 1em;
+
+        background-color: ${colors.primary};
+        color: white;
+        font-weight: bold;
+
+        &::after {
+            content: attr(data-language);
+            font-weight: normal;
+        }
+    }
+
+    pre {
+        padding: 1em 1.5em;
+    }
+
+    code {
+        overflow-x: auto;
+        font-family: 'Fira Code', monospace;
+        padding: 0.3em 0.5em;
+    }
+
+    code[data-line-numbers] {
+        counter-reset: line;
+    }
+
+    code[data-line-numbers] > [data-line]::before {
+        counter-increment: line;
+        content: counter(line);
+
+        display: inline-block;
+        width: 0.75rem;
+        margin-right: 2.25rem;
+        text-align: right;
+        color: gray;
+    }
+
+    figcaption {
+        display: none;
+    }
+`
 
 export const Page = styled.div`
     padding: 0;
@@ -145,37 +197,6 @@ export const Content = styled.div`
         border: 1px solid ${colors.border};
     }
 
-    pre {
-        overflow-x: auto;
-        padding: 1em 1.5em;
-    }
-
-    code {
-        font-family: 'Fira Code', monospace;
-        padding: 0.2em 0.4em;
-    }
-
-    code[data-line-numbers] {
-        counter-reset: line;
-    }
-
-    code[data-line-numbers] > [data-line]::before {
-        counter-increment: line;
-        content: counter(line);
-
-        display: inline-block;
-        width: 0.75rem;
-        margin-right: 2.25rem;
-        text-align: right;
-        color: gray;
-    }
-
-    figcaption {
-        text-align: center;
-        background-color: black;
-        color: white;
-    }
-
     a {
         ${mixin.linkStyle}
     }
@@ -189,4 +210,6 @@ export const Content = styled.div`
     .katex-display {
         overflow-x: auto;
     }
+
+    ${CodeStyles}
 `
