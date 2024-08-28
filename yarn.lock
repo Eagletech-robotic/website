@@ -404,6 +404,11 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@rehype-pretty/transformers@^0.13.2":
+  version "0.13.2"
+  resolved "https://registry.yarnpkg.com/@rehype-pretty/transformers/-/transformers-0.13.2.tgz#10aa3eccf44a55c8721eaea74d4759e3fe522e7d"
+  integrity sha512-p2ciQSwqy5Ip8aNUa9q6rdS/hJZXrxHYYfDVOHvKOsBu3t9HDmQ65YX6r9Qbl19vi160OAxmGF7MIoCRDJrRhg==
+
 "@remix-run/router@1.19.0":
   version "1.19.0"
   resolved "https://registry.yarnpkg.com/@remix-run/router/-/router-1.19.0.tgz#745dbffbce67f05386d57ca22c51dfd85c979593"

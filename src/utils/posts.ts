@@ -1,4 +1,4 @@
-import { Plugin, unified } from 'unified'
+import { unified } from 'unified'
 import remarkParse from 'remark-parse'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
@@ -7,6 +7,7 @@ import remarkRehype from 'remark-rehype'
 import rehypeKatex from 'rehype-katex'
 import rehypeStringify from 'rehype-stringify'
 import rehypePrettyCode from 'rehype-pretty-code'
+import { transformerCopyButton } from '@rehype-pretty/transformers'
 import { visit } from 'unist-util-visit'
 import { matter } from 'vfile-matter'
 import { VFile } from 'remark-rehype/lib'
@@ -80,6 +81,12 @@ async function fetchBlogPosts(): Promise<BlogPost[]> {
             .use(rehypePrettyCode, {
                 defaultLang: 'plaintext',
                 theme: 'dark-plus',
+                transformers: [
+                    transformerCopyButton({
+                        visibility: 'always',
+                        feedbackDuration: 3_000,
+                    }),
+                ],
             })
             .use(addLineNumbers)
             .use(rehypeStringify)
