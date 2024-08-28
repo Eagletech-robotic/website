@@ -9,6 +9,8 @@ import {
     codeLineHeight,
 } from '../../styles/commonStyles'
 
+const codeBlockLeftRightPadding = '1.5em'
+
 const CodeStyles = css`
     figure {
         overflow: hidden;
@@ -35,12 +37,16 @@ const CodeStyles = css`
         padding: 0.5em 0.5em;
 
         @media (min-width: ${breakpoints.tablet}) {
-            padding: 1em 1.5em;
+            padding: 1em 0;
         }
     }
 
-    code {
+    code:not(pre code) {
         padding: 0.3em 0.5em;
+    }
+
+    code {
+        padding-bottom: 0.5em;
         overflow-x: auto;
 
         font-family: 'Fira Code', monospace;
@@ -75,15 +81,22 @@ const CodeStyles = css`
         }
     }
 
+    pre code [data-line] {
+        padding: 0 ${codeBlockLeftRightPadding};
+    }
+
     code [data-highlighted-chars] {
         border-radius: 0.25em;
         background-color: #aaa5;
     }
 
     code [data-highlighted-line] {
-        border-radius: 0.25em;
-        width: fit-content;
-        background-color: #88d5;
+        width: 100%;
+        background-color: #c8c8ff1a;
+    }
+
+    code::-webkit-scrollbar-track {
+        margin: ${codeBlockLeftRightPadding};
     }
 
     figcaption {
