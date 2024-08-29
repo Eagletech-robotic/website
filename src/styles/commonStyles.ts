@@ -8,6 +8,8 @@ export const colors = {
     background: '#f5f5f5',
     backgroundHeader: '#fcfcfc',
     border: '#eee',
+    highlight: '#f9f9f9',
+    codeHighlight: '#aaa5',
 }
 
 export const breakpoints = {

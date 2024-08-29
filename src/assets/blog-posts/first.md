@@ -57,7 +57,13 @@ async function highlightCode(code: string) {
 2. a
 3. list.
 
-### A plugin!
+## A plugin and a blockquote!
 
-Wow, look at that! `remarkGfm` plugin allows you to write links directly!
-www.google.com
+> Wow, look at that! `remarkGfm` plugin allows you to write links directly!
+> www.google.com. **Yeah, that's a blockquote!**
+>
+> ## haha
+
+## Let's have fun with images!
+
+![Logo](/images/logo.png)

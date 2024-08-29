@@ -44,7 +44,7 @@ const CodeStyles = css`
     [data-code-type='inline'] {
         padding: 0.3em 0.5em;
         border-radius: ${borderRadius};
-        background-color: #0b141a0f;
+        background-color: ${colors.codeHighlight};
     }
 
     [data-code-type='block'] {
@@ -90,7 +90,7 @@ const CodeStyles = css`
 
         [data-highlighted-chars] {
             border-radius: 0.25em;
-            background-color: #aaa5;
+            background-color: ${colors.codeHighlight};
         }
 
         [data-highlighted-line] {
@@ -266,6 +266,19 @@ export const Content = styled.div`
 
         border-radius: ${borderRadius};
         border: 1px solid ${colors.border};
+    }
+
+    blockquote {
+        margin: 1em 0;
+        padding: 0.5em 1em;
+
+        border-left: 4px solid ${colors.primary};
+        border-radius: ${borderRadius};
+        background-color: ${colors.highlight};
+
+        :last-child {
+            margin-bottom: 0;
+        }
     }
 
     a {
