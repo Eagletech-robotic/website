@@ -303,38 +303,32 @@ export const Content = styled.div`
         border-radius: ${borderRadius};
         overflow: hidden;
         border: 2px solid ${colors.primary};
+        margin-bottom: 1em;
     }
 
     th,
     td {
         padding: 0.5em;
-        border: 1px solid ${colors.primary};
     }
 
     th {
-        background-color: ${colors.highlight};
-        text-align: left;
+        background-color: ${colors.primary};
+        text-align: center;
         font-weight: bold;
+        color: white;
+        border-bottom: 2px solid ${colors.border};
     }
 
-    table tbody :last-child td {
-        border-bottom: none;
+    tr:not(:last-child) td {
+        border-bottom: 2px solid ${colors.border};
     }
 
-    table thead:first-child th {
-        border-top: none;
-    }
-
-    table tr :first-child {
-        border-left: none;
-    }
-
-    table tr :last-child {
-        border-right: none;
+    td:not(:last-child) {
+        border-right: 2px solid ${colors.border};
     }
 
     table tr:hover td {
-        background-color: #f1f1f1;
+        background-color: ${colors.highlight};
     }
 
     ${CodeStyles}

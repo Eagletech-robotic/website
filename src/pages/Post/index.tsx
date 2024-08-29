@@ -1,6 +1,17 @@
 import { useLoaderData } from 'react-router-dom'
 import { checkFrontMatter, getBlogPostById } from '../../utils/posts'
-import { Author, AuthorContainer, Content, DateText, ErrorInfo, Header, Info, Page, Separator, Title } from './styles'
+import {
+    Author,
+    AuthorContainer,
+    Content,
+    DateText,
+    ErrorInfo,
+    Header,
+    Info,
+    Page,
+    Separator,
+    Title,
+} from './styles'
 import { PageStructure } from '../../styles/commonStyles'
 import { isoToFullDate } from '../../utils/date'
 
@@ -33,7 +44,6 @@ export default function Post() {
     }
 
     const { author, title, date } = result
-
     return (
         <PageStructure>
             <Page>

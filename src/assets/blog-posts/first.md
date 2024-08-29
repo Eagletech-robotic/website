@@ -13,9 +13,6 @@ This is the **first** markdown file _ever_ uploaded as a test!
 ## Some text
 
 Hey, watch our [Github](https://github.com/Eagletech-robotic/website)!
-
-<div>A div</div>
-
 `This is inline code!`
 And,
 
@@ -82,11 +79,13 @@ $$
 -   [x] Task list
 -   [ ] Task list
 
-| Tables        |      Are      |  Cool |
-| :------------ | :-----------: | ----: |
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      |   centered    |   $12 |
-| zebra stripes |   are neat    |    $1 |
+| Tables          |      Are      |    Cool |
+| :-------------- | :-----------: | ------: |
+| col 3 is        | right-aligned |   $1600 |
+| col 2 is        |   centered    | **$12** |
+| _zebra stripes_ |   are neat    |      $1 |
+
+Pretty cool, right?
 
 ## Let's have fun with images!
 
