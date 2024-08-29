@@ -12,7 +12,7 @@ import { visit } from 'unist-util-visit'
 import { matter } from 'vfile-matter'
 import { VFile } from 'remark-rehype/lib'
 import { ElementContent, Root } from 'hast'
-import React from 'react'
+import * as React from 'react'
 import { loadMarkdownFiles } from './markdown'
 
 export function checkFrontMatter(
@@ -145,8 +145,8 @@ function wrapTables() {
                 const wrapper: ElementContent = {
                     type: 'element',
                     tagName: 'div',
-                    properties: { className: ['table-wrapper']},
-                    children: [node], 
+                    properties: { className: ['table-wrapper'] },
+                    children: [node],
                 }
 
                 if (parent) {
