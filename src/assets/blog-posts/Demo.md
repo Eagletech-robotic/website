@@ -10,7 +10,7 @@ draft: false
 
 This is the **first** markdown file _ever_ uploaded as a test!
 
-## Some text
+# Some text
 
 Hey, watch our [Github](https://github.com/Eagletech-robotic/website)!
 `This is inline code!`
@@ -57,14 +57,7 @@ async function highlightCode(code: string) {
 2. a
 3. list.
 
-## A plugin and a blockquote!
-
-> Wow, look at that! `remarkGfm` plugin allows you to write links directly!
-> www.google.com. **Yeah, that's a blockquote!**
->
-> ## haha
-
-## Should be try some math?
+# Should be try some math?
 
 Certainly! Here is an inline math: $e^{i\pi} + 1 = 0$.
 
@@ -74,10 +67,12 @@ $$
 \int_{-\infty}^\infty e^{-x^2} \, dx = \sqrt{\pi}
 $$
 
-## Time for some fun with GFM features!
+# Time for some fun with GFM features!
 
 -   [x] Task list
 -   [ ] Task list
+
+## Tables
 
 | Tables          |      Are      |    Cool |
 | :-------------- | :-----------: | ------: |
@@ -87,6 +82,15 @@ $$
 
 Pretty cool, right?
 
-## Let's have fun with images!
+~Strikethrough~
+
+# Blockquotes + other stuff
+
+> Wow, look at that! `remarkGfm` plugin also allows you to write links directly!
+> www.google.com. **Yeah, that's a blockquote!** 😊
+>
+> ## haha
+
+# Let's have fun with images!
 
 ![Logo](/images/logo.png)

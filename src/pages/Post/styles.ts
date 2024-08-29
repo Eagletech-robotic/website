@@ -48,7 +48,7 @@ const CodeStyles = css`
     }
 
     [data-code-type='block'] {
-        padding-bottom: 0.5em;
+        padding: 0.5em 0;
         overflow-x: auto;
 
         font-family: 'Fira Code', monospace;
