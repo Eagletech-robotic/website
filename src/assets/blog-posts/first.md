@@ -13,6 +13,9 @@ This is the **first** markdown file _ever_ uploaded as a test!
 ## Some text
 
 Hey, watch our [Github](https://github.com/Eagletech-robotic/website)!
+
+<div>A div</div>
+
 `This is inline code!`
 And,
 
@@ -63,6 +66,27 @@ async function highlightCode(code: string) {
 > www.google.com. **Yeah, that's a blockquote!**
 >
 > ## haha
+
+## Should be try some math?
+
+Certainly! Here is an inline math: $e^{i\pi} + 1 = 0$.
+
+And here is a block math:
+
+$$
+\int_{-\infty}^\infty e^{-x^2} \, dx = \sqrt{\pi}
+$$
+
+## Time for some fun with GFM features!
+
+-   [x] Task list
+-   [ ] Task list
+
+| Tables        |      Are      |  Cool |
+| :------------ | :-----------: | ----: |
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      |   centered    |   $12 |
+| zebra stripes |   are neat    |    $1 |
 
 ## Let's have fun with images!
 

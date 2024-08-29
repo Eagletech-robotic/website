@@ -293,6 +293,48 @@ export const Content = styled.div`
 
     .katex-display {
         overflow-x: auto;
+        overflow-y: hidden; /* Prevent scrollbar appearing for no reason */
+        padding-top: 0.5em; /* Prevent top from cliping */
+    }
+
+    table {
+        width: 100%;
+        border-collapse: separate;
+        border-radius: ${borderRadius};
+        overflow: hidden;
+        border: 2px solid ${colors.primary};
+    }
+
+    th,
+    td {
+        padding: 0.5em;
+        border: 1px solid ${colors.primary};
+    }
+
+    th {
+        background-color: ${colors.highlight};
+        text-align: left;
+        font-weight: bold;
+    }
+
+    table tbody :last-child td {
+        border-bottom: none;
+    }
+
+    table thead:first-child th {
+        border-top: none;
+    }
+
+    table tr :first-child {
+        border-left: none;
+    }
+
+    table tr :last-child {
+        border-right: none;
+    }
+
+    table tr:hover td {
+        background-color: #f1f1f1;
     }
 
     ${CodeStyles}
