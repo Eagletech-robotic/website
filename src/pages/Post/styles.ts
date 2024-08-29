@@ -79,26 +79,26 @@ const CodeStyles = css`
             }
         }
 
-        & [data-line] {
+        [data-line] {
             padding: 0 ${codeBlockLeftRightPadding};
             cursor: text;
         }
 
-        & [data-line]:hover {
+        [data-line]:hover {
             background-color: #0001;
         }
 
-        & [data-highlighted-chars] {
+        [data-highlighted-chars] {
             border-radius: 0.25em;
             background-color: #aaa5;
         }
 
-        & [data-highlighted-line] {
+        [data-highlighted-line] {
             width: 100%;
             background-color: #c8c8ff1a;
         }
 
-        &::-webkit-scrollbar {
+        &::-webkit-scrollbar-track {
             margin: ${codeBlockLeftRightPadding};
         }
     }
