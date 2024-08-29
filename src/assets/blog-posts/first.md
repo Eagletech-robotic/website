@@ -13,7 +13,7 @@ This is the **first** markdown file _ever_ uploaded as a test!
 ## Some text
 
 Hey, watch our [Github](https://github.com/Eagletech-robotic/website)!
-`This is inline Rust code!{:rs}`
+`This is inline code!`
 And,
 
 ```tsx title="Code Block!" {2-4} /remark/

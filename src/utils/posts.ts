@@ -11,6 +11,7 @@ import { transformerCopyButton } from '@rehype-pretty/transformers'
 import { visit } from 'unist-util-visit'
 import { matter } from 'vfile-matter'
 import { VFile } from 'remark-rehype/lib'
+import { ElementContent, Root } from 'hast'
 import React from 'react'
 import { loadMarkdownFiles } from './markdown'
 
@@ -87,8 +88,9 @@ async function fetchBlogPosts(): Promise<BlogPost[]> {
                         feedbackDuration: 3_000,
                     }),
                 ],
+                bypassInlineCode: true,
             })
-            .use(addLineNumbers)
+            .use(addCodeTypeProperties)
             .use(rehypeStringify)
             .use(() => (_tree: any, file: VFile) => matter(file))
             .process(markdown.value)
@@ -109,13 +111,26 @@ async function fetchBlogPosts(): Promise<BlogPost[]> {
     return blogPosts
 }
 
-function addLineNumbers() {
-    return (tree: any) => {
+function addCodeTypeProperties() {
+    return (tree: Root) => {
         visit(tree, 'element', (node) => {
-            if (node.tagName === 'pre' && node.children[0]?.tagName === 'code') {
-                node.children[0].properties = {
-                    ...node.children[0].properties,
-                    'data-line-numbers': true,
+            if (node.tagName === 'pre') {
+                const firstChild = node.children[0]
+                if (firstChild && 'tagName' in firstChild && firstChild.tagName === 'code') {
+                    firstChild.properties = {
+                        ...firstChild.properties,
+                        'data-code-type': 'block',
+                        'data-line-numbers': 'true',
+                    }
+                }
+            } else {
+                for (const child of node.children) {
+                    if ('tagName' in child && child.tagName === 'code') {
+                        child.properties = {
+                            ...child.properties,
+                            'data-code-type': 'inline',
+                        }
+                    }
                 }
             }
         })

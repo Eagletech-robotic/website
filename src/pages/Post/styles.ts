@@ -41,11 +41,13 @@ const CodeStyles = css`
         }
     }
 
-    code:not(pre code) {
+    [data-code-type='inline'] {
         padding: 0.3em 0.5em;
+        border-radius: ${borderRadius};
+        background-color: #0b141a0f;
     }
 
-    code {
+    [data-code-type='block'] {
         padding-bottom: 0.5em;
         overflow-x: auto;
 
@@ -59,15 +61,11 @@ const CodeStyles = css`
         }
     }
 
-    code:not(pre code) {
-        border-radius: ${borderRadius};
-    }
-
-    code[data-line-numbers] {
+    [data-code-type='block'][data-line-numbers] {
         counter-reset: line;
     }
 
-    code[data-line-numbers] > [data-line]::before {
+    [data-code-type='block'][data-line-numbers] > [data-line]::before {
         counter-increment: line;
         content: counter(line);
 
@@ -82,30 +80,25 @@ const CodeStyles = css`
         }
     }
 
-    pre code [data-line] {
+    [data-code-type='block'] [data-line] {
         padding: 0 ${codeBlockLeftRightPadding};
     }
 
-    code [data-highlighted-chars] {
+    [data-code-type='block'] [data-highlighted-chars] {
         border-radius: 0.25em;
         background-color: #aaa5;
     }
 
-    code [data-highlighted-line] {
+    [data-code-type='block'] [data-highlighted-line] {
         width: 100%;
         background-color: #c8c8ff1a;
     }
 
-    code::-webkit-scrollbar-track {
+    [data-code-type='block']::-webkit-scrollbar-track {
         margin: ${codeBlockLeftRightPadding};
     }
 
     figcaption {
-        display: none;
-    }
-
-    // Disable copy button for inline code
-    .rehype-pretty-copy:not(pre .rehype-pretty-copy) {
         display: none;
     }
 
