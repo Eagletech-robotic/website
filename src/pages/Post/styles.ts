@@ -59,43 +59,48 @@ const CodeStyles = css`
             font-size: ${fontSizes.desktop.content};
             line-height: ${codeLineHeight.desktop};
         }
-    }
 
-    [data-code-type='block'][data-line-numbers] {
-        counter-reset: line;
-    }
-
-    [data-code-type='block'][data-line-numbers] > [data-line]::before {
-        counter-increment: line;
-        content: counter(line);
-
-        display: inline-block;
-        width: 0.75rem;
-        margin-right: 1.75em;
-        text-align: right;
-        color: gray;
-
-        @media (min-width: ${breakpoints.tablet}) {
-            margin-right: 2.25em;
+        &[data-line-numbers] {
+            counter-reset: line;
         }
-    }
 
-    [data-code-type='block'] [data-line] {
-        padding: 0 ${codeBlockLeftRightPadding};
-    }
+        &[data-line-numbers] > [data-line]::before {
+            counter-increment: line;
+            content: counter(line);
 
-    [data-code-type='block'] [data-highlighted-chars] {
-        border-radius: 0.25em;
-        background-color: #aaa5;
-    }
+            display: inline-block;
+            width: 0.75rem;
+            margin-right: 1.75em;
+            text-align: right;
+            color: gray;
 
-    [data-code-type='block'] [data-highlighted-line] {
-        width: 100%;
-        background-color: #c8c8ff1a;
-    }
+            @media (min-width: ${breakpoints.tablet}) {
+                margin-right: 2.25em;
+            }
+        }
 
-    [data-code-type='block']::-webkit-scrollbar-track {
-        margin: ${codeBlockLeftRightPadding};
+        & [data-line] {
+            padding: 0 ${codeBlockLeftRightPadding};
+            cursor: text;
+        }
+
+        & [data-line]:hover {
+            background-color: #0001;
+        }
+
+        & [data-highlighted-chars] {
+            border-radius: 0.25em;
+            background-color: #aaa5;
+        }
+
+        & [data-highlighted-line] {
+            width: 100%;
+            background-color: #c8c8ff1a;
+        }
+
+        &::-webkit-scrollbar {
+            margin: ${codeBlockLeftRightPadding};
+        }
     }
 
     figcaption {
