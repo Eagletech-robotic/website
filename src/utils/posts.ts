@@ -90,6 +90,7 @@ async function fetchBlogPosts(): Promise<BlogPost[]> {
                 ],
                 bypassInlineCode: true,
             })
+            .use(wrapTables)
             .use(addCodeTypeProperties)
             .use(rehypeStringify)
             .use(() => (_tree: any, file: VFile) => matter(file))
@@ -131,6 +132,25 @@ function addCodeTypeProperties() {
                             'data-code-type': 'inline',
                         }
                     }
+                }
+            }
+        })
+    }
+}
+
+function wrapTables() {
+    return (tree: Root) => {
+        visit(tree, 'element', (node, index, parent) => {
+            if (node.tagName === 'table') {
+                const wrapper: ElementContent = {
+                    type: 'element',
+                    tagName: 'div',
+                    properties: { className: ['table-wrapper']},
+                    children: [node], 
+                }
+
+                if (parent) {
+                    parent.children.splice(index as number, 1, wrapper)
                 }
             }
         })

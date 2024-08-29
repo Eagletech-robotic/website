@@ -297,13 +297,20 @@ export const Content = styled.div`
         padding-top: 0.5em; /* Prevent top from cliping */
     }
 
+    .table-wrapper {
+        overflow-x: auto;
+        margin-bottom: 1em;
+    }
+
     table {
         width: 100%;
         border-collapse: separate;
         border-radius: ${borderRadius};
-        overflow: hidden;
         border: 2px solid ${colors.primary};
-        margin-bottom: 1em;
+        margin-bottom: 0.25em;
+
+        white-space: nowrap;
+        overflow: hidden;
     }
 
     th,

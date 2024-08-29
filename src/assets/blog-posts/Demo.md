@@ -1,8 +1,8 @@
 ---
-title: 'The First Post'
+title: 'Post de Demo'
 date: '2024-08-01'
-author: 'idk'
-summary: 'The first post ever on this website. Well... yeah. It is not very interesting, but it does test a few features. Just... waiting for more posts to be posted before deleting this one. If you prefer, this is basically just a placeholder? Well, finally arrived at the second line now, can stop writing phew!'
+author: 'Thibault'
+summary: 'Ceci est un post de démo, pour tester et montrer les fonctionnalités de markdown.'
 draft: false
 ---
 
@@ -74,11 +74,11 @@ $$
 
 ## Tables
 
-| Tables          |      Are      |    Cool |
-| :-------------- | :-----------: | ------: |
-| col 3 is        | right-aligned |   $1600 |
-| col 2 is        |   centered    | **$12** |
-| _zebra stripes_ |   are neat    |      $1 |
+| Tables          |              Are              |    Cool |
+| :-------------- | :---------------------------: | ------: |
+| col 3 is        | this is centered... in theory |   $1600 |
+| col 2 is        |           centered            | **$12** |
+| _zebra stripes_ |           are neat            |      $1 |
 
 Pretty cool, right?
 
