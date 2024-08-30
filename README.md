@@ -6,6 +6,21 @@
 
 [Lien vers le site](https://eagletech-robotics.netlify.app)
 
+## Table des matières
+
+- [Table des matières](#table-des-matières)
+- [Comment faire des modifications locales](#comment-faire-des-modifications-locales)
+    - [Prérequis :](#prérequis-)
+    - [Installation](#installation)
+    - [Modifier le code](#modifier-le-code)
+- [Guide pour écrire un article de blog](#guide-pour-écrire-un-article-de-blog)
+    - [Description](#description)
+    - [Démarrage](#démarrage)
+    - [Création d'un nouveau post](#création-dun-nouveau-post)
+    - [Ajouter des images](#ajouter-des-images)
+    - [Publier un post](#publier-un-post)
+    - [Liste des fonctionnalités](#liste-des-fonctionnalités)
+
 ## Comment faire des modifications locales
 
 ### Prérequis :
