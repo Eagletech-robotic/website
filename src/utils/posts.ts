@@ -22,7 +22,7 @@ export function checkFrontMatter(
 
     const errors: string[] = []
     const pushError = (error: string) => {
-        errors.push(`The following field has not been specified: ${error}`)
+        errors.push(`Le champ suivant n'a pas été défini : ${error}`)
     }
 
     if (!author) pushError('author')
