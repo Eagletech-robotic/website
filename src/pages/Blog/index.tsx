@@ -18,44 +18,14 @@ export default function Blog() {
     return (
         <PageStructure>
             <Page>
-                <Title>The EagleTech Blog 🔥</Title>
+                <Title>Le Blog de l'Equipe EagleTech 🔥</Title>
                 <Intro>
-                    <p>Hi. This is our blog page 📖.</p>
+                    <p>Salut. Ceci est notre blog 📖.</p>
 
                     <p>
-                        As you may have seen, we are a new robotics club based in south of France.
-                        The 2024-25 season will be our <b>first</b> time competing at the{' '}
-                        <StyledA href="https://www.coupederobotique.fr/">
-                            Coupe de Robotique
-                        </StyledA>{' '}
-                        national competition.
-                        <img src={coupeDeRobotiqueLogo}></img>
-                        Visit our <StyledLink to="/about">about page</StyledLink> to learn more!
+                        C'est simplement un endroit où nous postons de temps en temps des articles
+                        sur notre équipe et l'avancée de nos projets.
                     </p>
-
-                    <p>
-                        But, what about the important part? What will you find on our blog?{' '}
-                        <br></br>Here, we will post about <i>various</i> things concerning our club.
-                        You can expect to find content about:
-                    </p>
-
-                    <ul>
-                        <li>
-                            🛠️ <b>Mechanics:</b> our robot and its current state; problems we had,
-                            how we fixed them, etc...
-                        </li>
-                        <li>
-                            🖥️ <b>Programming:</b> similar things. We will probably post about our
-                            code and algorithms the most.
-                        </li>
-                        <li>
-                            <InlineLogo /> <b>Our club</b> in general. For example, at the end of
-                            the year, we might write a blog post about how the competition unfolded.
-                        </li>
-                        <li>
-                            🤷 <b>Side projects</b> and other stuff.
-                        </li>
-                    </ul>
                 </Intro>
 
                 <MobilePostsList blogPosts={blogPosts} />
