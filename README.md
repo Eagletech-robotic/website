@@ -83,29 +83,31 @@ draft: true
 
 ### Liste des fonctionnalités
 
- - Texte Normal
- - # # H1
- - ## ## H2
- - ### ### H3 (à éviter sauf si strictement nécéssaire; diffère du texte en gras uniquement par sa marge)
- - _​_Texte en italic_​_
- - **\**Texte en gras\***\*\
- - \[Lien]\(https:/​/github.com) qui donne [Lien](https://github.com), ou directement https://github.com
- - \![Alt]\(https:/​/picsum.photos/200/300) donne une image
+-   Texte Normal
+-   # # H1
+-   ## ## H2
+-   ### ### H3 (à éviter sauf si strictement nécéssaire; diffère du texte en gras uniquement par sa marge)
+-   *​_Texte en italic*​\_
+-   **\*\*Texte en gras\***\*\
+-   ~\~Texte barré\~~
+-   \[Lien]\(https:/​/github.com) qui donne [Lien](https://github.com), ou directement https://github.com
+-   \![Alt]\(https:/​/picsum.photos/200/300) donne une image
 
 > \> Blockquote
 
-  - \- Liste non-ordonnée
-  * \* Suite de la liste
+-   \- Liste non-ordonnée
 
-  1. 1\. Liste ordonnée
-  2. 2\. Suite de la liste ordonnée
+*   \* Suite de la liste
+
+1. 1\. Liste ordonnée
+2. 2\. Suite de la liste ordonnée
 
 \``Code inline`\`
 
 \```ts title="Code Block" {2-4,6} /function/ /customWord/
+
 ```ts
-const texte =
-`
+const texte = `
 Ceci est un bloc de code. Sur le site, ils ne ressemblent pas vraiment à ça. N'hésitez pas à regarder la démo.
 Il y a 4 fonctionnalités principales.
 'ts' permet de colorer le code selon les habitudes typescript. Pensez toujours inclure un langage un (sauf si c'est du pur texte).
@@ -114,8 +116,31 @@ Il y a 4 fonctionnalités principales.
 '/function/' surlignera chaque instance du mot 'function' dans le code
 `
 ```
+
 \```
 
 Vous pouvez également écrire des formules mathématiques en $\LaTeX$. Ce projet utilise la librarie open-source Katex; vous pouvez voir la liste des fonctions supportées et autres informations pratiques sur https://katex.org/docs/supported.
 
 $$\int_{-\infty}^\infty e^{-x^2} \, dx = \sqrt{\pi}$$
+
+Les tables sont supportés également.
+
+```
+| Alignement à gauche | Alignement au milieu |
+| :------------------ | :------------------: |
+| L1                  |          A           |
+| L2                  |          B           |
+| L3                  |          C           |
+```
+
+donne
+
+| Alignement à gauche | Alignement au milieu |
+| :------------------ | :------------------: |
+| L1                  |          A           |
+| L2                  |          B           |
+| L3                  |          C           |
+
+Dernièrement, il est aussi possible de faire des listes de tâches
+-   [x] Fait
+-   [ ] Non fait
