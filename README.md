@@ -41,7 +41,7 @@ Vous pouvez faire vos modifications. Le serveur se relancera automatiquement dè
 ### Description
 
 Ici, vous trouverez toutes les connaissances qu'il vous faudra pour écrire un article de blog.
-Si vous avez un doute, vous pouvez vous référez au post Demo, prévu à cet effet car il utilise un maximum des fonctionnalités d'interprétation du markdown.
+Pensez aussi à vous référer à la démo pour voir comment les fonctionnalités de markdown sont rendues sur le site (il faut lancer le site en local pour pouvoir voir la démo).
 
 ### Démarrage
 
@@ -86,7 +86,7 @@ draft: true
 > publié, mais seulement sur votre version locale.
 >
 > > C'est d'ailleurs comme ça qu'est faite la démo.
-> 
+>
 > Pour mettre le post en ligne, se référer à la section [Publier un post](publier-un-post).
 
 ### Ajouter des images
