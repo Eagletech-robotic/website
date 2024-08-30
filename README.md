@@ -52,7 +52,7 @@ Pour commencer le développement, se référer à la section [modifier le code](
 Crééz un fichier markdown au chemin `/src/assets/blog-posts`. Nommez le au format `[AAAAMMJJ]-[nom].md`, où `AAAAMMJJ` est la date de création. Ceci est un exemple de nom :
 
 ```
-20240830-démo-blog.md
+20240830-demo-blog.md
 ```
 
 Ensuite, insérez ce texte au début de votre fichier :
