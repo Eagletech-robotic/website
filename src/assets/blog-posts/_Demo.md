@@ -57,7 +57,7 @@ async function highlightCode(code: string) {
 2. a
 3. list.
 
-# Should be try some math?
+# Should we try some math?
 
 Certainly! Here is an inline math: $e^{i\pi} + 1 = 0$.
 
