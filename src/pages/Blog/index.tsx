@@ -1,8 +1,6 @@
 import { useBlogPosts } from '../../utils/posts'
-import coupeDeRobotiqueLogo from '/images/CDR-logo.jpg'
 import { Intro, Page, Title } from './styles'
-import { PageStructure, StyledA, StyledLink } from '../../styles/commonStyles'
-import { InlineLogo } from '../../styles/inlineLogo'
+import { PageStructure } from '../../styles/commonStyles'
 import MobilePostsList from '../../components/MobilePostsList'
 import DesktopPostsList from '../../components/DesktopPostsList'
 

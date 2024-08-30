@@ -1,13 +1,5 @@
 import styled from 'styled-components'
-import {
-    blogMaxWidth,
-    borderRadius,
-    breakpoints,
-    colors,
-    fontSizes,
-    postSummariesGap,
-} from '../../styles/commonStyles'
-import { InlineLogo } from '../../styles/inlineLogo'
+import { blogMaxWidth, breakpoints, colors, fontSizes } from '../../styles/commonStyles'
 
 export const Page = styled.div`
     margin: 0 auto;
@@ -33,22 +25,5 @@ export const Intro = styled.div`
 
     p {
         margin-bottom: 1rem;
-    }
-
-    ul li {
-        list-style: disc inside;
-    }
-
-    img:not(${InlineLogo}) {
-        display: block;
-        background-color: white;
-        padding: 1rem 4rem;
-        margin: 0.5rem auto;
-        border-radius: ${borderRadius};
-        width: 100%;
-
-        @media (min-width: 600px) {
-            width: 60%;
-        }
     }
 `
