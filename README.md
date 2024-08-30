@@ -81,6 +81,25 @@ draft: true
 ---
 ```
 
+> N'hésitez pas à faire des commits réguliers ! Tant qu'il y aura
+> écrit `draft: true`, votre post n'apparaîtra pas sur le site qui
+> publié, mais seulement sur votre version locale.
+>
+> > C'est d'ailleurs comme ça qu'est faite la démo.
+> 
+> Pour mettre le post en ligne, se référer à la section [Publier un post](publier-un-post).
+
+### Ajouter des images
+
+Pour ajouter des images, crééz un répertoire au chemin `/public/blog-images/` avec le nom de exact du post sur lequel vous travaillez. Vous pourrez ensuite ajoutez des images, svgs, et autres contenus statiques. Pour y référer dans votre post, il vous suffira d'utiliser le chemin relatif par rapport à `public`.
+
+Par exemple, si votre post s'appelle `20240830-post-de-blog.md`, vous pourrez trouver l'image `image-de-test.png` avec le lien `/blog-images/20240830-post-de-blog/image-de-test.png`.
+
+### Publier un post
+
+Une fois que votre post est prêt à être mis en ligne, il vous suffira de changer la ligne `draft: true` à `draft: false` en haut du fichier. Un fois ce changement commité, le post apparaîtra automatiquement sur le site en ligne.
+Si vous avez pris plusieurs jours à écrire le post, pensez aussi à mettre à jour `date: [date]`. Sinon, votre post risque de ne pas s'afficher tout en haut !
+
 ### Liste des fonctionnalités
 
 -   Texte Normal
@@ -142,5 +161,6 @@ donne
 | L3                  |          C           |
 
 Dernièrement, il est aussi possible de faire des listes de tâches
+
 -   [x] Fait
 -   [ ] Non fait
