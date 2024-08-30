@@ -87,7 +87,7 @@ draft: true
 -   # # H1
 -   ## ## H2
 -   ### ### H3 (à éviter sauf si strictement nécéssaire; diffère du texte en gras uniquement par sa marge)
--   *​_Texte en italic*​\_
+-   *​_Texte en italique*​\_
 -   **\*\*Texte en gras\***\*\
 -   ~\~Texte barré\~~
 -   \[Lien]\(https:/​/github.com) qui donne [Lien](https://github.com), ou directement https://github.com
