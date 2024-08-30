@@ -10,6 +10,9 @@ draft: true
 
 This is the **first** markdown file _ever_ uploaded as a test!
 
+### Heading 3
+looks almost **exactly** like bold text!
+
 # Some text
 
 Hey, watch our [Github](https://github.com/Eagletech-robotic/website)!
