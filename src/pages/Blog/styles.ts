@@ -5,6 +5,7 @@ import {
     breakpoints,
     colors,
     fontSizes,
+    postSummariesGap,
 } from '../../styles/commonStyles'
 import { InlineLogo } from '../../styles/inlineLogo'
 

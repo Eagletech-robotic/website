@@ -5,6 +5,8 @@ import {
     hoverTransitionTimingFunction,
     fontSizes,
     breakpoints,
+    postSummariesGap,
+    lineHeights,
 } from '../../styles/commonStyles'
 import { Link } from 'react-router-dom'
 
@@ -13,21 +15,25 @@ export const StyledPostSummary = styled(Link)`
 `
 
 export const Container = styled.div`
-    padding: 2rem;
-    margin-bottom: 2rem;
-
+    margin-bottom: ${postSummariesGap.mobile};
     background-color: white;
-    border: 1px solid ${colors.border};
-    border-radius: ${borderRadius};
 
-    transition: 0.3s ${hoverTransitionTimingFunction};
+    @media (min-width: ${breakpoints.tablet}) {
+        padding: 2rem;
+        margin-bottom: ${postSummariesGap.desktop};
+        break-inside: avoid;
+        border: 1px solid ${colors.border};
+        border-radius: ${borderRadius};
 
-    &:hover {
-        transform: scale(1.03);
-    }
+        transition: 0.3s ${hoverTransitionTimingFunction};
 
-    &:active {
-        transform: scale(0.97);
+        &:hover {
+            transform: scale(1.03);
+        }
+
+        &:active {
+            transform: scale(0.97);
+        }
     }
 `
 
@@ -37,18 +43,20 @@ export const ErrorInfo = styled.div`
 `
 
 export const Title = styled.h2`
-    font-size: ${fontSizes.mobile.heading2};
+    font-size: ${fontSizes.mobile.content};
+    text-transform: uppercase;
     font-weight: bold;
 
     @media (min-width: ${breakpoints.tablet}) {
         font-size: ${fontSizes.desktop.heading2};
+        text-transform: initial;
     }
 `
 
 export const Summary = styled.div`
     font-size: ${fontSizes.mobile.content};
     color: ${colors.textLight};
-    margin: 8px 0;
+    margin: 0.5em 0;
 
     @media (min-width: ${breakpoints.tablet}) {
         font-size: ${fontSizes.desktop.content};

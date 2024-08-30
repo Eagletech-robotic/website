@@ -46,11 +46,20 @@ export const fontSizes = {
     },
 }
 
-export const contentLineHeight = '1.6'
-export const codeLineHeight = {
-    desktop: '1.6',
-    mobile: '1.4',
+export const postSummariesGap = {
+    desktop: '2rem',
+    mobile: '1rem',
 }
+
+export const lineHeights = {
+    contentLineHeight: '1.6',
+    codeLineHeight: {
+        desktop: '1.6',
+        mobile: '1.4',
+    },
+    titleLineHeight: '1.2',
+}
+
 export const borderRadius = '12px'
 export const blogMaxWidth = '750px'
 
@@ -129,7 +138,7 @@ export const mixin = {
 }
 
 export const PageStructure = styled.div`
-    line-height: ${contentLineHeight};
+    line-height: ${lineHeights.contentLineHeight};
     padding: 0 1rem;
     margin-top: 3rem;
 `

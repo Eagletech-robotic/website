@@ -6,7 +6,7 @@ import {
     breakpoints,
     fontSizes,
     mixin,
-    codeLineHeight,
+    lineHeights,
 } from '../../styles/commonStyles'
 
 const codeBlockLeftRightPadding = '1.5em'
@@ -52,12 +52,12 @@ const CodeStyles = css`
         overflow-x: auto;
 
         font-family: 'Fira Code', monospace;
-        line-height: ${codeLineHeight.mobile};
+        line-height: ${lineHeights.codeLineHeight.mobile};
         font-size: ${fontSizes.mobile.small};
 
         @media (min-width: ${breakpoints.tablet}) {
             font-size: ${fontSizes.desktop.content};
-            line-height: ${codeLineHeight.desktop};
+            line-height: ${lineHeights.codeLineHeight.desktop};
         }
 
         &[data-line-numbers] {
@@ -159,7 +159,7 @@ export const Title = styled.h1`
 
     font-weight: bold;
     font-size: ${fontSizes.mobile.title};
-    line-height: 1.2;
+    line-height: ${lineHeights.titleLineHeight};
 
     @media (min-width: ${breakpoints.tablet}) {
         font-size: ${fontSizes.desktop.title};
@@ -213,7 +213,7 @@ export const Content = styled.div`
     h3 {
         margin: 1.5em 0 1em;
         font-weight: bold;
-        line-height: 1.2;
+        line-height: ${lineHeights.titleLineHeight};
     }
 
     h1 {
