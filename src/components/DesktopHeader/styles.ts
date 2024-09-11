@@ -10,7 +10,7 @@ import {
     hoverTransitionTimingFunction,
     mixin,
     zIndices,
-} from '../../styles/commonStyles'
+} from 'src/styles/commonStyles'
 
 export const StyledHeader = styled.div`
     position: sticky;

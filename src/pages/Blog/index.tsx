@@ -1,8 +1,8 @@
-import { useBlogPosts } from '../../utils/posts'
+import { useBlogPosts } from 'src/utils/posts'
 import { Intro, Page, Title } from './styles'
-import { PageStructure } from '../../styles/commonStyles'
-import MobilePostsList from '../../components/MobilePostsList'
-import DesktopPostsList from '../../components/DesktopPostsList'
+import { PageStructure } from 'src/styles/commonStyles'
+import MobilePostsList from 'src/components/Blog/MobilePostsList'
+import DesktopPostsList from 'src/components/Blog/DesktopPostsList'
 
 export default function Blog() {
     const blogPosts = useBlogPosts()

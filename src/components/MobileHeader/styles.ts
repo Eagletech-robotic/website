@@ -9,7 +9,7 @@ import {
     hoverTransitionTimingFunction,
     mixin,
     zIndices,
-} from '../../styles/commonStyles'
+} from 'src/styles/commonStyles'
 import BurgerIcon from './BurgerIcon'
 
 const menuPadding = '2rem'

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { breakpoints, postSummariesGap } from '../../styles/commonStyles'
+import { breakpoints, postSummariesGap } from 'src/styles/commonStyles'
 
 export const StyledPostsList = styled.div`
     display: none;

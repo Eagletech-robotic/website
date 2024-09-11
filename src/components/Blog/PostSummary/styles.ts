@@ -6,8 +6,7 @@ import {
     fontSizes,
     breakpoints,
     postSummariesGap,
-    lineHeights,
-} from '../../styles/commonStyles'
+} from 'src/styles/commonStyles'
 import { Link } from 'react-router-dom'
 
 export const StyledPostSummary = styled(Link)`

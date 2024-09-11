@@ -7,7 +7,7 @@ import {
     fontSizes,
     mixin,
     lineHeights,
-} from '../../styles/commonStyles'
+} from 'src/styles/commonStyles'
 
 const codeBlockLeftRightPadding = '1.5em'
 

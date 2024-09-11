@@ -11,7 +11,7 @@ export default defineConfig({
     },
     resolve: {
         alias: {
-            screens: path.resolve(__dirname, './src/screens'),
+            src: path.resolve(__dirname, './src'),
         },
     },
     optimizeDeps: {

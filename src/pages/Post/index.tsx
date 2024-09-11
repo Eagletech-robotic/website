@@ -1,5 +1,5 @@
 import { useLoaderData } from 'react-router-dom'
-import { checkFrontMatter, getBlogPostById } from '../../utils/posts'
+import { checkFrontMatter, getBlogPostById } from 'src/utils/posts'
 import {
     Author,
     AuthorContainer,
@@ -12,8 +12,8 @@ import {
     Separator,
     Title,
 } from './styles'
-import { PageStructure } from '../../styles/commonStyles'
-import { isoToFullDate } from '../../utils/date'
+import { PageStructure } from 'src/styles/commonStyles'
+import { isoToFullDate } from 'src/utils/date'
 
 export async function loader({ params }: any): Promise<BlogPost> {
     const post = await getBlogPostById(params.postId)

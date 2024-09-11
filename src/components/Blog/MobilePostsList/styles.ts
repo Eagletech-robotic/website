@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { breakpoints, colors, postSummariesGap } from '../../styles/commonStyles'
+import { breakpoints, colors } from 'src/styles/commonStyles'
 
 export const StyledPostsList = styled.div`
     display: block;

@@ -1,5 +1,5 @@
 import PostSummary from '../PostSummary'
-import { Divider, Post, StyledPostsList } from './styles'
+import { Divider, StyledPostsList } from './styles'
 
 export default function MobilePostsList({
     blogPosts,

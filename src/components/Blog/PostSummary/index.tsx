@@ -1,5 +1,5 @@
-import { checkFrontMatter } from '../../utils/posts'
-import { isoToFullDate } from '../../utils/date'
+import { checkFrontMatter } from 'src/utils/posts'
+import { isoToFullDate } from 'src/utils/date'
 import { Container, ErrorInfo, Footer, StyledPostSummary, Summary, Title } from './styles'
 
 export default function PostSummary({ blogPost }: { blogPost: BlogPost }) {

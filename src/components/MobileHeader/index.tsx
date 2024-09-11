@@ -1,5 +1,5 @@
 import { CSSProperties } from 'styled-components'
-import { InlineLogo } from '../../styles/inlineLogo'
+import { InlineLogo } from 'src/styles/inlineLogo'
 import {
     ExternalLinkButton,
     GitHubLogo,

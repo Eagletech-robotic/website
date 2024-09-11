@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { hoverTransitionTimingFunction } from '../../styles/commonStyles'
+import { hoverTransitionTimingFunction } from 'src/styles/commonStyles'
 
 export const MenuIcon = styled.div`
     align-content: center;

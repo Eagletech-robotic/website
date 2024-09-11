@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { blogMaxWidth, breakpoints, colors, fontSizes } from '../../styles/commonStyles'
+import { blogMaxWidth, breakpoints, colors, fontSizes } from 'src/styles/commonStyles'
 
 export const Page = styled.div`
     margin: 0 auto;

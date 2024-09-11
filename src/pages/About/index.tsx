@@ -1,4 +1,4 @@
-import { PageStructure } from '../../styles/commonStyles'
+import { PageStructure } from 'src/styles/commonStyles'
 
 export default function About() {
     return (
