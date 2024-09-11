@@ -7,7 +7,7 @@ export default function Root() {
     return (
         <>
             <GlobalStyle />
-            
+
             <DesktopHeader />
             <MobileHeader />
 
