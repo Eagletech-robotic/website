@@ -8,8 +8,8 @@ export const colors = {
     background: '#f5f5f5',
     backgroundHeader: '#fcfcfc',
     border: '#eee',
-    highlight: '#f9f9f9',
-    codeHighlight: '#aaa5',
+    highlight: '#aaa1',
+    codeHighlight: '#aaa7',
 }
 
 export const breakpoints = {
@@ -31,16 +31,18 @@ export const headerHeight = {
 
 export const fontSizes = {
     desktop: {
-        title: '3rem',
-        heading1: '2rem',
-        heading2: '1.5rem',
+        title: '3.5rem',
+        heading1: '2.5rem',
+        heading2: '1.75rem',
+        heading3: '1.4rem',
         content: '1.125rem',
         small: '0.9rem',
     },
     mobile: {
         title: '2.25rem',
-        heading1: '1.75rem',
+        heading1: '1.9rem',
         heading2: '1.5rem',
+        heading3: '1.25rem',
         content: '1rem',
         small: '0.88rem',
     },

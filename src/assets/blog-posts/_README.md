@@ -1,8 +1,14 @@
+---
+title: README.md, pour tester de nombreuses choses
+date: 2024-09-11
+draft: true
+author: Thibault Monnier
+summary: README du projet, mis ici pour pouvoir montrer à quoi ressemble un vrai article, qui utilise de nombreuses fonctionnalités, et pour pouvoir se comparer à l'affichage sur GitHub.
+---
+
 # EagleTech Website (en cours de création)
 
-<a href="https://github.com/Eagletech-robotic">
-    <img src="./logo.png" alt="Logo" width="150" height="150">
-</a>
+![Logo](/images/logo.png)
 
 [Lien vers le site](https://eagletech-robotics.netlify.app)
 
@@ -14,8 +20,7 @@
   - [Prérequis :](#prérequis-)
   - [Installation](#installation)
   - [Modifier le code](#modifier-le-code)
-- [Guide pour écrire un article de blog](#guide-pour-écrire-un-article-de-blog)
-  - [Description](#description)
+- [Description](#description)
   - [Démarrage](#démarrage)
   - [Création d'un nouveau post](#création-dun-nouveau-post)
   - [Ajouter des images](#ajouter-des-images)
@@ -54,9 +59,9 @@ Le serveur devrait s'ouvrir automatiquement dans votre navigateur. Sinon, allez 
 
 Vous pouvez faire vos modifications. Le serveur se relancera automatiquement dès que vous ferez un changement (sinon, il suffit de recharger la page).
 
-## Guide pour écrire un article de blog
+# Guide pour écrire un article de blog
 
-### Description
+## Description
 
 Ici, vous trouverez toutes les connaissances qu'il vous faudra pour écrire un article de blog.
 Pensez aussi à vous référer à la démo pour voir comment les fonctionnalités de markdown sont rendues sur le site (il faut lancer le site en local pour pouvoir voir la démo).
@@ -143,7 +148,7 @@ Si vous avez pris plusieurs jours à écrire le post, pensez aussi à mettre à 
 
 \```ts title="Code Block" {2-4,6} /function/ /customWord/
 
-```ts
+```ts title="Code Block" {2-4,6} /function/ /customWord/
 const texte = `
 Ceci est un bloc de code. Sur le site, ils ne ressemblent pas vraiment à ça. N'hésitez pas à regarder la démo.
 Il y a 4 fonctionnalités principales.
@@ -158,9 +163,11 @@ Il y a 4 fonctionnalités principales.
 
 Vous pouvez également écrire des formules mathématiques en $\LaTeX$. Ce projet utilise la librarie open-source Katex; vous pouvez voir la liste des fonctions supportées et autres informations pratiques sur https://katex.org/docs/supported.
 
-$$\int_{-\infty}^\infty e^{-x^2} \, dx = \sqrt{\pi}$$
+$$
+\int_{-\infty}^\infty e^{-x^2} \, dx = \sqrt{\pi}
+$$
 
-Les tables sont supportés également.
+Les tables sont supportées également.
 
 ```
 | Alignement à gauche | Alignement au milieu |

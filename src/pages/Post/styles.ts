@@ -41,22 +41,26 @@ const CodeStyles = css`
         }
     }
 
+    code {
+        font-family: 'Fira Code', monospace;
+    }
+
     [data-code-type='inline'] {
         padding: 0.3em 0.5em;
         border-radius: ${borderRadius};
         background-color: ${colors.codeHighlight};
+        font-size: ${fontSizes.mobile.small} !important;
     }
 
     [data-code-type='block'] {
         padding: 0.5em 0;
         overflow-x: auto;
 
-        font-family: 'Fira Code', monospace;
         line-height: ${lineHeights.codeLineHeight.mobile};
         font-size: ${fontSizes.mobile.small};
 
         @media (min-width: ${breakpoints.tablet}) {
-            font-size: ${fontSizes.desktop.content};
+            font-size: ${fontSizes.desktop.small};
             line-height: ${lineHeights.codeLineHeight.desktop};
         }
 
@@ -151,11 +155,11 @@ export const Header = styled.div`
     display: flex;
     flex-direction: column;
 
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 `
 
 export const Title = styled.h1`
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 
     font-weight: bold;
     font-size: ${fontSizes.mobile.title};
@@ -167,29 +171,14 @@ export const Title = styled.h1`
 `
 
 export const Info = styled.div`
-    font-size: ${fontSizes.mobile.small};
+    font-size: ${fontSizes.mobile.content};
     display: block;
     text-align: center;
     color: ${colors.textLight};
 
     @media (min-width: ${breakpoints.tablet}) {
-        font-size: ${fontSizes.desktop.small};
+        font-size: ${fontSizes.desktop.content};
     }
-`
-export const AuthorContainer = styled.div`
-    margin-bottom: 0.5rem;
-
-    @media (min-width: ${breakpoints.tablet}) {
-        margin-bottom: 1rem;
-    }
-`
-
-export const Author = styled.div`
-    font-style: italic;
-`
-
-export const DateText = styled.div`
-    font-style: italic;
 `
 
 export const Separator = styled.hr`
@@ -216,20 +205,18 @@ export const Content = styled.div`
         line-height: ${lineHeights.titleLineHeight};
     }
 
+    h1,
+    h2 {
+        padding-bottom: 0.5em;
+        border-bottom: 2px solid ${colors.border};
+    }
+
     h1 {
         text-align: center;
         font-size: ${fontSizes.mobile.heading1};
 
         @media (min-width: ${breakpoints.tablet}) {
             font-size: ${fontSizes.desktop.heading1};
-        }
-
-        &:not(:first-child)::before {
-            content: '';
-            display: block;
-            margin: 1em 0;
-            height: 2px;
-            background-color: #ddd;
         }
     }
 
@@ -238,6 +225,14 @@ export const Content = styled.div`
 
         @media (min-width: ${breakpoints.tablet}) {
             font-size: ${fontSizes.desktop.heading2};
+        }
+    }
+
+    h3 {
+        font-size: ${fontSizes.mobile.heading3};
+
+        @media (min-width: ${breakpoints.tablet}) {
+            font-size: ${fontSizes.desktop.heading3};
         }
     }
 
