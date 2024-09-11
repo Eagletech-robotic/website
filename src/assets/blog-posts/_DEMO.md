@@ -12,11 +12,9 @@ This is the **first** markdown file _ever_ uploaded as a test!
 
 ### Heading 3
 
-looks almost **exactly** like bold text!
+## Some text
 
-# Some text
-
-Hey, watch our [Github](https://github.com/Eagletech-robotic/website)!
+Hey, watch out for our [Github](https://github.com/Eagletech-robotic/website)!
 `This is inline code!`
 And,
 
@@ -61,7 +59,7 @@ async function highlightCode(code: string) {
 2. a
 3. list.
 
-# Should we try some math?
+## Should we try some math?
 
 Certainly! Here is an inline math: $e^{i\pi} + 1 = 0$.
 
@@ -71,12 +69,12 @@ $$
 \int_{-\infty}^\infty e^{-x^2} \, dx = \sqrt{\pi}
 $$
 
-# Time for some fun with GFM features!
+## Time for some fun with GFM features!
 
 -   [x] Task list
 -   [ ] Task list
 
-## Tables
+### Tables
 
 | Tables          |              Are              |    Cool |
 | :-------------- | :---------------------------: | ------: |
@@ -88,13 +86,13 @@ Pretty cool, right?
 
 ~Strikethrough~
 
-# Blockquotes + other stuff
+## Blockquotes + other stuff
 
 > Wow, look at that! `remarkGfm` plugin also allows you to write links directly!
 > www.google.com. **Yeah, that's a blockquote!** 😊
 >
-> ## haha
+> ### haha
 
-# Let's have fun with images!
+## Let's have fun with images!
 
 ![Logo](/images/logo.png)

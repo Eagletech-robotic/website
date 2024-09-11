@@ -59,7 +59,10 @@ Vous pouvez faire vos modifications. Le serveur se relancera automatiquement dè
 ### Description
 
 Ici, vous trouverez toutes les connaissances qu'il vous faudra pour écrire un article de blog.
-Pensez aussi à vous référer à la démo pour voir comment les fonctionnalités de markdown sont rendues sur le site (il faut lancer le site en local pour pouvoir voir la démo).
+
+> Pour voir ce que le markdown donne en conditions réelles, lançez le site en local, et [voyez ce README](http://localhost:3000/blog/posts/00p9f5f7) sur le site lui-même ! Note : il risque cependant d'être un peu vieux...
+>
+> Vous pouvez aussi voir [la démo](http://localhost:3000/blog/posts/00j81tdk), qui a à peu près le même usage.
 
 ### Démarrage
 

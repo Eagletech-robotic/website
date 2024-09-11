@@ -20,7 +20,8 @@ summary: README du projet, mis ici pour pouvoir montrer à quoi ressemble un vra
   - [Prérequis :](#prérequis-)
   - [Installation](#installation)
   - [Modifier le code](#modifier-le-code)
-- [Description](#description)
+- [Guide pour écrire un article de blog](#guide-pour-écrire-un-article-de-blog)
+  - [Description](#description)
   - [Démarrage](#démarrage)
   - [Création d'un nouveau post](#création-dun-nouveau-post)
   - [Ajouter des images](#ajouter-des-images)
@@ -59,12 +60,15 @@ Le serveur devrait s'ouvrir automatiquement dans votre navigateur. Sinon, allez 
 
 Vous pouvez faire vos modifications. Le serveur se relancera automatiquement dès que vous ferez un changement (sinon, il suffit de recharger la page).
 
-# Guide pour écrire un article de blog
+## Guide pour écrire un article de blog
 
-## Description
+### Description
 
 Ici, vous trouverez toutes les connaissances qu'il vous faudra pour écrire un article de blog.
-Pensez aussi à vous référer à la démo pour voir comment les fonctionnalités de markdown sont rendues sur le site (il faut lancer le site en local pour pouvoir voir la démo).
+
+> Pour voir ce que le markdown donne en conditions réelles, lançez le site en local, et [voyez ce README](http://localhost:3000/blog/posts/00p9f5f7) sur le site lui-même !
+>
+> Vous pouvez aussi voir [la démo](http://localhost:3000/blog/posts/00j81tdk), qui a à peu près le même usage.
 
 ### Démarrage
 
