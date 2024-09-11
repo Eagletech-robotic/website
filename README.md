@@ -1,4 +1,4 @@
-# EagleTech Website
+# EagleTech Website (en cours de création)
 
 <a href="https://github.com/Eagletech-robotic">
     <img src="./logo.png" alt="Logo" width="150" height="150">
