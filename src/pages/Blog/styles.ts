@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { blogMaxWidth, breakpoints, colors, fontSizes } from 'src/styles/commonStyles'
+import { blogMaxWidth, breakpoints, colors, fontSizes, lineHeights } from 'src/styles/commonStyles'
 
 export const Page = styled.div`
     margin: 0 auto;
@@ -8,6 +8,7 @@ export const Page = styled.div`
 
 export const Title = styled.h1`
     font-size: 2rem;
+    line-height: ${lineHeights.titleLineHeight};
     font-weight: bold;
 `
 

@@ -56,8 +56,8 @@ export const postSummariesGap = {
 export const lineHeights = {
     contentLineHeight: '1.6',
     codeLineHeight: {
-        desktop: '1.6',
-        mobile: '1.4',
+        desktop: '1.7',
+        mobile: '1.5',
     },
     titleLineHeight: '1.2',
 }
