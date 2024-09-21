@@ -3,9 +3,10 @@ import { Intro, Page, Title } from './styles'
 import { PageStructure } from 'src/styles/commonStyles'
 import MobilePostsList from 'src/components/Blog/MobilePostsList'
 import DesktopPostsList from 'src/components/Blog/DesktopPostsList'
+import { LoadingSpinner } from 'src/styles/sharedStyledComponents'
 
 export default function Blog() {
-    const blogPosts = useBlogPosts()
+    const { blogPosts, loading } = useBlogPosts()
 
     blogPosts.sort((a: BlogPost, b: BlogPost) => {
         const dateA = a.post.data.matter?.date || '1970-01-01'
@@ -26,8 +27,14 @@ export default function Blog() {
                     </p>
                 </Intro>
 
-                <MobilePostsList blogPosts={blogPosts} />
-                <DesktopPostsList blogPosts={blogPosts} />
+                {loading ? (
+                    <LoadingSpinner />
+                ) : (
+                    <>
+                        <MobilePostsList blogPosts={blogPosts} />
+                        <DesktopPostsList blogPosts={blogPosts} />
+                    </>
+                )}
             </Page>
         </PageStructure>
     )

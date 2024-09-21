@@ -258,9 +258,7 @@ export const Content = styled.div`
 
     img {
         width: 100%;
-
         border-radius: ${borderRadius};
-        border: 1px solid ${colors.border};
     }
 
     blockquote {

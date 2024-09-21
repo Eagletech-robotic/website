@@ -47,16 +47,19 @@ export function checkFrontMatter(
     }
 }
 
-export function useBlogPosts(): BlogPost[] {
+export function useBlogPosts(): { blogPosts: BlogPost[]; loading: boolean } {
     const [blogPosts, setBlogPosts] = React.useState<BlogPost[]>([])
+    const [loading, setLoading] = React.useState(true)
+
     React.useEffect(() => {
         void (async () => {
             const blogPosts = await fetchBlogPosts()
             setBlogPosts(blogPosts)
+            setLoading(false)
         })()
     }, [])
 
-    return blogPosts
+    return { blogPosts, loading }
 }
 
 export async function getBlogPostById(id: string): Promise<BlogPost | null> {
