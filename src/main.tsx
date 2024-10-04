@@ -8,12 +8,17 @@ import Post, { loader as postLoader } from './pages/Post/index'
 
 import 'katex/dist/katex.min.css'
 import './styles/reset.css'
+import Home from './pages/Home'
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Root />,
         children: [
+            {
+                path: '',
+                element: <Home />,
+            },
             {
                 path: 'about',
                 element: <About />,

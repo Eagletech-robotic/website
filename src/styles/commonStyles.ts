@@ -4,8 +4,10 @@ import styled, { createGlobalStyle, css } from 'styled-components'
 export const colors = {
     text: '#202020',
     textLight: '#6c6c6c',
+    textWhite: '#d0d0d0',
     primary: '#23a7cf',
     background: '#f5f5f5',
+    darkBackground: '#0a0a0a',
     backgroundHeader: '#fcfcfc',
     border: '#eee',
     highlight: '#aaa1',
