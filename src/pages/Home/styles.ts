@@ -10,6 +10,7 @@ import styled from 'styled-components'
 export const Page = styled.div`
     display: flex;
     flex-direction: column;
+    gap: 3rem;
     padding: 0 1rem;
     background-color: ${colors.darkBackground};
     color: ${colors.textWhite};
@@ -24,8 +25,12 @@ export const HeaderContainer = styled.div`
     flex-direction: column;
     align-items: center;
     position: relative;
-    height: 130vh;
+    min-height: 110vh;
     z-index: 1;
+
+    @media (min-width: ${breakpoints.tablet}) {
+        min-height: 130vh;
+    }
 `
 
 export const Header = styled.div`
@@ -60,12 +65,10 @@ export const Subtitle = styled.h2`
     }
 `
 
-export const Logo = styled.div`
+export const Logo = styled.img`
     height: 20rem;
     width: 20rem;
     z-index: -1;
-    background-image: url('/images/logo.png');
-    background-size: contain;
 
     @media (min-width: ${breakpoints.tablet}) {
         height: 30rem;
@@ -78,12 +81,16 @@ export const Section = styled.section`
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    padding: 10rem 0;
+    padding: 5rem 1rem;
     z-index: 5;
 
     @media (min-width: ${breakpoints.tablet}) {
         flex-direction: row;
-        padding: 15rem 0;
+        padding: 12rem 0;
+
+        &:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
     }
 `
 
@@ -152,15 +159,5 @@ export const Paragraph = styled.p`
 
     @media (min-width: ${breakpoints.tablet}) {
         font-size: ${fontSizes.desktop.heading3};
-    }
-`
-
-export const Image = styled.img`
-    width: 100%;
-    max-width: 20rem;
-    margin-top: 2rem;
-
-    @media (min-width: ${breakpoints.tablet}) {
-        max-width: 30rem;
     }
 `
