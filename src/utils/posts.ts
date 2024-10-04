@@ -94,6 +94,7 @@ async function fetchBlogPosts(): Promise<BlogPost[]> {
                 bypassInlineCode: true,
             })
             .use(wrapTables)
+            .use(addAnchorToHeadings)
             .use(addCodeTypeProperties)
             .use(rehypeStringify)
             .use(() => (_tree: any, file: VFile) => matter(file))
@@ -155,6 +156,38 @@ function wrapTables() {
                 if (parent) {
                     parent.children.splice(index as number, 1, wrapper)
                 }
+            }
+        })
+    }
+}
+
+function addAnchorToHeadings() {
+    return (tree: Root) => {
+        visit(tree, 'element', (node) => {
+            if (node.tagName.match(/^h[1-6]$/)) {
+                const firstChild = node.children[0]
+                if (!firstChild || firstChild.type !== 'text') return
+
+                const id = (firstChild.value || '')
+                    .normalize('NFD')
+                    .toLowerCase()
+                    .replace(/\s+/g, '-')
+                    .replace(/[^a-z0-9-]/g, '')
+                node.properties.id = id
+
+                // Create an anchor element
+                const anchor: ElementContent = {
+                    type: 'element',
+                    tagName: 'a',
+                    properties: {
+                        href: `#${id}`,
+                        className: ['header-anchor'],
+                    },
+                    children: [{ type: 'text', value: '#' }],
+                }
+
+                // Prepend the anchor to the node's children
+                node.children.unshift(anchor)
             }
         })
     }

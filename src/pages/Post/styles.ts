@@ -203,6 +203,22 @@ export const Content = styled.div`
         margin: 1.5em 0 1em;
         font-weight: bold;
         line-height: ${lineHeights.titleLineHeight};
+
+        position: relative;
+
+        & > a.header-anchor {
+            position: absolute;
+            left: -1em;
+            opacity: 0;
+            color: ${colors.primary};
+
+            transition: opacity 0.2s ease-in-out, visibility 0s linear 0.2s;
+        }
+
+        &:hover > a.header-anchor,
+        & > a.header-anchor:hover {
+            opacity: 1;
+        }
     }
 
     h1,
