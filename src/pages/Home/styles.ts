@@ -2,9 +2,8 @@ import {
     breakpoints,
     colors,
     fontSizes,
-    headerHeight,
     hoverTransitionTimingFunction,
-    mixin,
+    lineHeights,
 } from 'src/styles/commonStyles'
 import styled from 'styled-components'
 
@@ -14,34 +13,31 @@ export const Page = styled.div`
     padding: 0 1rem;
     background-color: ${colors.darkBackground};
     color: ${colors.textWhite};
+
+    & > :nth-child(even) {
+        background-color: ${colors.primaryDarkBlue};
+    }
 `
 
 export const HeaderContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: calc(100vh - ${headerHeight.mobile});
     position: relative;
+    height: 130vh;
     z-index: 1;
-
-    @media (min-width: ${breakpoints.desktop}) {
-        height: 150vh;
-    }
 `
 
 export const Header = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-top: 10rem;
-    z-index: 1;
-
+    margin-bottom: 6.5rem;
     position: sticky;
     top: 9rem;
 
     @media (min-width: ${breakpoints.tablet}) {
-        margin-top: 20rem;
+        margin-bottom: 8rem;
     }
 `
 
@@ -67,36 +63,33 @@ export const Subtitle = styled.h2`
 export const Logo = styled.div`
     height: 20rem;
     width: 20rem;
-    position: absolute;
     z-index: -1;
     background-image: url('/images/logo.png');
     background-size: contain;
 
     @media (min-width: ${breakpoints.tablet}) {
-        height: 35rem;
-        width: 35rem;
+        height: 30rem;
+        width: 30rem;
     }
 `
 
-const Section = styled.section`
+export const Section = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 15rem 0;
-`
+    justify-content: space-evenly;
+    padding: 10rem 0;
+    z-index: 5;
 
-export const Section1 = styled(Section)`
-    background-color: ${colors.darkBackground};
-`
-
-export const Section2 = styled(Section)`
-    background-color: ${colors.darkBackground};
+    @media (min-width: ${breakpoints.tablet}) {
+        flex-direction: row;
+        padding: 15rem 0;
+    }
 `
 
 export const Button = styled.button`
     margin-top: 2rem;
-    border: 1px solid ${colors.primary};
+    border: 1px solid ${colors.primaryYellow};
     background-color: transparent;
     padding: 1rem 4rem 1rem 3rem;
     color: ${colors.textWhite};
@@ -120,7 +113,7 @@ export const Button = styled.button`
     }
 
     &:hover {
-        background-color: ${colors.primary};
+        background-color: ${colors.primaryYellow};
         color: ${colors.text};
 
         &::after {
@@ -130,11 +123,44 @@ export const Button = styled.button`
     }
 `
 
+export const Content = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: ${lineHeights.contentLineHeight};
+
+    @media (min-width: ${breakpoints.tablet}) {
+        max-width: 40vw;
+    }
+`
+
 export const SectionTitle = styled.h2`
-    font-size: ${fontSizes.mobile.heading2};
+    font-size: ${fontSizes.mobile.heading1};
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+
+    @media (min-width: ${breakpoints.tablet}) {
+        font-size: ${fontSizes.desktop.heading1};
+    }
+`
+
+export const Paragraph = styled.p`
+    font-size: ${fontSizes.mobile.heading3};
     text-align: center;
 
     @media (min-width: ${breakpoints.tablet}) {
-        font-size: ${fontSizes.desktop.heading2};
+        font-size: ${fontSizes.desktop.heading3};
+    }
+`
+
+export const Image = styled.img`
+    width: 100%;
+    max-width: 20rem;
+    margin-top: 2rem;
+
+    @media (min-width: ${breakpoints.tablet}) {
+        max-width: 30rem;
     }
 `

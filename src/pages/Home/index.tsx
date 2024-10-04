@@ -1,35 +1,43 @@
 import { Link } from 'react-router-dom'
 import {
     Button,
+    Content,
     Header,
     HeaderContainer,
     Logo,
     Page,
-    Section1,
-    Section2,
+    Paragraph,
+    Section,
     SectionTitle,
     Subtitle,
     Title,
 } from './styles'
+import robot from '/images/CDR-logo.jpg'
 
 export default function Home() {
     return (
         <Page>
             <HeaderContainer>
                 <Header>
-                    <Logo />
                     <Title>EagleTech</Title>
                     <Subtitle>Robotics</Subtitle>
                 </Header>
+                <Logo />
             </HeaderContainer>
 
-            <Section1>
-                <SectionTitle>Nous sommes une équipe française</SectionTitle>
+            <Section>
+                <Content>
+                    <SectionTitle>Une Equipe Française de Robotique</SectionTitle>
+                    <Paragraph>
+                        Nous somme un équipe de robotique française, qui participe à la compétition
+                        Coupe de France de Robotique.
+                    </Paragraph>
+                </Content>
                 <Link to="/about">
                     <Button>Découvrir Plus!</Button>
                 </Link>
-            </Section1>
-            <Section2>Second Section</Section2>
+            </Section>
+            <Section>Second Section</Section>
         </Page>
     )
 }
