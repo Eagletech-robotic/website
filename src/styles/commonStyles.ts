@@ -72,6 +72,8 @@ export const blogMaxWidth = '750px'
 export const hoverTransitionTimingFunction = 'cubic-bezier(0.25, 0.8, 0.24, 1)'
 export const headerShadow = '0px 0px 15px 0px black'
 
+export const textUnderlineOffset = '4px'
+
 const styles = css`
     html {
         scroll-behavior: smooth;
@@ -143,7 +145,7 @@ export const mixin = {
     linkStyle: css`
         color: ${colors.textLight};
         text-decoration: underline;
-        text-underline-offset: 4px;
+        text-underline-offset: ${textUnderlineOffset};
         transition: 0.2s ${hoverTransitionTimingFunction};
 
         &:hover {

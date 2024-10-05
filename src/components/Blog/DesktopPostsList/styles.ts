@@ -8,8 +8,3 @@ export const StyledPostsList = styled.div`
         display: block;
     }
 `
-
-export const Posts = styled.div`
-    column-count: 2;
-    column-gap: ${postSummariesGap.desktop};
-`

@@ -1,5 +1,5 @@
 import PostSummary from '../PostSummary'
-import { StyledPostsList, Posts } from './styles'
+import { StyledPostsList } from './styles'
 
 export default function DesktopPostsList({
     blogPosts,
@@ -12,13 +12,9 @@ export default function DesktopPostsList({
 
     return (
         <StyledPostsList>
-            <PostSummary blogPost={blogPosts[0]} />
-            <Posts>
-                {blogPosts.map((blogPost, index) => {
-                    if (index === 0) return null
-                    else return <PostSummary blogPost={blogPost} key={index} />
-                })}
-            </Posts>
+            {blogPosts.map((blogPost, index) => {
+                return <PostSummary blogPost={blogPost} key={index} />
+            })}
         </StyledPostsList>
     )
 }

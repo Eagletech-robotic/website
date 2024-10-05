@@ -7,6 +7,7 @@ import {
     breakpoints,
     postSummariesGap,
     lineHeights,
+    textUnderlineOffset,
 } from 'src/styles/commonStyles'
 import { Link } from 'react-router-dom'
 
@@ -22,17 +23,44 @@ export const Container = styled.div`
         padding: 2rem;
         margin-bottom: ${postSummariesGap.desktop};
         break-inside: avoid;
-        border: 1px solid ${colors.border};
+        border: 3px solid transparent;
         border-radius: ${borderRadius};
 
-        transition: 0.3s ${hoverTransitionTimingFunction};
-
         &:hover {
-            transform: scale(1.03);
+            animation: borderAnimation 0.05s ease forwards;
         }
 
-        &:active {
-            transform: scale(0.97);
+        @keyframes borderAnimation {
+            0% {
+                border-top: 3px solid ${colors.primary};
+                border-right: 3px solid transparent;
+                border-bottom: 3px solid transparent;
+                border-left: 3px solid transparent;
+            }
+            25% {
+                border-top: 3px solid ${colors.primary};
+                border-right: 3px solid ${colors.primary};
+                border-bottom: 3px solid transparent;
+                border-left: 3px solid transparent;
+            }
+            50% {
+                border-top: 3px solid ${colors.primary};
+                border-right: 3px solid ${colors.primary};
+                border-bottom: 3px solid ${colors.primary};
+                border-left: 3px solid transparent;
+            }
+            75% {
+                border-top: 3px solid ${colors.primary};
+                border-right: 3px solid ${colors.primary};
+                border-bottom: 3px solid ${colors.primary};
+                border-left: 3px solid ${colors.primary};
+            }
+            100% {
+                border-top: 3px solid ${colors.primary};
+                border-right: 3px solid ${colors.primary};
+                border-bottom: 3px solid ${colors.primary};
+                border-left: 3px solid ${colors.primary};
+            }
         }
     }
 `
