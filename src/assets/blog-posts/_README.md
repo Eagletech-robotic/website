@@ -1,12 +1,10 @@
 ---
-title: README.md, pour tester de nombreuses choses
+title: README - Le README du Site EagleTech
 date: 2024-09-11
 draft: true
 author: Thibault Monnier
 summary: README du projet, mis ici pour pouvoir montrer à quoi ressemble un vrai article, qui utilise de nombreuses fonctionnalités, et pour pouvoir se comparer à l'affichage sur GitHub.
 ---
-
-# EagleTech Website (en cours de création)
 
 ![Logo](/images/logo.png)
 
@@ -120,6 +118,8 @@ draft: true
 
 Pour ajouter des images, crééz un répertoire au chemin `/public/blog-images/` avec le nom de exact du post sur lequel vous travaillez. Vous pourrez ensuite ajoutez des images, svgs, et autres contenus statiques. Pour y référer dans votre post, il vous suffira d'utiliser le chemin relatif par rapport à `public`.
 
+#### Un exemple
+
 Par exemple, si votre post s'appelle `20240830-post-de-blog.md`, vous pourrez trouver l'image `image-de-test.png` avec le lien `/blog-images/20240830-post-de-blog/image-de-test.png`.
 
 ### Publier un post
@@ -130,9 +130,9 @@ Si vous avez pris plusieurs jours à écrire le post, pensez aussi à mettre à 
 ### Liste des fonctionnalités
 
 -   Texte Normal
--   # # H1
 -   ## ## H2
 -   ### ### H3
+-   #### #### H4
 -   *​_Texte en italique*​\_
 -   **\*\*Texte en gras\***\*\
 -   ~\~Texte barré\~~

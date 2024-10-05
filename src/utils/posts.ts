@@ -10,10 +10,10 @@ import rehypePrettyCode from 'rehype-pretty-code'
 import { transformerCopyButton } from '@rehype-pretty/transformers'
 import { visit } from 'unist-util-visit'
 import { matter } from 'vfile-matter'
-import { VFile } from 'remark-rehype/lib'
 import { ElementContent, Root } from 'hast'
 import * as React from 'react'
 import { loadMarkdownFiles } from './markdown'
+import { VFile } from 'vfile-matter/lib'
 
 export function checkFrontMatter(
     post: Post
@@ -164,12 +164,11 @@ function wrapTables() {
 function addAnchorToHeadings() {
     return (tree: Root) => {
         visit(tree, 'element', (node) => {
-            if (node.tagName.match(/^h[1-6]$/)) {
+            if (node.tagName.match(/^h[1-3]$/)) {
                 const firstChild = node.children[0]
                 if (!firstChild || firstChild.type !== 'text') return
 
                 const id = (firstChild.value || '')
-                    .normalize('NFD')
                     .toLowerCase()
                     .replace(/\s+/g, '-')
                     .replace(/[^a-z0-9-]/g, '')

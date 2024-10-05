@@ -73,6 +73,15 @@ export const hoverTransitionTimingFunction = 'cubic-bezier(0.25, 0.8, 0.24, 1)'
 export const headerShadow = '0px 0px 15px 0px black'
 
 const styles = css`
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: ${headerHeight.mobile};
+
+        @media (min-width: ${breakpoints.tablet}) {
+            scroll-padding-top: ${headerHeight.desktop};
+        }
+    }
+
     body {
         overflow-y: scroll;
         background-color: white;

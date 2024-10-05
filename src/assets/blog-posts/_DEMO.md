@@ -6,7 +6,7 @@ summary: Ceci est un post de démo, pour tester et montrer les fonctionnalités 
 draft: true
 ---
 
-# Hi!
+## Hi!
 
 This is the **first** markdown file _ever_ uploaded as a test!
 
@@ -91,7 +91,7 @@ Pretty cool, right?
 > Wow, look at that! `remarkGfm` plugin also allows you to write links directly!
 > www.google.com. **Yeah, that's a blockquote!** 😊
 >
-> ### haha
+> #### haha
 
 ## Let's have fun with images!
 

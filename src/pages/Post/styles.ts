@@ -184,6 +184,7 @@ export const Info = styled.div`
 export const Separator = styled.hr`
     border: 2px solid ${colors.primary};
     border-radius: ${borderRadius};
+    margin-bottom: 3rem;
 `
 
 export const Content = styled.div`
@@ -197,20 +198,23 @@ export const Content = styled.div`
         margin-bottom: 1em;
     }
 
-    h1,
     h2,
     h3 {
         margin: 1.5em 0 1em;
         font-weight: bold;
         line-height: ${lineHeights.titleLineHeight};
+        scroll-margin-top: 1em;
 
         position: relative;
 
         & > a.header-anchor {
             position: absolute;
-            left: -1em;
+            padding: 1em;
+            top: -1em;
+            left: -2em;
             opacity: 0;
             color: ${colors.primary};
+            text-decoration: none;
 
             transition: opacity 0.2s ease-in-out, visibility 0s linear 0.2s;
         }
@@ -221,22 +225,9 @@ export const Content = styled.div`
         }
     }
 
-    h1,
     h2 {
         padding-bottom: 0.5em;
         border-bottom: 2px solid ${colors.border};
-    }
-
-    h1 {
-        text-align: center;
-        font-size: ${fontSizes.mobile.heading1};
-
-        @media (min-width: ${breakpoints.tablet}) {
-            font-size: ${fontSizes.desktop.heading1};
-        }
-    }
-
-    h2 {
         font-size: ${fontSizes.mobile.heading2};
 
         @media (min-width: ${breakpoints.tablet}) {
@@ -250,6 +241,11 @@ export const Content = styled.div`
         @media (min-width: ${breakpoints.tablet}) {
             font-size: ${fontSizes.desktop.heading3};
         }
+    }
+
+    h4 {
+        font-weight: bold;
+        margin: 1em 0 0.5em;
     }
 
     strong {
