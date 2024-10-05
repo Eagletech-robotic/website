@@ -171,7 +171,7 @@ function addAnchorToHeadings() {
                 const id = (firstChild.value || '')
                     .toLowerCase()
                     .replace(/\s+/g, '-')
-                    .replace(/[^a-z0-9-]/g, '')
+                    .replace(/[^a-z0-9à-ü-]/g, '')
                 node.properties.id = id
 
                 // Create an anchor element
