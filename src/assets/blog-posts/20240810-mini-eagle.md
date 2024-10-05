@@ -7,7 +7,7 @@ author: Antoine Monnier
 summary: Présentation de Mini Eagle, un robot expérimental conçu pour tester des concepts en vue de la Coupe de France de Robotique 2025.
 ---
 
-# Présentation de Mini Eagle
+## Présentation de Mini Eagle
 
 Le règlement de la prochaine [Coupe de France de Robotique 2025](https://www.coupederobotique.fr/) n'ayant pas encore été publié, nous ne pouvons pas encore démarrer la conception de notre robot principal. Alors, comment essayer d'avancer pendant ces vacances d'été ? Nous avons décidé de nous lancer dans la conception d'un robot miniature, Mini Eagle, qui nous permettra de tester des idées et des concepts pour la future compétition.
 
@@ -15,7 +15,7 @@ Le règlement de la prochaine [Coupe de France de Robotique 2025](https://www.co
 
 ![Vue de profil du robot Mini-Eagle](/blog-images/20240810-mini-eagle/vue-profil.jpg)
 
-# Objectifs
+## Objectifs
 
 Les objectifs de Mini Eagle sont les suivants :
 
@@ -23,7 +23,7 @@ Les objectifs de Mini Eagle sont les suivants :
 -   Apprendre à utiliser de nouveaux outils et technologies.
 -   S'amuser et gagner en expérience pratique !
 
-# Conception
+## Conception
 
 Mini Eagle est un robot conçu avec les composants suivants :
 
@@ -36,7 +36,7 @@ La carte Nucleo STM32 est une plateforme de développement basée sur un microco
 
 Un capteur TOF mesure la distance en calculant le temps que met la lumière pour faire l'aller-retour entre le capteur et l'objet. Celui dont est équipé notre carte de démonstration permet de détecter jusqu'à 4 cibles simultanément, à condition qu'elles soient situées dans le cône de détection (environ 10°) et à des distances différentes du capteur.
 
-# Programmation
+## Programmation
 
 Les microcontrôleurs STM32 se programment avec un fichier objet au format ELF. Celui-ci peut être généré depuis une variété de languages, mais STM32 fournit uniquement les librairies en language C. Il est donc plus simple de commencer avec ce language, même s'il semble aujourd'hui un peu dépassé.
 
@@ -46,18 +46,24 @@ Nous avons commencé par écrire le code de Mini-Eagle dans l'environnement de d
 
 Personnellement, j'ai trouvé cet environnement - basé sur le vieillissant [projet Eclipse](https://eclipseide.org/) - contraignant à utiliser, et je suis rapidement revenu à Visual Studio Code, plus moderne et qui intègre l'indispensable outil de complétion CoPilot. J'utilise encore STM32IDE pour la configuration de la carte, pour lancer le compilateur, et pour charger le programme sur le robot.
 
-# Premiers tests
+## Premiers tests
 
 La première expérimentation est un programme utilisant le TOF, disposé latéralement, pour guider le MiniEagle le long d'un mur.
 
 Le projet est en cours, et le code est disponible sur https://github.com/Eagletech-robotic/mini-eagle-lateral-tof
 
-# Leçons tirées
+## Leçons tirées
 
-**Le matériel...** Venant du monde du logiciel non embarqué, j'ai découvert que le premier ennemi n'est pas soi-même (les bugs informatiques), mais le matériel. Un code qui tourne à un instant t peut ne plus marcher à l'itération suivante : câble débranché, pile déchargée, circuit encodeur endommagé... Voici quelques-uns des problèmes que j'ai rencontrés après seulement quelques dizaines d'heures d'expérimentation.
+#### Le matériel...
 
-**Importance des tests automatisés**. Pour limiter l'impact des bugs matériels, j'ai inclus dans le code du robot un auto-test qui s'exécute systématiquement au démarrage. Ce code effectue un test de rotation des roues à différentes vitesses, pour vérifier le fonctionnement des moteurs et des encodeurs. Puis il passe en mode test pour le TOF, avec une LED clignotant à une fréquence proportionnelle à la distance détectée. Une fois les tests validés, un appui sur le bouton-poussoir du board Nucleo lance le programme principal.
+Venant du monde du logiciel non embarqué, j'ai découvert que le premier ennemi n'est pas soi-même (les bugs informatiques), mais le matériel. Un code qui tourne à un instant t peut ne plus marcher à l'itération suivante : câble débranché, pile déchargée, circuit encodeur endommagé... Voici quelques-uns des problèmes que j'ai rencontrés après seulement quelques dizaines d'heures d'expérimentation.
 
-**Gestion des versions**. STM32IDE utilise un générateur de code qui peut modifier plusieurs fichiers lors du changement d'un seul paramètre. La mise en place du gestionnaire de version Git s'est rapidement avérée indispensable pour identifier les changements et pouvoir facilement revenir en arrière en cas de besoin.
+#### Importance des tests automatisés
+
+Pour limiter l'impact des bugs matériels, j'ai inclus dans le code du robot un auto-test qui s'exécute systématiquement au démarrage. Ce code effectue un test de rotation des roues à différentes vitesses, pour vérifier le fonctionnement des moteurs et des encodeurs. Puis il passe en mode test pour le TOF, avec une LED clignotant à une fréquence proportionnelle à la distance détectée. Une fois les tests validés, un appui sur le bouton-poussoir du board Nucleo lance le programme principal.
+
+#### Gestion des versions
+
+STM32IDE utilise un générateur de code qui peut modifier plusieurs fichiers lors du changement d'un seul paramètre. La mise en place du gestionnaire de version Git s'est rapidement avérée indispensable pour identifier les changements et pouvoir facilement revenir en arrière en cas de besoin.
 
 Ces expériences avec Mini Eagle nous permettent d'acquérir des compétences précieuses en programmation embarquée, qui seront utiles pour notre futur robot de la Coupe de France de Robotique 2025.
