@@ -1,6 +1,6 @@
 ---
 title: README - Le README du Site EagleTech
-date: 2024-09-11
+date: 1970-01-02
 draft: true
 author: Thibault Monnier
 summary: README du projet, mis ici pour pouvoir montrer à quoi ressemble un vrai article, qui utilise de nombreuses fonctionnalités, et pour pouvoir se comparer à l'affichage sur GitHub.

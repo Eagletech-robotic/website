@@ -70,14 +70,14 @@ export const ErrorInfo = styled.div`
     margin-left: 2rem;
 `
 
-export const Title = styled.h2`
+export const Title = styled.h3`
     font-size: ${fontSizes.mobile.content};
     line-height: ${lineHeights.titleLineHeight};
     text-transform: uppercase;
     font-weight: bold;
 
     @media (min-width: ${breakpoints.tablet}) {
-        font-size: ${fontSizes.desktop.heading2};
+        font-size: ${fontSizes.desktop.heading3};
         text-transform: initial;
     }
 `
