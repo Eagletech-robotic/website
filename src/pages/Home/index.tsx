@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import {
     Button,
     Content,
@@ -9,6 +8,7 @@ import {
     Paragraph,
     Section,
     SectionTitle,
+    StyledLink,
     Subtitle,
     Title,
 } from './styles'
@@ -30,36 +30,37 @@ export default function Home() {
                     <Paragraph>
                         Nous sommes un équipe de robotique française, formée de six personnes, qui
                         participe à la compétition « <i>Coupe de France de Robotique</i> » de cette
-                        année 2024-2025.
+                        année 2024-2025. Découvrez-en davantage sur notre équipe !
                     </Paragraph>
                 </Content>
-                <Link to="/about">
+                <StyledLink to="/about">
                     <Button>Découvrir Plus !</Button>
-                </Link>
+                </StyledLink>
             </Section>
             <Section>
                 <Content>
-                    <SectionTitle>Nous Partageons nos Progrès</SectionTitle>
+                    <SectionTitle>Nous Partageons notre Travail</SectionTitle>
                     <Paragraph>
                         Nous postons régulièrement sur notre Blog pour faire part de nos avancés sur
-                        le robot, et de notre club en général.
+                        le robot, et de notre club en général. Vous pourrez ainsi suivre l'évolution
+                        de celui-ci au cours de l'année !
                     </Paragraph>
                 </Content>
-                <Link to="/blog">
+                <StyledLink to="/blog">
                     <Button>Visiter !</Button>
-                </Link>
+                </StyledLink>
             </Section>
             <Section>
                 <Content>
-                    <SectionTitle>Code Open-Source</SectionTitle>
+                    <SectionTitle>Du Code Open-Source</SectionTitle>
                     <Paragraph>
                         L'entièreté de notre code est open-source sur GitHub. Vous pouvez y accéder
                         si cela vous intéresse.
                     </Paragraph>
                 </Content>
-                <Link to="https://github.com/Eagletech-robotic">
+                <StyledLink to="https://github.com/Eagletech-robotic">
                     <Button>Allons-y !</Button>
-                </Link>
+                </StyledLink>
             </Section>
         </Page>
     )

@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom'
 import {
     breakpoints,
     colors,
     fontSizes,
+    headerHeight,
     hoverTransitionTimingFunction,
     lineHeights,
 } from 'src/styles/commonStyles'
@@ -11,12 +13,16 @@ export const Page = styled.div`
     display: flex;
     flex-direction: column;
     gap: 3rem;
-    padding: 0 1rem;
+    padding: 0;
     background-color: ${colors.darkBackground};
     color: ${colors.textWhite};
 
     & > :nth-child(even) {
         background-color: ${colors.primaryDarkBlue};
+    }
+
+    @media (min-width: ${breakpoints.tablet}) {
+        padding: 0 1rem;
     }
 `
 
@@ -84,7 +90,7 @@ export const Section = styled.section`
     padding: 5rem 1rem;
     z-index: 5;
 
-    @media (min-width: ${breakpoints.tablet}) {
+    @media (min-width: ${breakpoints.desktop}) {
         flex-direction: row;
         padding: 12rem 0;
 
@@ -101,6 +107,8 @@ export const Button = styled.button`
     padding: 1rem 4rem 1rem 3rem;
     color: ${colors.textWhite};
     border-radius: 2rem;
+    position: sticky;
+    top: 0rem;
 
     transition: background-color 0.5s ${hoverTransitionTimingFunction},
         color 0.5s ${hoverTransitionTimingFunction};
@@ -137,7 +145,7 @@ export const Content = styled.div`
     justify-content: center;
     line-height: ${lineHeights.contentLineHeight};
 
-    @media (min-width: ${breakpoints.tablet}) {
+    @media (min-width: ${breakpoints.desktop}) {
         max-width: 40vw;
     }
 `
@@ -159,5 +167,14 @@ export const Paragraph = styled.p`
 
     @media (min-width: ${breakpoints.tablet}) {
         font-size: ${fontSizes.desktop.heading3};
+    }
+`
+
+export const StyledLink = styled(Link)`
+    position: sticky;
+    top: ${headerHeight.mobile};
+
+    @media (min-width: ${breakpoints.desktop}) {
+        top: ${headerHeight.desktop};
     }
 `
