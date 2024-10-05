@@ -114,6 +114,8 @@ draft: true
 
 Pour ajouter des images, crééz un répertoire au chemin `/public/blog-images/` avec le nom de exact du post sur lequel vous travaillez. Vous pourrez ensuite ajoutez des images, svgs, et autres contenus statiques. Pour y référer dans votre post, il vous suffira d'utiliser le chemin relatif par rapport à `public`.
 
+#### Exemple
+
 Par exemple, si votre post s'appelle `20240830-post-de-blog.md`, vous pourrez trouver l'image `image-de-test.png` avec le lien `/blog-images/20240830-post-de-blog/image-de-test.png`.
 
 ### Publier un post
@@ -124,9 +126,9 @@ Si vous avez pris plusieurs jours à écrire le post, pensez aussi à mettre à 
 ### Liste des fonctionnalités
 
 -   Texte Normal
--   # # H1
 -   ## ## H2
 -   ### ### H3
+-   #### #### H4
 -   *​_Texte en italique*​\_
 -   **\*\*Texte en gras\***\*\
 -   ~\~Texte barré\~~
