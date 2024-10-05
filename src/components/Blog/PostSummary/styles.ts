@@ -18,6 +18,7 @@ export const StyledPostSummary = styled(Link)`
 export const Container = styled.div`
     margin-bottom: ${postSummariesGap.mobile};
     background-color: white;
+    position: relative;
 
     @media (min-width: ${breakpoints.tablet}) {
         padding: 2rem;
@@ -98,5 +99,19 @@ export const Footer = styled.div`
 
     @media (min-width: ${breakpoints.tablet}) {
         font-size: ${fontSizes.desktop.small};
+    }
+`
+
+export const Draft = styled.img`
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 1rem;
+    height: 1rem;
+    margin: 0.5rem;
+
+    @media (min-width: ${breakpoints.tablet}) {
+        width: 2rem;
+        height: 2rem;
     }
 `

@@ -1,6 +1,6 @@
 import { checkFrontMatter } from 'src/utils/posts'
 import { isoToFullDate } from 'src/utils/date'
-import { Container, ErrorInfo, Footer, StyledPostSummary, Summary, Title } from './styles'
+import { Container, Draft, ErrorInfo, Footer, StyledPostSummary, Summary, Title } from './styles'
 
 export default function PostSummary({ blogPost }: { blogPost: BlogPost }) {
     const { result, isError } = checkFrontMatter(blogPost.post)
@@ -24,6 +24,7 @@ export default function PostSummary({ blogPost }: { blogPost: BlogPost }) {
                 <Footer>
                     {isoToFullDate(result.date)} · {result.author}
                 </Footer>
+                {result.draft && <Draft src="/images/draft-icon.svg" alt="Brouillon" />}
             </Container>
         </StyledPostSummary>
     )
