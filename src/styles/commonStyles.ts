@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import styled, { createGlobalStyle, css } from 'styled-components'
 
 export const colors = {
-    text: '#202020',
+    text: '#303030',
     textLight: '#6c6c6c',
     textWhite: '#d0d0d0',
     primary: '#23a7cf',

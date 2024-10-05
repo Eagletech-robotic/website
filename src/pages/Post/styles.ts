@@ -154,6 +154,7 @@ export const ErrorInfo = styled.div`
 export const Header = styled.div`
     display: flex;
     flex-direction: column;
+    position: relative;
 
     margin-bottom: 2rem;
 `
@@ -173,11 +174,28 @@ export const Title = styled.h1`
 export const Info = styled.div`
     font-size: ${fontSizes.mobile.content};
     display: block;
-    text-align: center;
     color: ${colors.textLight};
 
     @media (min-width: ${breakpoints.tablet}) {
         font-size: ${fontSizes.desktop.content};
+    }
+`
+
+export const Author = styled.span`
+    color: ${colors.text};
+`
+
+export const DraftIcon = styled.img`
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0.5rem;
+
+    @media (min-width: ${breakpoints.tablet}) {
+        width: 2rem;
+        height: 2rem;
     }
 `
 

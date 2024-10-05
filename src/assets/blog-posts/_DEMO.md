@@ -1,6 +1,6 @@
 ---
 title: Post de Demo
-date: 1970-01-01
+date: 1
 author: Thibault
 summary: Ceci est un post de démo, pour tester et montrer les fonctionnalités de markdown.
 draft: true

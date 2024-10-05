@@ -1,6 +1,16 @@
 import { useLoaderData } from 'react-router-dom'
 import { checkFrontMatter, getBlogPostById } from 'src/utils/posts'
-import { Content, ErrorInfo, Header, Info, Page, Separator, Title } from './styles'
+import {
+    Author,
+    Content,
+    DraftIcon,
+    ErrorInfo,
+    Header,
+    Info,
+    Page,
+    Separator,
+    Title,
+} from './styles'
 import { PageStructure } from 'src/styles/commonStyles'
 import { isoToFullDate } from 'src/utils/date'
 
@@ -39,8 +49,9 @@ export default function Post() {
                 <Header>
                     <Title>{title}</Title>
                     <Info>
-                        {author} · {isoToFullDate(date)}
+                        Publié par <Author>{author}</Author> le <i>{isoToFullDate(date)}</i>.
                     </Info>
+                    {result.draft && <DraftIcon src="/images/draft-icon.svg" alt="Brouillon" />}
                 </Header>
 
                 <Separator />
