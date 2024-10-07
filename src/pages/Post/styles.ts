@@ -72,7 +72,6 @@ export const Header = styled.div`
 
 export const LinkBack = styled(Link)`
     color: ${colors.primary};
-    margin-bottom: 0.75rem;
     text-decoration: none;
 `
 

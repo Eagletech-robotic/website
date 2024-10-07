@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import logo from '/images/logo_128.png'
-import { colors, lineHeights } from './commonStyles'
+import { breakpoints, colors, lineHeights } from './commonStyles'
 
 export const InlineLogo = styled.div`
     width: 1.2em;
@@ -35,5 +35,9 @@ export const LoadingSpinner = styled.div`
 export const PageStructure = styled.div`
     line-height: ${lineHeights.contentLineHeight};
     padding: 0 1rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
+
+    @media (min-width: ${breakpoints.tablet}) {
+        margin-top: 3rem;
+    }
 `
