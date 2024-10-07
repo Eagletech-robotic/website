@@ -134,7 +134,6 @@ const CodeStyles = css`
         display: flex;
         justify-content: space-between;
         padding: 0.5em 1em;
-
         background-color: ${colors.primary};
         color: white;
         font-weight: bold;
@@ -146,7 +145,7 @@ const CodeStyles = css`
     }
 
     pre {
-        padding: 0.5em 0.5em;
+        padding: 0.5em;
 
         @media (min-width: ${breakpoints.tablet}) {
             padding: 1em 0;
@@ -155,26 +154,24 @@ const CodeStyles = css`
 
     code {
         font-family: 'Fira Code', monospace;
+        font-size: ${fontSizes.mobile.small};
+        line-height: ${lineHeights.codeLineHeight.mobile};
+
+        @media (min-width: ${breakpoints.tablet}) {
+            font-size: ${fontSizes.desktop.small};
+            line-height: ${lineHeights.codeLineHeight.desktop};
+        }
     }
 
     [data-code-type='inline'] {
         padding: 0.3em 0.5em;
         border-radius: ${borderRadius};
         background-color: ${colors.codeHighlight};
-        font-size: ${fontSizes.mobile.small} !important;
     }
 
     [data-code-type='block'] {
         padding: 0.5em 0;
         overflow-x: auto;
-
-        line-height: ${lineHeights.codeLineHeight.mobile};
-        font-size: ${fontSizes.mobile.small};
-
-        @media (min-width: ${breakpoints.tablet}) {
-            font-size: ${fontSizes.desktop.small};
-            line-height: ${lineHeights.codeLineHeight.desktop};
-        }
 
         &[data-line-numbers] {
             counter-reset: line;
@@ -219,10 +216,6 @@ const CodeStyles = css`
         }
     }
 
-    figcaption {
-        display: none;
-    }
-
     .rehype-pretty-copy {
         top: 0;
         right: 0;
@@ -238,11 +231,6 @@ const CodeStyles = css`
 
         .ready {
             background-image: url(/images/copy-icon.svg);
-        }
-
-        .ready,
-        .success {
-            background-repeat: no-repeat;
         }
     }
 `
@@ -316,16 +304,18 @@ export const Content = styled.div`
         font-style: italic;
     }
 
-    ul > li {
-        list-style: disc;
+    ul > li,
+    ol > li {
         margin-left: 2.5em;
         margin-bottom: 0.5em;
     }
 
+    ul > li {
+        list-style: disc;
+    }
+
     ol > li {
         list-style: decimal;
-        margin-left: 2.5em;
-        margin-bottom: 0.5em;
     }
 
     img {
