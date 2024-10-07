@@ -160,29 +160,10 @@ export const Header = styled.div`
     margin-bottom: 2rem;
 `
 
-export const BreadCrumbs = styled.div`
-    max-width: ${blogMaxWidth};
-    margin: 0 auto;
-    display: flex;
-    line-height: ${lineHeights.titleLineHeight};
-
-    & > span {
-        color: ${colors.textLight};
-        margin-bottom: 1rem;
-        text-decoration: none;
-    }
-`
-
-export const BreadCrumbSeperator = styled.span`
-    color: ${colors.textLight};
-    margin: 0 0.5rem;
-`
-
 export const LinkBack = styled(Link)`
-    color: ${colors.text};
-    margin-bottom: 1rem;
+    color: ${colors.primary};
+    margin-bottom: 0.75rem;
     text-decoration: none;
-    white-space: nowrap;
 `
 
 export const Title = styled.h1`

@@ -2,8 +2,6 @@ import { useLoaderData } from 'react-router-dom'
 import { checkFrontMatter, getBlogPostById } from 'src/utils/posts'
 import {
     Author,
-    BreadCrumbs,
-    BreadCrumbSeperator,
     Content,
     DraftIcon,
     ErrorInfo,
@@ -48,13 +46,9 @@ export default function Post() {
     const { author, title, date } = result
     return (
         <PageStructure>
-            <BreadCrumbs>
-                <LinkBack to="..">Blog</LinkBack>
-                <BreadCrumbSeperator> » </BreadCrumbSeperator>
-                <span>{title}</span>
-            </BreadCrumbs>
             <Page>
                 <Header>
+                    <LinkBack to="..">Blog »</LinkBack>
                     <Title>{title}</Title>
                     <Info>
                         Publié par <Author>{author}</Author> le <i>{isoToFullDate(date)}</i>.
