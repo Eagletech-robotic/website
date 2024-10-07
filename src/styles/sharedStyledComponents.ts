@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import logo from '/images/logo_128.png'
-import { colors } from './commonStyles'
+import { colors, lineHeights } from './commonStyles'
 
 export const InlineLogo = styled.div`
     width: 1.2em;
@@ -30,4 +30,10 @@ export const LoadingSpinner = styled.div`
             transform: rotate(360deg);
         }
     }
+`
+
+export const PageStructure = styled.div`
+    line-height: ${lineHeights.contentLineHeight};
+    padding: 0 1rem;
+    margin-top: 3rem;
 `

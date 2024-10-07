@@ -153,17 +153,3 @@ export const mixin = {
         }
     `,
 }
-
-export const PageStructure = styled.div`
-    line-height: ${lineHeights.contentLineHeight};
-    padding: 0 1rem;
-    margin-top: 3rem;
-`
-
-export const StyledLink = styled(Link)`
-    ${mixin.linkStyle}
-`
-
-export const StyledA = styled.a`
-    ${mixin.linkStyle}
-`

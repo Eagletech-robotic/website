@@ -1,9 +1,8 @@
 import { useBlogPosts } from 'src/utils/posts'
 import { Intro, Page, Title } from './styles'
-import { PageStructure } from 'src/styles/commonStyles'
 import MobilePostsList from 'src/components/Blog/MobilePostsList'
 import DesktopPostsList from 'src/components/Blog/DesktopPostsList'
-import { LoadingSpinner } from 'src/styles/sharedStyledComponents'
+import { LoadingSpinner, PageStructure } from 'src/styles/sharedStyledComponents'
 
 export default function Blog() {
     const { blogPosts, loading } = useBlogPosts()
