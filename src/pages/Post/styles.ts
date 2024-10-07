@@ -7,8 +7,44 @@ import {
     fontSizes,
     mixin,
     lineHeights,
+    hoverTransitionTimingFunction,
 } from 'src/styles/commonStyles'
 import { Link } from 'react-router-dom'
+
+export const ScrollToTopButton = styled.div`
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 1000;
+
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: ${colors.primary};
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    transition: background-color 0.3s ${hoverTransitionTimingFunction};
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+
+    @media (min-width: ${breakpoints.tablet}) {
+        padding: 0.75rem;
+        bottom: 2rem;
+        right: 2rem;
+
+        &:hover {
+            background-color: ${colors.primaryDarkBlue};
+        }
+
+        & > svg {
+            width: 1.75rem;
+            height: 1.75rem;
+        }
+    }
+`
 
 export const Page = styled.div`
     padding: 0;

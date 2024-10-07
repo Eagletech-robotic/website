@@ -9,11 +9,12 @@ import {
     Info,
     LinkBack,
     Page,
+    ScrollToTopButton,
     Separator,
     Title,
 } from './styles'
-import { PageStructure } from 'src/styles/commonStyles'
 import { isoToFullDate } from 'src/utils/date'
+import { PageStructure } from 'src/styles/sharedStyledComponents'
 
 export async function loader({ params }: any): Promise<BlogPost> {
     const post = await getBlogPostById(params.postId)
@@ -60,6 +61,22 @@ export default function Post() {
 
                 <Content dangerouslySetInnerHTML={{ __html: post.post.value }} />
             </Page>
+
+            <ScrollToTopButton onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    viewBox="0 0 24 24"
+                >
+                    <polyline points="18 15 12 9 6 15"></polyline>
+                </svg>
+            </ScrollToTopButton>
         </PageStructure>
     )
 }
