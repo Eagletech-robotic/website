@@ -10,6 +10,82 @@ import {
 } from 'src/styles/commonStyles'
 import { Link } from 'react-router-dom'
 
+export const Page = styled.div`
+    padding: 0;
+    background-color: white;
+    margin: 0 auto;
+    max-width: ${blogMaxWidth};
+
+    @media (min-width: ${breakpoints.tablet}) {
+        padding: 3rem;
+    }
+`
+
+export const ErrorInfo = styled.div`
+    margin-left: 2rem;
+    color: red;
+`
+
+export const Header = styled.div`
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    margin-bottom: 2rem;
+`
+
+export const LinkBack = styled(Link)`
+    color: ${colors.primary};
+    margin-bottom: 0.75rem;
+    text-decoration: none;
+`
+
+export const Title = styled.h1`
+    margin-bottom: 2rem;
+
+    font-weight: bold;
+    font-size: ${fontSizes.mobile.title};
+    line-height: ${lineHeights.titleLineHeight};
+
+    @media (min-width: ${breakpoints.tablet}) {
+        font-size: ${fontSizes.desktop.title};
+    }
+`
+
+export const Info = styled.div`
+    font-size: ${fontSizes.mobile.content};
+    display: block;
+    color: ${colors.textLight};
+
+    @media (min-width: ${breakpoints.tablet}) {
+        font-size: ${fontSizes.desktop.content};
+    }
+`
+
+export const Author = styled.span`
+    color: ${colors.text};
+`
+
+export const DraftIcon = styled.img`
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0.5rem;
+
+    @media (min-width: ${breakpoints.tablet}) {
+        width: 2rem;
+        height: 2rem;
+    }
+`
+
+export const Separator = styled.hr`
+    border: 2px solid ${colors.primary};
+    border-radius: ${borderRadius};
+    margin-bottom: 3rem;
+`
+
 const codeBlockLeftRightPadding = '1.5em'
 
 const CodeStyles = css`
@@ -134,82 +210,6 @@ const CodeStyles = css`
             background-repeat: no-repeat;
         }
     }
-`
-
-export const Page = styled.div`
-    padding: 0;
-    background-color: white;
-    margin: 0 auto;
-    max-width: ${blogMaxWidth};
-
-    @media (min-width: ${breakpoints.tablet}) {
-        padding: 3rem;
-    }
-`
-
-export const ErrorInfo = styled.div`
-    margin-left: 2rem;
-    color: red;
-`
-
-export const Header = styled.div`
-    display: flex;
-    flex-direction: column;
-    position: relative;
-
-    margin-bottom: 2rem;
-`
-
-export const LinkBack = styled(Link)`
-    color: ${colors.primary};
-    margin-bottom: 0.75rem;
-    text-decoration: none;
-`
-
-export const Title = styled.h1`
-    margin-bottom: 2rem;
-
-    font-weight: bold;
-    font-size: ${fontSizes.mobile.title};
-    line-height: ${lineHeights.titleLineHeight};
-
-    @media (min-width: ${breakpoints.tablet}) {
-        font-size: ${fontSizes.desktop.title};
-    }
-`
-
-export const Info = styled.div`
-    font-size: ${fontSizes.mobile.content};
-    display: block;
-    color: ${colors.textLight};
-
-    @media (min-width: ${breakpoints.tablet}) {
-        font-size: ${fontSizes.desktop.content};
-    }
-`
-
-export const Author = styled.span`
-    color: ${colors.text};
-`
-
-export const DraftIcon = styled.img`
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 1.5rem;
-    height: 1.5rem;
-    margin: 0.5rem;
-
-    @media (min-width: ${breakpoints.tablet}) {
-        width: 2rem;
-        height: 2rem;
-    }
-`
-
-export const Separator = styled.hr`
-    border: 2px solid ${colors.primary};
-    border-radius: ${borderRadius};
-    margin-bottom: 3rem;
 `
 
 export const Content = styled.div`
