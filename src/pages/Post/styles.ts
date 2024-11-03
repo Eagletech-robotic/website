@@ -257,14 +257,24 @@ export const Content = styled.div`
 
         & > a.header-anchor {
             position: absolute;
-            padding: 1em;
-            top: -1em;
-            left: -2em;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
             opacity: 0;
+            font-size: 0;
             color: ${colors.primary};
             text-decoration: none;
-
             transition: opacity 0.2s ease-in-out, visibility 0s linear 0.2s;
+
+            @media (min-width: ${breakpoints.tablet}) {
+                padding: 1em;
+                top: -1em;
+                left: -2em;
+                bottom: auto;
+                right: auto;
+                font-size: inherit;
+            }
         }
 
         &:hover > a.header-anchor,
