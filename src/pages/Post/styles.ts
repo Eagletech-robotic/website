@@ -405,3 +405,34 @@ export const Content = styled.div`
 
     ${CodeStyles}
 `
+
+export const EndOfPageLinkText = styled.span`
+    position: relative;
+    color: ${colors.textLight};
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0.05em;
+        height: 2px;
+        transition: background-color 0.2s ${hoverTransitionTimingFunction};
+        background-color: 2px solid transparent;
+    }
+`
+
+export const EndOfPageLinkToBlog = styled(Link)`
+    display: block;
+    border-radius: ${borderRadius};
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: white;
+    width: 100%;
+    text-decoration: none;
+
+    &:hover > ${EndOfPageLinkText}::after {
+        background-color: ${colors.textLight};
+    }
+`

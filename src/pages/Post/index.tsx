@@ -4,6 +4,8 @@ import {
     Author,
     Content,
     DraftIcon,
+    EndOfPageLinkText,
+    EndOfPageLinkToBlog,
     ErrorInfo,
     Header,
     Info,
@@ -77,6 +79,10 @@ export default function Post() {
                     <polyline points="18 15 12 9 6 15"></polyline>
                 </svg>
             </ScrollToTopButton>
+
+            <EndOfPageLinkToBlog to="..">
+                <EndOfPageLinkText>Retour à la liste des articles</EndOfPageLinkText>
+            </EndOfPageLinkToBlog>
         </PageStructure>
     )
 }
