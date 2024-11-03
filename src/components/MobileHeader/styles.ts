@@ -6,6 +6,7 @@ import {
     colors,
     fontSizes,
     headerHeight,
+    headerShadow,
     hoverTransitionTimingFunction,
     mixin,
     zIndices,
@@ -32,7 +33,7 @@ export const StyledHeader = styled.div`
     ${mixin.centerElement};
 
     background-color: ${colors.backgroundHeader};
-    box-shadow: 0px 1px 15px 0px;
+    box-shadow: ${headerShadow};
 `
 
 export const StyledBurgerIcon = styled(BurgerIcon)`

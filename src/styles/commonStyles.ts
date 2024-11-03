@@ -68,7 +68,7 @@ export const borderRadius = '12px'
 export const blogMaxWidth = '750px'
 
 export const hoverTransitionTimingFunction = 'cubic-bezier(0.25, 0.8, 0.24, 1)'
-export const headerShadow = '0px 0px 15px 0px black'
+export const headerShadow = '0px 0px 8px 0px #000c'
 
 export const textUnderlineOffset = '4px'
 
