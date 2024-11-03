@@ -1,5 +1,4 @@
-import { Link } from 'react-router-dom'
-import styled, { createGlobalStyle, css } from 'styled-components'
+import { createGlobalStyle, css } from 'styled-components'
 
 export const colors = {
     text: '#303030',
@@ -24,7 +23,6 @@ export const breakpoints = {
 export const zIndices = {
     headerContainer: 20,
     contentCover: 25,
-    menuMobile: 30,
     header: 35,
 }
 

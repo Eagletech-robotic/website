@@ -1,11 +1,11 @@
 import { NavLink } from 'react-router-dom'
 import styled, { css } from 'styled-components'
 import {
+    borderRadius,
     breakpoints,
     colors,
     fontSizes,
     headerHeight,
-    headerShadow,
     hoverTransitionTimingFunction,
     mixin,
     zIndices,
@@ -80,17 +80,17 @@ export const OpaqueBackground = styled.div`
 `
 
 export const Menu = styled.div`
-    z-index: ${zIndices.menuMobile};
+    z-index: ${zIndices.header};
     position: fixed;
     top: ${headerHeight.mobile};
     left: 0;
 
-    width: 60vw;
+    width: 70vw;
     max-width: 30rem;
     height: calc(100% - ${headerHeight.mobile});
 
-    box-shadow: ${headerShadow};
-    border-radius: 0 2rem 2rem 0;
+    border-top: 1px solid ${colors.text};
+    border-radius: 0 ${borderRadius} ${borderRadius} 0;
     background-color: ${colors.backgroundHeader};
     font-weight: 600;
     transition: 0.5s ${hoverTransitionTimingFunction};
