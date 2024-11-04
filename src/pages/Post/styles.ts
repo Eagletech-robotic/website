@@ -424,7 +424,7 @@ export const EndOfPageLinkText = styled.span`
 
 export const EndOfPageLinkToBlog = styled(Link)`
     display: block;
-    border-radius: ${borderRadius};
+    border-top: 2px solid ${colors.border};
     text-align: center;
     margin-top: 2rem;
     padding: 1rem;
@@ -434,5 +434,10 @@ export const EndOfPageLinkToBlog = styled(Link)`
 
     &:hover > ${EndOfPageLinkText}::after {
         background-color: ${colors.textLight};
+    }
+
+    @media (min-width: ${breakpoints.tablet}) {
+        border-top: none;
+        border-radius: ${borderRadius};
     }
 `
