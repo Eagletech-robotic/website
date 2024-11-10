@@ -26,7 +26,7 @@ export const Description = styled.div`
     opacity: 0;
     transform: translateY(-10px);
     overflow: hidden;
-    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: 0.3s ease-in-out 0.3s;
 `
 
 export const StyledMemberPresentation = styled.div`
