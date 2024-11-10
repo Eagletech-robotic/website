@@ -1,4 +1,4 @@
-import { Description, MemberPhoto, StyledMemberPresentation, Title } from './styles'
+import { Description, MemberPhoto, Overview, StyledMemberPresentation, Title } from './styles'
 
 interface MemberPresentationProps {
     title: string
@@ -9,8 +9,11 @@ interface MemberPresentationProps {
 export default function MemberPresentation(children: MemberPresentationProps) {
     return (
         <StyledMemberPresentation>
-            <MemberPhoto src={children.photo} />
-            <Title>{children.title}</Title>
+            <Overview>
+                <MemberPhoto src={children.photo} />
+                <Title>{children.title}</Title>
+            </Overview>
+            <Description>{children.description}</Description>
         </StyledMemberPresentation>
     )
 }

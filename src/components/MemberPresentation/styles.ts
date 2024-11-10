@@ -1,33 +1,11 @@
-import {
-    colors,
-    borderRadius,
-    fontSizes,
-    breakpoints,
-    hoverTransitionTimingFunction,
-} from 'src/styles/commonStyles'
+import { colors, borderRadius, fontSizes, breakpoints } from 'src/styles/commonStyles'
 import styled from 'styled-components'
 
-export const StyledMemberPresentation = styled.div`
+export const Overview = styled.div`
     position: relative;
-    width: 80%;
-    margin-bottom: 2rem;
     display: flex;
     justify-content: start;
-    padding: 1rem;
     gap: 2rem;
-    border: 1px solid ${colors.border};
-    border-radius: ${borderRadius};
-
-    &:nth-child(even) {
-        justify-self: end;
-        justify-content: end;
-        flex-direction: row-reverse;
-
-        &::after {
-            right: auto;
-            left: 1.5rem;
-        }
-    }
 
     &::after {
         content: '';
@@ -41,9 +19,50 @@ export const StyledMemberPresentation = styled.div`
         align-self: center;
         transition: transform ease-in-out 0.2s;
     }
+`
 
-    &:hover::after {
-        transform: rotate(90deg);
+export const Description = styled.div`
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+`
+
+export const StyledMemberPresentation = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 80%;
+    margin: 0 2rem 2rem 2rem;
+    padding: 1rem;
+    border: 2px solid ${colors.border};
+    border-radius: ${borderRadius};
+
+    &:nth-child(even) {
+        margin-left: auto;
+
+        & ${Overview} {
+            justify-content: end;
+            flex-direction: row-reverse;
+
+            &::after {
+                right: auto;
+                left: 1.5rem;
+            }
+        }
+    }
+
+    &:hover {
+        ${Description} {
+            max-height: 20rem;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        & ${Overview}::after {
+            transform: rotate(90deg);
+        }
     }
 `
 
@@ -62,15 +81,6 @@ export const Title = styled.div`
     align-self: center;
     font-size: ${fontSizes.mobile.content};
     font-weight: bold;
-
-    @media (min-width: ${breakpoints.tablet}) {
-        font-size: ${fontSizes.desktop.content};
-    }
-`
-
-export const Description = styled.div`
-    font-size: ${fontSizes.mobile.content};
-    color: ${colors.primary};
 
     @media (min-width: ${breakpoints.tablet}) {
         font-size: ${fontSizes.desktop.content};
