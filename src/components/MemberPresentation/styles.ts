@@ -5,42 +5,56 @@ export const Overview = styled.div<{ $isOpen: boolean }>`
     position: relative;
     display: flex;
     justify-content: start;
-    gap: 2rem;
+    gap: 1rem;
 
-    &::after {
-        content: '';
-        background-image: url('/images/unfold-icon.svg');
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: absolute;
+    @media (min-width: ${breakpoints.tablet}) {
+        gap: 2rem;
+    }
+`
+
+export const OpenIcon = styled.div<{ $isOpen: boolean }>`
+    flex-shrink: 0;
+    flex-grow: 0;
+    background-image: url('/images/unfold-icon.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1rem;
+    width: 1rem;
+    align-self: center;
+    transition: transform ease-in-out 0.2s;
+    transform: ${(props) => (props.$isOpen ? 'rotate(90deg)' : 'rotate(0)')};
+
+    @media (min-width: ${breakpoints.tablet}) {
         height: 1.5rem;
         width: 1.5rem;
-        right: 1.5rem;
-        align-self: center;
-        transition: transform ease-in-out 0.2s;
-
-        transform: ${(props) => (props.$isOpen ? 'rotate(90deg)' : 'rotate(0)')};
+        margin: 1.5rem;
     }
 `
 
 export const Description = styled.div<{ $isOpen: boolean }>`
     transition: 0.3s ease-in-out;
+    overflow: hidden;
 
-    max-height: ${(props) => (props.$isOpen ? '200rem' : 0)};
+    max-height: ${(props) => (props.$isOpen ? '50rem' : 0)};
     opacity: ${(props) => (props.$isOpen ? 1 : 0)};
     transform: ${(props) => (props.$isOpen ? 'translateY(0)' : 'translateY(-10px)')};
+
+    @media (min-width: ${breakpoints.tablet}) {
+        max-height: ${(props) => (props.$isOpen ? '20rem' : 0)};
+    }
 `
 
-export const StyledMemberPresentation = styled.div`
+export const StyledMemberPresentation = styled.div<{ $isOpen: boolean }>`
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    width: 80%;
-    margin: 0 2rem 2rem 2rem;
+    margin-bottom: 2rem;
+    gap: ${(props) => (props.$isOpen ? '1rem' : 0)};
+    width: 100%;
     padding: 1rem;
     border: 2px solid ${colors.border};
     border-radius: ${borderRadius};
     cursor: pointer;
+    transition: 0.3s ease-in-out;
 
     &:nth-child(even) {
         margin-left: auto;
@@ -48,27 +62,33 @@ export const StyledMemberPresentation = styled.div`
         & ${Overview} {
             justify-content: end;
             flex-direction: row-reverse;
-
-            &::after {
-                right: auto;
-                left: 1.5rem;
-            }
         }
+    }
+
+    @media (min-width: ${breakpoints.tablet}) {
+        width: 80%;
+        margin: 0 2rem 2rem 2rem;
     }
 `
 
 export const MemberPhoto = styled.div<{ src: string }>`
-    width: 5rem;
-    height: 5rem;
+    width: 4rem;
+    height: 4rem;
     flex-shrink: 0;
     border-radius: ${borderRadius};
     background-color: ${colors.primary};
     background-image: url(${(props) => props.src});
     background-repeat: no-repeat;
     background-size: cover;
+
+    @media (min-width: ${breakpoints.tablet}) {
+        width: 6rem;
+        height: 6rem;
+    }
 `
 
 export const Title = styled.div`
+    flex-grow: 1;
     align-self: center;
     font-size: ${fontSizes.mobile.content};
     font-weight: bold;
