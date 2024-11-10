@@ -4,16 +4,18 @@ interface MemberPresentationProps {
     title: string
     photo: string
     description: string
+    isOpen: boolean
+    onClick: () => void
 }
 
 export default function MemberPresentation(children: MemberPresentationProps) {
     return (
-        <StyledMemberPresentation>
-            <Overview>
+        <StyledMemberPresentation onClick={children.onClick}>
+            <Overview $isOpen={children.isOpen}>
                 <MemberPhoto src={children.photo} />
                 <Title>{children.title}</Title>
             </Overview>
-            <Description>{children.description}</Description>
+            <Description $isOpen={children.isOpen}>{children.description}</Description>
         </StyledMemberPresentation>
     )
 }

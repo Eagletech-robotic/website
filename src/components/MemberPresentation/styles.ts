@@ -1,7 +1,7 @@
 import { colors, borderRadius, fontSizes, breakpoints } from 'src/styles/commonStyles'
 import styled from 'styled-components'
 
-export const Overview = styled.div`
+export const Overview = styled.div<{ $isOpen: boolean }>`
     position: relative;
     display: flex;
     justify-content: start;
@@ -18,15 +18,17 @@ export const Overview = styled.div`
         right: 1.5rem;
         align-self: center;
         transition: transform ease-in-out 0.2s;
+
+        transform: ${(props) => (props.$isOpen ? 'rotate(90deg)' : 'rotate(0)')};
     }
 `
 
-export const Description = styled.div`
-    max-height: 0;
-    opacity: 0;
-    transform: translateY(-10px);
-    overflow: hidden;
-    transition: 0.3s ease-in-out 0.3s;
+export const Description = styled.div<{ $isOpen: boolean }>`
+    transition: 0.3s ease-in-out;
+
+    max-height: ${(props) => (props.$isOpen ? '200rem' : 0)};
+    opacity: ${(props) => (props.$isOpen ? 1 : 0)};
+    transform: ${(props) => (props.$isOpen ? 'translateY(0)' : 'translateY(-10px)')};
 `
 
 export const StyledMemberPresentation = styled.div`
@@ -38,6 +40,7 @@ export const StyledMemberPresentation = styled.div`
     padding: 1rem;
     border: 2px solid ${colors.border};
     border-radius: ${borderRadius};
+    cursor: pointer;
 
     &:nth-child(even) {
         margin-left: auto;
@@ -50,18 +53,6 @@ export const StyledMemberPresentation = styled.div`
                 right: auto;
                 left: 1.5rem;
             }
-        }
-    }
-
-    &:hover {
-        ${Description} {
-            max-height: 20rem;
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        & ${Overview}::after {
-            transform: rotate(90deg);
         }
     }
 `

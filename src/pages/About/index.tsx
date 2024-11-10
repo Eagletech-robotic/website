@@ -9,16 +9,29 @@ import photoOrion from '/images/portraits/Orion.png'
 import photoRobin from '/images/portraits/Robin.png'
 import photoThibault from '/images/portraits/Thibault.png'
 import MemberPresentation from 'src/components/MemberPresentation'
+import React from 'react'
 
 export default function About() {
+    const [openMember, setOpenMember] = React.useState<number | undefined>()
+
+    const handleOpenMember = (index: number) => {
+        if (openMember === index) {
+            setOpenMember(undefined)
+        } else {
+            setOpenMember(index)
+        }
+    }
+
     return (
         <PageStructure>
             {MemberPresentations.map((member, index) => (
                 <MemberPresentation
+                    onClick={() => handleOpenMember(index)}
                     key={index}
                     title={member.title}
                     photo={member.photo}
                     description={member.description}
+                    isOpen={openMember === index}
                 />
             ))}
         </PageStructure>
