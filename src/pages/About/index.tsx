@@ -102,14 +102,7 @@ const MemberPresentations = [
     {
         photo: photoNicolas,
         title: 'Nicolas Boulay - Informatique-Electronique',
-        description: `Ingénieur passionné de robotique, j’ai été arbitre
-        puis chef arbitre Eurobot après avoir  participé en 2003 et 2004
-        à la coupe de France de Robotique avec mon école (Projet&Tech).
-        J’ai refait une équipe avec Marion et des amis en 2005 et 2007.
-        L’an passé, la conjonction des jours fériés a permis de faire le trajet depuis Nice
-        jusqu’en Vendée pour montrer la coupe à nos adolescents. Cela m’a donné envie de recommencer,
-        intéressé surtout par l'évolution des technologies disponibles. Dans ce projet,
-        je vais réaliser surtout l’électronique et l’informatique bas niveau du robot.
+        description: `J’ai participé à la coupe en 1999 dont le règlement était sur les châteaux forts. Les années suivantes, j’ai été arbitre puis chef arbitre Eurobot (l’année des Palets). En 2005 et 2007, j’ai refait une équipe avec Marion et des amis. L’an passé, la conjonction des jours fériés à permis de faire le trajet depuis Nice pour montrer la coupe à nos adolescents. Cela m’a donné envie de recommencer surtout avec l’évolution des technologies disponibles. Je vais réaliser surtout l’électronique et l’informatique bas niveau du robot.
         `,
     },
     {
