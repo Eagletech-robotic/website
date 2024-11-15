@@ -1,7 +1,9 @@
 import { colors, borderRadius, fontSizes, breakpoints } from 'src/styles/commonStyles'
 import styled from 'styled-components'
 
-export const Overview = styled.div<{ $isOpen: boolean }>`
+const openingTransition = '0.3s ease-in-out'
+
+export const Overview = styled.div`
     position: relative;
     display: flex;
     justify-content: start;
@@ -32,16 +34,15 @@ export const OpenIcon = styled.div<{ $isOpen: boolean }>`
 `
 
 export const Description = styled.div<{ $isOpen: boolean }>`
-    transition: 0.3s ease-in-out;
-    overflow: hidden;
-
-    max-height: ${(props) => (props.$isOpen ? '50rem' : 0)};
     opacity: ${(props) => (props.$isOpen ? 1 : 0)};
     transform: ${(props) => (props.$isOpen ? 'translateY(0)' : 'translateY(-10px)')};
+    transition: ${openingTransition};
+`
 
-    @media (min-width: ${breakpoints.tablet}) {
-        max-height: ${(props) => (props.$isOpen ? '20rem' : 0)};
-    }
+export const DescriptionWrapper = styled.div<{ $height: number }>`
+    overflow: hidden;
+    height: ${(props) => props.$height}px;
+    transition: ${openingTransition};
 `
 
 export const StyledMemberPresentation = styled.div<{ $isOpen: boolean }>`
@@ -54,7 +55,7 @@ export const StyledMemberPresentation = styled.div<{ $isOpen: boolean }>`
     border: 2px solid ${colors.border};
     border-radius: ${borderRadius};
     cursor: pointer;
-    transition: 0.3s ease-in-out;
+    transition: ${openingTransition};
 
     &:nth-child(even) {
         margin-left: auto;

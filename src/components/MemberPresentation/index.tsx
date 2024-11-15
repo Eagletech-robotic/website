@@ -1,5 +1,7 @@
+import { useLayoutEffect, useRef, useState } from 'react'
 import {
     Description,
+    DescriptionWrapper,
     MemberPhoto,
     OpenIcon,
     Overview,
@@ -15,15 +17,31 @@ interface MemberPresentationProps {
     onClick: () => void
 }
 
-export default function MemberPresentation(children: MemberPresentationProps) {
+export default function MemberPresentation({
+    title,
+    photo,
+    description,
+    isOpen,
+    onClick,
+}: MemberPresentationProps) {
+    const descriptionRef = useRef<HTMLDivElement>(null)
+    const [height, setHeight] = useState(0)
+    useLayoutEffect(() => {
+        setHeight(descriptionRef.current!.getBoundingClientRect().height)
+    }, [])
+
     return (
-        <StyledMemberPresentation onClick={children.onClick} $isOpen={children.isOpen}>
-            <Overview $isOpen={children.isOpen}>
-                <MemberPhoto src={children.photo} />
-                <Title>{children.title}</Title>
-                <OpenIcon $isOpen={children.isOpen} />
+        <StyledMemberPresentation onClick={onClick} $isOpen={isOpen}>
+            <Overview>
+                <MemberPhoto src={photo} />
+                <Title>{title}</Title>
+                <OpenIcon $isOpen={isOpen} />
             </Overview>
-            <Description $isOpen={children.isOpen}>{children.description}</Description>
+            <DescriptionWrapper $height={isOpen ? height : 0}>
+                <Description ref={descriptionRef} $isOpen={isOpen}>
+                    {description}
+                </Description>
+            </DescriptionWrapper>
         </StyledMemberPresentation>
     )
 }
