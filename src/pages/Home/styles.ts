@@ -31,11 +31,13 @@ export const HeaderContainer = styled.div`
     flex-direction: column;
     align-items: center;
     position: relative;
-    min-height: 110vh;
+    height: 110vh;
     z-index: 1;
+    max-height: 60rem;
 
     @media (min-width: ${breakpoints.tablet}) {
-        min-height: 130vh;
+        height: 130vh;
+        max-height: 80rem;
     }
 `
 
@@ -45,10 +47,11 @@ export const Header = styled.div`
     align-items: center;
     margin-bottom: 6.5rem;
     position: sticky;
-    top: 9rem;
+    top: 7rem;
 
     @media (min-width: ${breakpoints.tablet}) {
         margin-bottom: 8rem;
+        top: 9rem;
     }
 `
 

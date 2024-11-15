@@ -10,6 +10,7 @@ import photoRobin from '/images/portraits/Robin.png'
 import photoThibault from '/images/portraits/Thibault.png'
 import MemberPresentation from 'src/components/MemberPresentation'
 import React from 'react'
+import { StyledAbout } from './styles'
 
 export default function About() {
     const [openMember, setOpenMember] = React.useState<number | undefined>()
@@ -24,16 +25,18 @@ export default function About() {
 
     return (
         <PageStructure>
-            {MemberPresentations.map((member, index) => (
-                <MemberPresentation
-                    onClick={() => handleOpenMember(index)}
-                    key={index}
-                    title={member.title}
-                    photo={member.photo}
-                    description={member.description}
-                    isOpen={openMember === index}
-                />
-            ))}
+            <StyledAbout>
+                {MemberPresentations.map((member, index) => (
+                    <MemberPresentation
+                        onClick={() => handleOpenMember(index)}
+                        key={index}
+                        title={member.title}
+                        photo={member.photo}
+                        description={member.description}
+                        isOpen={openMember === index}
+                    />
+                ))}
+            </StyledAbout>
         </PageStructure>
     )
 }

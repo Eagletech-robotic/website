@@ -1,2 +1,6 @@
-import { borderRadius, breakpoints, colors, fontSizes } from 'src/styles/commonStyles'
 import styled from 'styled-components'
+
+export const StyledAbout = styled.div`
+    max-width: 100rem;
+    margin: auto;
+`
