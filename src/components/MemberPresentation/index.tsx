@@ -27,7 +27,9 @@ export default function MemberPresentation({
     const descriptionRef = useRef<HTMLDivElement>(null)
     const [height, setHeight] = useState(0)
     useLayoutEffect(() => {
-        setHeight(descriptionRef.current!.getBoundingClientRect().height)
+        const element = descriptionRef.current!
+        // For some reason, the element's height takes time to be correct.
+        setTimeout(() => setHeight(element.offsetHeight), 100)
     }, [])
 
     return (
