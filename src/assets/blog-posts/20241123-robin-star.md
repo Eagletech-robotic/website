@@ -1,5 +1,5 @@
 ---
-title: Robin, 12 ans, nous a cocoté une star !
+title: Robin, 12 ans, nous a concocté une star !
 date: 2024-11-23
 author: Louis Monnier
 summary: À 12 ans, avec un simple kit Lego Boost, Robin a réussi à créer notre PAMI, notre super star qui fait la fête pour un bonus de 15 points. Merci, Robin !
