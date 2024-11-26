@@ -18,7 +18,7 @@ Un kit Lego Boost suffit pour construire un PAMI, le petit robot auxiliaire qui 
 ## Construire la scène, une étape essentielle
 
 **Mais avant de construire le robot, l’équipe a dû d’abord construire la scène,** l’endroit sur lequel notre star doit se rendre.
-![PAMI, Robin et son robot star](/blog-images/20241123-robin-star/air-de-jeu.png)
+![PAMI, Robin et son robot star](/blog-images/20241123-robin-star/aire-de-jeu.png)
 
 Ils l’ont réalisée en suivant les indications du règlement à la lettre pour tester le PAMI dans des conditions optimales. Ils ont acheté quelques chutes de bois chez Castorama où elles ont été découpées aux bonnes dimensions. Ensuite, les planches ont simplement été assemblées et vissées.
 
