@@ -13,7 +13,7 @@ Un kit Lego Boost suffit pour construire un PAMI, le petit robot auxiliaire qui 
 
 Évidemment, le robot PAMI n’est pas notre robot principal, mais notre star. Pour faire simple, la star doit, dans les quinze dernières secondes du match, suivre la flèche pour monter sur la scène et s’approcher le plus possible de son objectif, avant de commencer à faire la fête. Et pour ça, notre mini robot doit bouger ses accessoires et faire du bruit tout en restant immobile. 
 
-> Pour plus d’informations, je vous invite à lire notre article de blog sur les règles de Eurobot 2025 ou, pour les plus suicidaires, le règlement général et les règles du jeu 2025 sur [Eurobot](https://www.eurobot.org/).
+> Pour plus d’informations, je vous invite à lire [notre article de blog sur les règles de Eurobot 2025](https://eagletech-robotics.netlify.app/blog/posts/00xi1m3l) ou, pour les plus suicidaires, le règlement général et les règles du jeu 2025 sur [Eurobot](https://www.eurobot.org/).
 
 ## Construire la scène, une étape essentielle
 
