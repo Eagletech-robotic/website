@@ -23,7 +23,7 @@ export function DesktopHeader(): JSX.Element {
                 </Logo>
 
                 <Links>
-                    <NavLinkButton to="about">🔎 About</NavLinkButton>
+                    <NavLinkButton to="about">🔎 A propos</NavLinkButton>
                     <NavLinkButton to="blog">📝 Blog</NavLinkButton>
                     <ExternalLinkButton href="https://github.com/Eagletech-robotic">
                         <GitHubLogo src={githubLogo} />

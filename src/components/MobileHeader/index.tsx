@@ -61,10 +61,10 @@ export function MobileHeader(): JSX.Element {
             <Menu ref={refMenu} style={isVisibleStyle}>
                 <ButtonsContainer>
                     <NavLinkButton to="/" onClick={handleLinkClick}>
-                        <InlineLogo /> Home
+                        <InlineLogo /> Accueil
                     </NavLinkButton>
                     <NavLinkButton to="about" onClick={handleLinkClick}>
-                        🔎 About
+                        🔎 A propos
                     </NavLinkButton>
                     <NavLinkButton to="blog" onClick={handleLinkClick}>
                         📝 Blog
