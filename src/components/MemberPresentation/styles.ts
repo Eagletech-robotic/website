@@ -72,7 +72,7 @@ export const StyledMemberPresentation = styled.div<{ $isOpen: boolean }>`
     }
 `
 
-export const MemberPhoto = styled.div<{ src: string }>`
+export const MemberPhoto = styled.div<{ src: string; $isOpen: boolean }>`
     width: 4rem;
     height: 4rem;
     flex-shrink: 0;
@@ -81,10 +81,15 @@ export const MemberPhoto = styled.div<{ src: string }>`
     background-image: url(${(props) => props.src});
     background-repeat: no-repeat;
     background-size: cover;
+    transition: ${openingTransition};
+
+    ${(props) => props.$isOpen && 'width: 6rem; height: 6rem;'}
 
     @media (min-width: ${breakpoints.tablet}) {
         width: 6rem;
         height: 6rem;
+
+        ${(props) => props.$isOpen && 'width: 8rem; height: 8rem;'}
     }
 `
 

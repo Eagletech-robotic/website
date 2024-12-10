@@ -35,7 +35,7 @@ export default function MemberPresentation({
     return (
         <StyledMemberPresentation onClick={onClick} $isOpen={isOpen}>
             <Overview>
-                <MemberPhoto src={photo} />
+                <MemberPhoto src={photo} $isOpen={isOpen} />
                 <Title>{title}</Title>
                 <OpenIcon $isOpen={isOpen} />
             </Overview>
