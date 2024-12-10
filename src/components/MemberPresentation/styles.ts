@@ -53,13 +53,13 @@ export const StyledMemberPresentation = styled.div<{ $isOpen: boolean }>`
     width: 100%;
     padding: 1rem;
     border: 2px solid ${colors.border};
+    border-left: 5px solid ${colors.primary};
     border-radius: ${borderRadius};
     cursor: pointer;
     transition: ${openingTransition};
 
     &:nth-child(even) {
-        margin-left: auto;
-
+        border-left: 5px solid ${colors.primaryYellow};
         & ${Overview} {
             justify-content: end;
             flex-direction: row-reverse;
@@ -68,7 +68,7 @@ export const StyledMemberPresentation = styled.div<{ $isOpen: boolean }>`
 
     @media (min-width: ${breakpoints.tablet}) {
         width: 80%;
-        margin: 0 2rem 2rem 2rem;
+        margin: 0 auto 2rem auto;
     }
 `
 
