@@ -10,7 +10,17 @@ import photoRobin from '/images/portraits/Robin.png'
 import photoThibault from '/images/portraits/Thibault.png'
 import MemberPresentation from 'src/components/MemberPresentation'
 import React from 'react'
-import { StyledAbout } from './styles'
+import {
+    Banner,
+    MembersList,
+    MembersPresentation,
+    Presentation,
+    StyledAbout,
+    StyledLink,
+    TeamPresentation,
+    Title,
+} from './styles'
+import banner from '/public/images/about-banner.jpeg'
 
 export default function About() {
     const [openMember, setOpenMember] = React.useState<number | undefined>()
@@ -26,16 +36,44 @@ export default function About() {
     return (
         <PageStructure>
             <StyledAbout>
-                {MemberPresentations.map((member, index) => (
-                    <MemberPresentation
-                        onClick={() => handleOpenMember(index)}
-                        key={index}
-                        title={member.title}
-                        photo={member.photo}
-                        description={member.description}
-                        isOpen={openMember === index}
-                    />
-                ))}
+                <TeamPresentation>
+                    <Title>L'équipe EagleTech</Title>
+                    <Presentation>
+                        EagleTech, c’est l’histoire d’une blague qui a pris son envol pour devenir
+                        un projet tout aussi ambitieux, à notre petite échelle, que passionnant.
+                        Notre équipe, très motivée et impliquée, est composée de deux familles, les
+                        Monnier et les Boulay, amis de longue date, qui ont décidé de se rassembler
+                        pour participer à la{' '}
+                        <StyledLink to="https://coupederobotique.fr">
+                            Coupe de France de Robotique
+                        </StyledLink>
+                        . Nous avons dans nos rangs des anciens finalistes de la Coupe de France de
+                        Robotique, des ingénieurs, un journaliste en herbe, un cadet de 12 ans et un
+                        visionnaire : celui qui a eu l’idée folle de lancer ce projet et qui se
+                        demande aujourd’hui ce qui lui a pris 😃. Avec EagleTech on construit des
+                        robots, on transmet notre apprentissage, notre expérience. On apprend aussi
+                        à mieux nous connaître, on crée des souvenirs, des liens et une belle
+                        histoire à raconter par le biais de notre{' '}
+                        <StyledLink to="/blog">blog</StyledLink>.
+                    </Presentation>
+                    <Banner src={banner} alt="Banner" />
+                </TeamPresentation>
+
+                <MembersPresentation>
+                    <Title>Les membres de l'équipe</Title>
+                    <MembersList>
+                        {MemberPresentations.map((member, index) => (
+                            <MemberPresentation
+                                onClick={() => handleOpenMember(index)}
+                                key={index}
+                                title={member.title}
+                                photo={member.photo}
+                                description={member.description}
+                                isOpen={openMember === index}
+                            />
+                        ))}
+                    </MembersList>
+                </MembersPresentation>
             </StyledAbout>
         </PageStructure>
     )

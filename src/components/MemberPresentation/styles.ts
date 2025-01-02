@@ -48,9 +48,8 @@ export const DescriptionWrapper = styled.div<{ $height: number }>`
 export const StyledMemberPresentation = styled.div<{ $isOpen: boolean }>`
     display: flex;
     flex-direction: column;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     gap: ${(props) => (props.$isOpen ? '1rem' : 0)};
-    width: 100%;
     padding: 1rem;
     border: 2px solid ${colors.border};
     border-left: 5px solid ${colors.primary};
@@ -67,8 +66,7 @@ export const StyledMemberPresentation = styled.div<{ $isOpen: boolean }>`
     }
 
     @media (min-width: ${breakpoints.tablet}) {
-        width: 80%;
-        margin: 0 auto 2rem auto;
+        margin-bottom: 2rem;
     }
 `
 
