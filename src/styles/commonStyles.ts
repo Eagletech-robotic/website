@@ -129,6 +129,10 @@ const styles = css`
     i {
         font-style: italic;
     }
+
+    ::selection {
+        background: ${colors.primaryYellow}66;
+    }
 `
 
 export const GlobalStyle = createGlobalStyle`${styles}`

@@ -157,6 +157,10 @@ const CodeStyles = css`
         font-size: ${fontSizes.mobile.small};
         line-height: ${lineHeights.codeLineHeight.mobile};
 
+        span::selection {
+            background: ${colors.codeHighlight};
+        }
+
         @media (min-width: ${breakpoints.tablet}) {
             font-size: ${fontSizes.desktop.small};
             line-height: ${lineHeights.codeLineHeight.desktop};
