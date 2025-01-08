@@ -2,7 +2,7 @@
 title: En quoi consiste la Coupe de France de Robotique ?
 date: 2024-11-01
 author: Louis Monnier
-summary: À 12 ans, avec un simple kit Lego Boost, Robin a réussi à créer notre PAMI, notre super Star qui fait la fête pour un bonus de 15 points. Merci, Robin !
+summary: Découvrez le règlement de la Coupe de France de Robotique 2025 en 5 minutes.
 draft: false
 ---
 
@@ -48,7 +48,7 @@ Le règlement précise également comment se déroule la partie. Après seulemen
 ![Dates importantes de la Coupe de France de Robotique](/blog-images/20241101-en-quoi-consiste-la-coupe-de-france-de-robotique/Poolzor.png)
 
 
-## Règle du Jeu saison 2024-2025 : The Show must go on
+## Règle du Jeu saison 2024-2025 : The Show Must Go On
 
 [Les règles du jeu](https://www.eurobot.org/wp-content/uploads/2024/10/Eurobot2025_Rules.pdf), changent chanque année, et comme les anglophones l’ont probablement compris au titre, le thème du jeu cette année est celui du spectacle.
 Nos robots ont pour objectif d’assurer la promotion, la mise en place de la scène et l'animation du spectacle d'une star.

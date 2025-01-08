@@ -48,7 +48,7 @@ export default function Home() {
                         Nous postons régulièrement sur notre blog pour faire part de nos avancés sur
                         le robot. Vous pourrez ainsi suivre l'évolution de celui-ci au cours de
                         l'année ! Nous écrivons également des articles sur diverses informations
-                        pratiques pouvant servir à d'autres équipes telles que{' '}
+                        pratiques pouvant servir à d'autres équipes ou curieux telles que{' '}
                         <InlineLink to="/blog/posts/00xi1m3l">
                             le règlement de la coupe de cette année
                         </InlineLink>
