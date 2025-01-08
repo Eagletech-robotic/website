@@ -50,10 +50,6 @@ export const Presentation = styled.p`
     }
 `
 
-export const StyledLink = styled(Link)`
-    ${mixin.linkStyle}
-`
-
 export const Banner = styled.img`
     width: 100%;
     height: auto;

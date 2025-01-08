@@ -3,6 +3,7 @@ import {
     Content,
     Header,
     HeaderContainer,
+    InlineLink,
     Logo,
     Page,
     Paragraph,
@@ -28,9 +29,12 @@ export default function Home() {
                 <Content>
                     <SectionTitle>Une Equipe Française de Robotique</SectionTitle>
                     <Paragraph>
-                        Nous sommes un équipe de robotique française, formée de six personnes, qui
-                        participe à la compétition « <i>Coupe de France de Robotique</i> » de cette
-                        année 2024-2025. Découvrez-en davantage sur notre équipe !
+                        Nous sommes un équipe de robotique française, formée de huit personnes, qui
+                        participe à la compétition «{' '}
+                        <InlineLink to="https://www.coupederobotique.fr/" target="_blank">
+                            Coupe de France de Robotique
+                        </InlineLink>{' '}
+                        » sur cette année 2024-2025. Découvrez-en davantage sur notre équipe !
                     </Paragraph>
                 </Content>
                 <StyledLink to="/about">
@@ -41,9 +45,14 @@ export default function Home() {
                 <Content>
                     <SectionTitle>Nous Partageons notre Travail</SectionTitle>
                     <Paragraph>
-                        Nous postons régulièrement sur notre Blog pour faire part de nos avancés sur
-                        le robot, et de notre club en général. Vous pourrez ainsi suivre l'évolution
-                        de celui-ci au cours de l'année !
+                        Nous postons régulièrement sur notre blog pour faire part de nos avancés sur
+                        le robot. Vous pourrez ainsi suivre l'évolution de celui-ci au cours de
+                        l'année ! Nous écrivons également des articles sur diverses informations
+                        pratiques pouvant servir à d'autres équipes telles que{' '}
+                        <InlineLink to="/blog/posts/00xi1m3l">
+                            le règlement de la coupe de cette année
+                        </InlineLink>
+                        .
                     </Paragraph>
                 </Content>
                 <StyledLink to="/blog">
@@ -55,10 +64,12 @@ export default function Home() {
                     <SectionTitle>Du Code Open-Source</SectionTitle>
                     <Paragraph>
                         L'entièreté de notre code est open-source sur GitHub. Vous pouvez y accéder
-                        si cela vous intéresse.
+                        si cela vous intéresse. Vous y trouverez aussi bien le code de notre robot
+                        et algorithme de vision que celui de ce site web, ou encore d'autres projets
+                        tels que notre simulateur.
                     </Paragraph>
                 </Content>
-                <StyledLink to="https://github.com/Eagletech-robotic">
+                <StyledLink to="https://github.com/Eagletech-robotic" target="_blank">
                     <Button>Allons-y !</Button>
                 </StyledLink>
             </Section>

@@ -138,7 +138,7 @@ export const ExternalLinkButton = styled.a`
 
     display: flex;
     border: none;
-    gap: 6px;
+    gap: 0.4em;
 
     justify-content: center;
 `

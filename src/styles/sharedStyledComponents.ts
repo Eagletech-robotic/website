@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import logo from '/images/logo_128.png'
-import { breakpoints, colors, lineHeights } from './commonStyles'
+import { breakpoints, colors, lineHeights, mixin } from './commonStyles'
+import { Link } from 'react-router-dom'
 
 export const InlineLogo = styled.div`
     width: 1.2em;
@@ -40,4 +41,8 @@ export const PageStructure = styled.div`
     @media (min-width: ${breakpoints.tablet}) {
         margin-top: 3rem;
     }
+`
+
+export const InlineLink = styled(Link)`
+    ${mixin.linkStyle}
 `

@@ -38,37 +38,28 @@ export const HeaderContainer = styled.div`
     height: 100%;
 `
 
-const linkStyles = css`
-    text-align: center;
-    align-content: center;
-    height: 100%;
-    padding: 0 2rem;
-
+const genericLinkStyles = css`
     text-decoration: none;
     cursor: pointer;
     font-size: ${fontSizes.desktop.content};
     transition: 0.5s ${hoverTransitionTimingFunction};
 `
 
-const scaleOnHover = css`
-    &:hover {
-        transform: scale(1.125);
-    }
-`
-
-export const Logo = styled.div`
-    height: 100%;
-    margin: 0 auto;
-    ${mixin.centerElement};
-`
-
 export const LogoLink = styled(NavLink)`
-    ${linkStyles}
-    ${scaleOnHover}
+    ${genericLinkStyles};
 
     height: 100%;
     padding: 0.75rem 3rem;
     margin: 0 auto;
+
+    &:hover {
+        scale: 1.1;
+    }
+`
+
+export const Logo = styled.div`
+    margin: 0 auto;
+    ${mixin.centerElement};
 `
 
 export const LogoImage = styled.img`
@@ -76,32 +67,21 @@ export const LogoImage = styled.img`
     width: auto;
 `
 
-export const Links = styled.div`
-    display: flex;
-    justify-content: space-between;
-    width: ${blogMaxWidth};
-    gap: 1rem;
-`
-
-export const NavLinkButton = styled(NavLink)`
-    ${linkStyles}
+const linkStyles = css`
+    ${genericLinkStyles};
 
     position: relative;
-
-    &.active {
-        border-color: ${colors.primary};
-        color: ${colors.primary};
-    }
+    padding: 0 2rem;
 
     &:hover {
         color: ${colors.primary};
 
-        &::after {
+        &::before {
             width: 100%;
         }
     }
 
-    &::after {
+    &::before {
         content: '';
         position: absolute;
         display: block;
@@ -116,23 +96,41 @@ export const NavLinkButton = styled(NavLink)`
     }
 `
 
-export const ExternalLinkButton = styled.a`
-    ${linkStyles}
-    ${scaleOnHover}
-
+export const Links = styled.div`
     display: flex;
-    border: none;
-    gap: 6px;
+    justify-content: space-between;
+    width: ${blogMaxWidth};
+    gap: 1rem;
+`
 
-    justify-content: center;
-    align-items: center;
+export const NavLinkButton = styled(NavLink)`
+    ${linkStyles};
 
-    &:hover {
-        transform: scale(1.1);
+    align-content: center;
+
+    &.active {
+        border-color: ${colors.primary};
+        color: ${colors.primary};
+    }
+`
+
+export const ExternalLinkButton = styled.a`
+    ${linkStyles};
+    ${mixin.centerElement};
+
+    &::after {
+        content: '';
+        margin-left: 0.75em;
+        width: 0.75em;
+        height: 0.75em;
+        background-image: url('/images/link-out.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 `
 
 export const GitHubLogo = styled.img`
+    margin-right: 0.4em;
     align-self: center;
     width: 1.4rem;
     height: auto;

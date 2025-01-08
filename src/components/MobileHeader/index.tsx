@@ -72,7 +72,7 @@ export function MobileHeader(): JSX.Element {
 
                     <ButtonsSeparator />
 
-                    <ExternalLinkButton href="https://github.com/Eagletech-robotic">
+                    <ExternalLinkButton href="https://github.com/Eagletech-robotic" target="_blank">
                         <GitHubLogo src={githubLogo} />
                         Github
                     </ExternalLinkButton>

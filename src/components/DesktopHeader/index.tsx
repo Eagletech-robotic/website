@@ -25,7 +25,7 @@ export function DesktopHeader(): JSX.Element {
                 <Links>
                     <NavLinkButton to="about">🔎 A propos</NavLinkButton>
                     <NavLinkButton to="blog">📝 Blog</NavLinkButton>
-                    <ExternalLinkButton href="https://github.com/Eagletech-robotic">
+                    <ExternalLinkButton href="https://github.com/Eagletech-robotic" target="_blank">
                         <GitHubLogo src={githubLogo} />
                         Github
                     </ExternalLinkButton>

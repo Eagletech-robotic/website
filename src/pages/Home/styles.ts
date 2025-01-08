@@ -153,6 +153,32 @@ export const Content = styled.div`
     }
 `
 
+export const InlineLink = styled(Link)`
+    position: relative;
+    font-style: italic;
+    text-decoration: none;
+    transition: 0.2s ${hoverTransitionTimingFunction};
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        bottom: 0.05em;
+        left: 0;
+        height: 2px;
+        background-color: currentColor;
+        transition: transform 0.5s ${hoverTransitionTimingFunction};
+    }
+
+    &:hover {
+        color: ${colors.primaryYellow};
+    }
+
+    &:hover::after {
+        transform: translateY(0.1em);
+    }
+`
+
 export const SectionTitle = styled.h2`
     font-size: ${fontSizes.mobile.heading1};
     text-align: center;

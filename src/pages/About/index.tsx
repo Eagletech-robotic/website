@@ -1,4 +1,4 @@
-import { PageStructure } from 'src/styles/sharedStyledComponents'
+import { InlineLink, PageStructure } from 'src/styles/sharedStyledComponents'
 
 import photoAntoine from '/images/portraits/Antoine.png'
 import photoJanaina from '/images/portraits/Janaina.png'
@@ -16,7 +16,6 @@ import {
     MembersPresentation,
     Presentation,
     StyledAbout,
-    StyledLink,
     TeamPresentation,
     Title,
 } from './styles'
@@ -44,9 +43,9 @@ export default function About() {
                         Notre équipe, très motivée et impliquée, est composée de deux familles, les
                         Monnier et les Boulay, amis de longue date, qui ont décidé de se rassembler
                         pour participer à la{' '}
-                        <StyledLink to="https://coupederobotique.fr">
+                        <InlineLink to="https://coupederobotique.fr" target="_blank">
                             Coupe de France de Robotique
-                        </StyledLink>
+                        </InlineLink>
                         . Nous avons dans nos rangs des anciens finalistes de la Coupe de France de
                         Robotique, des ingénieurs, un journaliste en herbe, un cadet de 12 ans et un
                         visionnaire : celui qui a eu l’idée folle de lancer ce projet et qui se
@@ -54,7 +53,7 @@ export default function About() {
                         robots, on transmet notre apprentissage, notre expérience. On apprend aussi
                         à mieux nous connaître, on crée des souvenirs, des liens et une belle
                         histoire à raconter par le biais de notre{' '}
-                        <StyledLink to="/blog">blog</StyledLink>.
+                        <InlineLink to="/blog">blog</InlineLink>.
                     </Presentation>
                     <Banner src={banner} alt="Banner" />
                 </TeamPresentation>
