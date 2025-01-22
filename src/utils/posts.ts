@@ -63,57 +63,62 @@ export function useBlogPosts(): { blogPosts: BlogPost[]; loading: boolean } {
 }
 
 export async function getBlogPostById(id: string): Promise<BlogPost | null> {
-    const blogPosts = await fetchBlogPosts()
-    for (const blogPost of blogPosts) {
-        if (blogPost.id === id) return blogPost
-    }
-
-    return null
+    const blogPost = (await fetchBlogPosts(id))[0]
+    return blogPost
 }
 
-async function fetchBlogPosts(): Promise<BlogPost[]> {
-    const markdowns: Post[] = loadMarkdownFiles()
+async function fetchBlogPosts(id?: string): Promise<BlogPost[]> {
+    const markdowns: Post[] = loadMarkdownFiles().filter((post) => {
+        if (id) return hash(post.path) === id
+        else return true
+    })
 
-    const promises: Array<Promise<BlogPost | null>> = markdowns.map(async (markdown) => {
-        const vfile = unified()
-            .use(remarkParse)
-            .use(remarkGfm)
-            .use(remarkMath)
-            .use(remarkFrontmatter)
-            .use(remarkRehype)
-            .use(rehypeKatex)
-            .use(rehypePrettyCode, {
-                defaultLang: 'plaintext',
-                theme: 'dark-plus',
-                transformers: [
-                    transformerCopyButton({
-                        visibility: 'always',
-                        feedbackDuration: 3_000,
-                    }),
-                ],
-                bypassInlineCode: true,
-            })
-            .use(wrapTables)
-            .use(addAnchorToHeadings)
-            .use(addCodeTypeProperties)
-            .use(rehypeStringify)
-            .use(() => (_tree: any, file: VFile) => matter(file))
-            .process(markdown.value)
-
-        const post: Post = {
-            data: (await vfile).data as any,
-            value: (await vfile).value as string,
-            path: markdown.path,
-        }
-
-        const blogPost = toBlogPost(await post, markdown.path)
-
-        if (shouldDisplay(blogPost)) return blogPost
-        else return null
+    const promises: Array<Promise<BlogPost | null>> = markdowns.map((post) => {
+        return processPost(post)
     })
 
     const blogPosts = (await Promise.all(promises)).filter((item) => item != null)
+
     return blogPosts
+}
+
+async function processPost(post: Post): Promise<BlogPost | null> {
+    console.log(`Processing post: ${post.path}`)
+    const vfile = unified()
+        .use(remarkParse)
+        .use(remarkGfm)
+        .use(remarkMath)
+        .use(remarkFrontmatter)
+        .use(remarkRehype)
+        .use(rehypeKatex)
+        .use(rehypePrettyCode, {
+            defaultLang: 'plaintext',
+            theme: 'dark-plus',
+            transformers: [
+                transformerCopyButton({
+                    visibility: 'always',
+                    feedbackDuration: 3_000,
+                }),
+            ],
+            bypassInlineCode: true,
+        })
+        .use(wrapTables)
+        .use(addAnchorToHeadings)
+        .use(addCodeTypeProperties)
+        .use(rehypeStringify)
+        .use(() => (_tree: any, file: VFile) => matter(file))
+        .process(post.value)
+
+    const processedPost: Post = {
+        data: (await vfile).data as any,
+        value: (await vfile).value as string,
+        path: post.path,
+    }
+
+    const blogPost = toBlogPost(await processedPost, post.path)
+
+    if (shouldDisplay(blogPost)) return blogPost
+    else return null
 }
 
 function addCodeTypeProperties() {
@@ -194,13 +199,9 @@ function addAnchorToHeadings() {
 
 function shouldDisplay(post: BlogPost): boolean {
     const isDevelopment = import.meta.env.VITE_SHOW_DRAFTS === 'true'
+    const isDraft = post.post.data.matter?.draft
 
-    let displayPost = true
-    if (post.post.data.matter?.draft) {
-        displayPost = isDevelopment
-    }
-
-    return displayPost
+    return (isDraft && isDevelopment) || !isDraft
 }
 
 function toBlogPost(post: Post, path: string): BlogPost {
