@@ -19,7 +19,7 @@ import {
     TeamPresentation,
     Title,
 } from './styles'
-import banner from '/public/images/about-banner.jpeg'
+import banner from '/src/assets/images/about-banner.jpeg'
 
 export default function About() {
     const [openMember, setOpenMember] = React.useState<number | undefined>()
