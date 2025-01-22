@@ -3,7 +3,7 @@ title: Drone, robot et radiocommande
 date: 2025-01-22
 author: Nicolas Boulay
 summary: L’open source dans l’informatique embarquée se limitait historiquement aux systèmes d’exploitation et aux compilateurs. On connaît bien GCC, BusyBox et FreeRTOS. Puis, Arduino a fait son entrée dans le monde du semi-professionnel. Mais cela évolue rapidement. Trois domaines se développent avec des logiciels, et parfois des produits open source, qui commencent à se croiser.
-draft: true
+draft: false
 ---
 
 ## Le domaine des drones
