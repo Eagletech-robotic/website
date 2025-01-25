@@ -19,16 +19,20 @@
             "last 1 firefox version"
         ]
     },
-    "dependencies": {
-        "@rehype-pretty/transformers": "^0.13.2",
-        "@testing-library/jest-dom": "^6.6.3",
-        "@testing-library/react": "^16.2.0",
-        "@testing-library/user-event": "^14.6.1",
-        "@types/jest": "^29.5.14",
+    "devDependencies": {
         "@types/node": "^22.10.10",
         "@types/react": "^19.0.8",
         "@types/react-dom": "^19.0.3",
         "@vitejs/plugin-react": "^4.3.4",
+        "typescript": "^5.7.3",
+        "vite": "^6.0.11",
+        "vite-plugin-commonjs": "^0.10.4",
+        "vite-plugin-pages": "^0.32.4",
+        "vite-plugin-svgr": "^4.3.0",
+        "vite-tsconfig-paths": "^5.1.4"
+    },
+    "dependencies": {
+        "@rehype-pretty/transformers": "^0.13.2",
         "katex": "^0.16.21",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
@@ -42,16 +46,10 @@
         "remark-math": "^6.0.0",
         "remark-parse": "^11.0.0",
         "remark-rehype": "^11.1.1",
-        "shiki": "^2.1.0",
+        "shiki": "^1.29.1",
         "styled-components": "^6.1.14",
-        "typescript": "^5.7.3",
         "unified": "^11.0.5",
-        "vfile-matter": "^5.0.0",
-        "vite": "^6.0.11",
-        "vite-plugin-commonjs": "^0.10.4",
-        "vite-plugin-pages": "^0.32.4",
-        "vite-plugin-svgr": "^4.3.0",
-        "vite-tsconfig-paths": "^5.1.4"
+        "vfile-matter": "^5.0.0"
     },
     "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
