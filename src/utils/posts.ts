@@ -83,7 +83,6 @@ async function fetchBlogPosts(id?: string): Promise<BlogPost[]> {
 }
 
 async function processPost(post: Post): Promise<BlogPost | null> {
-    console.log(`Processing post: ${post.path}`)
     const vfile = unified()
         .use(remarkParse)
         .use(remarkGfm)
