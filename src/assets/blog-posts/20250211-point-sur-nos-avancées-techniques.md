@@ -23,7 +23,7 @@ Nous avons déjà commencé certains projets, et même fini d’autres. Ensemble
 
 Notre équipe de robotique est composée de deux familles : Les Monnier et les Boulay. 
 
-**La partie mécanique**
+### La partie mécanique
 
 Les Boulay ont dans leurs rangs deux vétérans des coupes de robotique, la partie mécanique et physique leur a naturellement été attribuée. Ils s’occupent donc de la conception et de la construction du robot. Ayant déjà participé à La Coupe de France de Robotique dans les années 2000, ils avaient un ancien châssis de robot dont on a pu récupérer la structure et ses moteurs. D’autres éléments devenus obsolètes, comme l’ordinateur de bord dix fois plus grand et beaucoup moins puissant que les puces utilisées aujourd’hui, ont dû être jetés. On a ajouté des roues et un bouton d'arrêt d'urgence.
 
@@ -33,7 +33,7 @@ Les Boulay ont dans leurs rangs deux vétérans des coupes de robotique, la part
 À ces progrès, on peut ajouter la pince pour déplacer les matières premières qui serviront à construire les estrades. Les boîtes de conserve étant en métal, on a décidé d'utiliser cette spécificité pour concevoir une pince magnétique. Tout fonctionnait à merveille, mais malheureusement, le papier collé autour des boîtes de conserve a réduit leur attraction magnétique. Nous devons donc changer les aimants de la pince et en mettre des plus puissants en néodyme. Mais allons-nous en trouver ? Affaire à suivre.
 
 
-**L’algorithme de pilotage**
+### L’algorithme de pilotage
 
 Les Monnier, en revanche, s’occupent de l'algorithme de pilotage du Robot. Le robot doit être en totale autonomie pendant 100 secondes. La moindre erreur peut faire planter le robot et donc faire perdre la partie (sauf si les deux robots plantent, ce qui arrive parfois).
 
@@ -47,7 +47,7 @@ Les obstacles sont représentés comme des montagnes (points, ou symboles @) et 
 
 L’idée peut sembler simple, mais le calcul du champ de potentiel est complexe et doit prendre en compte un grand nombre de facteurs. En plus de cela, obtenir la position des matières premières ou des robots n’est pas non plus évident. Le règlement nous autorise à avoir une caméra qui surplombe le terrain. La nôtre est capable de détecter les QR codes mis sur les robots, sur le vinyle et sur les matières premières. l’ordinateur principal, à l'extérieur du robot, repère grâce à des calculs, la position des objets à suivre et génère des champs de potentiel (idéalement un par seconde) et l’envoie à l’ordinateur de bord. Pour ceux qui s’intéressent aux algorithmes de pilotage, un article de blog plus détaillé, écrit par l’un de nos programmeurs, sortira sans doute dans les mois à venir.
 
-**La Banderole**	
+### La Banderole
 La banderole doit être déployée sur le bord du terrain pour faire gagner 20 points ! Et on les a déjà plus ou moins assurés.
 Grâce à un système ingénieux de ressorts, la banderole, au départ rattachée et pliée à l’intérieur du robot principal, se déploie et nous assure 20 points. Il ne reste plus qu’à la rigidifier un peu une fois ouverte et à peindre la banderole dans le thème de Bot Marley, nom que nous avons donné à notre PAMI star.
 
