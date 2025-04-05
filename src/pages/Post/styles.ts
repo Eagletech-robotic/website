@@ -344,6 +344,7 @@ export const Content = styled.div`
         border-left: 4px solid ${colors.primary};
         border-radius: ${borderRadius};
         background-color: ${colors.highlight};
+        color: ${colors.textLight};
 
         :last-child {
             margin-bottom: 0;
