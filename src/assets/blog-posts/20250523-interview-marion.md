@@ -32,13 +32,14 @@ Ce que j'aime le plus avec EagleTech, c'est d’être entre amis et de transmett
 Je travaille essentiellement sur la mécanique, et j’aide un peu avec l’électronique, même si d’autres sont plus doués que moi dans ce domaine. En revanche, je ne me suis pas du tout investie dans la programmation que je maîtrise moins bien, et nous avions déjà plusieurs candidats bien plus compétents pour ça.
 Ce que je préfère, c’est la mécanique. J’aime inventer, essayer, trouver des solutions avec des pièces récupérées, des brics et des brocs que je trouve dans mon garage. Je fais avec ce que j’ai sous la main : ce n’est pas très précis, mais ça fonctionne !
 
+![Le robot EagleTech par Marion](/blog-images/20250523-interview-marion/robot-avec-son-drapeau.png)
+
 **Quelle a été la pièce du robot la plus intéressante à concevoir ?**
 
 Le drapeau, sans aucune hésitation ! C’était un sacré challenge de faire tenir un drapeau de cette taille dans le périmètre restreint du robot, et de faire en sorte qu’il se déploie tout seul, rapidement, sans intervention extérieure. Le robot peut ainsi se concentrer sur d’autres tâches. J’ai vraiment adoré relever ce défi.
 
 
-
-![Le drapeu de notre PAMI](/blog-images/20250523-interview-marion/drapeau-pami.png) 
+![Le drapeau de notre PAMI](/blog-images/20250523-interview-marion/drapeau-pami.png) 
 
 **Tu as fait partie de plusieurs équipes de robotique. Que conseillerais-tu à ceux qui veulent se lancer ?**
 
