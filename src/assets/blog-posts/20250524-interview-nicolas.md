@@ -57,7 +57,7 @@ Il est certain qu’il n’est pas donné à tout le monde de se lancer dans la 
 La robotique plairait surtout à ceux qui s’intéressent à l’ingénierie, à la programmation, à la conception et à l’invention. C’est fait pour ceux qui aiment chercher des solutions et et se creuser la tête sur des problèmes techniques.
 
 **Un dernier message que tu voudrais partager ?**
-Les passionnés de robotique peuvent commencer très jeunes. Je me souviens d'une fille qui nous avait vu à rencontre RER organisée à Terra numerica, qui a dit : « C’est ça que je veux faire quand je serai plus grande. »  Elle n’avait même pas 10 ans. Je lui souhaite sincèrement de réaliser ce rêve.
+Les passionnés de robotique peuvent commencer très jeunes. Je me souviens d'une jeune fille qui nous avait vu à la rencontre [RER organisée à Terra Numerica](https://eagletech-robotics.netlify.app/blog/posts/007bvczw), qui a dit : « C’est ça que je veux faire quand je serai plus grande. »  Elle n’avait même pas 10 ans. Je lui souhaite sincèrement de réaliser ce rêve.
 
 **Enfin, avant de terminer, es-tu confiant que le robot EagleTech sera prêt ?**
 Je te répondrai dans une semaine, mais c'est chaud. On a des tonnes de problèmes, on les résout rapidement, mais il y en a encore beaucoup.
