@@ -16,6 +16,8 @@ Je l’ai interviewée pour retracer son chemin, comprendre ce qui la motive, et
 
 J'ai fait un DUT en physique, puis une école d'ingénieurs en électronique-optique, que j’ai complétée avec un master en gestion. Aujourd’hui, je travaille depuis plus de 20 ans dans le test de logiciels. Ce parcours n'a pas grand-chose à voir avec la mécanique, ou la robotique, mais il me donne une double casquette : en ingénierie et en gestion de projet.
 
+![Marion au travail](/blog-images/20250523-interview-marion/marion.png)
+
 **Qu’est-ce qui t’a poussée à commencer la robotique ?**
 
 J'ai commencé la robotique quand j'étais encore étudiante. Je trouvais ça incroyable de pouvoir créer un robot de bout en bout, tout en suivant un cahier des charges : il faut que ça fonctionne le jour de la compétition. Il y a une forte collaboration et une vraie effervescence qui m’ont portée.
