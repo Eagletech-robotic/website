@@ -24,7 +24,7 @@ Le “bas niveau”, ce sont les instructions détaillées données aux capteurs
 ![Nicolas au travail](/blog-images/20250524-interview-nicolas/nicolas-au-travail.png)
 
 **Quel est ton parcours en robotique ?**
-Pendant mes études, en 1999, j’ai créé avec d’autres étudiants un club appelé Ayer Isep, et nous avons participé à la coupe e=m6. Après cette première expérience, je suis devenu arbitre pour la compétition, et c’est comme ça que j’ai rencontré ma femme. Séduits par l’ambiance et l’expérience, nous nous sommes lancés ensemble dans un projet avec deux collègues en 2005 : c’était l’équipe Astromech. Nous avons conservé cette même structure en 2007 pour tenter de refaire un robot, mais avec moins de temps on a même pas réussi à terminer notre robot à temps. Et cette année 2025, me voilà investi dans EagleTech.
+Pendant mes études, en 1999, j’ai créé avec d’autres étudiants un club appelé AIR ISEP, et nous avons participé à la coupe e=m6. Après cette première expérience, je suis devenu arbitre pour la compétition, et c’est comme ça que j’ai rencontré ma femme. Séduits par l’ambiance et l’expérience, nous nous sommes lancés ensemble dans un projet avec deux collègues en 2005 : c’était l’équipe Astromech. Nous avons conservé cette même structure en 2007 pour tenter de refaire un robot, mais avec moins de temps on a même pas réussi à terminer notre robot à temps. Et cette année 2025, me voilà investi dans EagleTech.
 
 **Qu'est-ce qui t'a poussé à participer à la création d’EagleTech ?**
 L’année dernière, nous sommes allés en famille à la Coupe de France de Robotique (le nouveau nom de la coupe e=m6). L’ambiance y est vraiment incroyable, ce qui nous a donné envie de nous lancer à nouveau.
