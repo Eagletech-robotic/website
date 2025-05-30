@@ -4,7 +4,7 @@ date: 2025-05-24
 tags: []
 draft: false
 author: Louis Monnier
-summary: Nicolas, responsable électronique chez EagleTech, partage sa passion, son parcours et les défis de la Coupe de France de Robotique, entre adrénaline, technique, esprit d’équipe et volonté de transmission.. 
+summary: Nicolas, responsable électronique chez EagleTech, partage sa passion, son parcours et les défis de la Coupe de France de Robotique, entre adrénaline, technique, esprit d’équipe et volonté de transmission.
 ---
 
 Un an de travail pour cinq matchs d'une minute trente : voilà le pari un peu fou relevé pour la troisième fois par Nicolas, ce récidiviste passionné de robotique. Responsable de l’électronique et du « bas niveau » chez EagleTech, Nicolas revient sur son parcours, ses motivations, et ce qui fait la magie de la Coupe de France de Robotique. Entre adrénaline de la compétition, défis techniques et transmission de sa passion, il nous livre un témoignage inspirant sur l’aventure humaine et technologique que représente la robotique amateur.
