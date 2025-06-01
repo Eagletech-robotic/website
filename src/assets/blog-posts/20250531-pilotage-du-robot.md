@@ -15,21 +15,17 @@ Le programme du robot se divise en trois grandes parties :
 - Le code du robot (les actions, les déplacements, les stratégies à adopter)
 - Le simulateur pour tester et valider le code du robot avant la compétition
 
-----
+## L’algorithme de vision et de positionnement du robot
 
-1. L’algorithme de vision et de positionnement du robot
+La règle du jeu nous autorise à utiliser deux caméras d’observation placées à 1,60 mètre au-dessus de la scène, ce qui permet de voir l’ensemble du terrain. Quatre QR codes disposés sur le terrain servent à positionner précisément les caméras et à déterminer notre couleur d’équipe (jaune ou bleu). Les QR codes placés sur notre robot et sur celui de l’adversaire nous permettent ensuite de connaître l’emplacement exact des deux robots sur le terrain, en fonction de leurs tags respectifs.
+Au départ, nous avions aussi envisagé de repérer la position des gradins et des matières premières grâce à leurs propres tags, mais ceux-ci se sont révélés trop petits pour être détectés par nos caméras, qui — il faut bien l’avouer — ne sont pas d’une qualité exceptionnelle. Toutes ces informations sont ensuite transmises au robot par liaison Bluetooth.
 
-   La règle du jeu nous autorise à utiliser deux caméras d’observation placées à 1,60 mètre au-dessus de la scène, ce qui permet de voir l’ensemble du terrain. Quatre QR codes disposés sur le terrain servent à positionner précisément les caméras et à déterminer notre couleur d’équipe (jaune ou bleu). Les QR codes placés sur notre robot et sur celui de l’adversaire nous permettent ensuite de connaître l’emplacement exact des deux robots sur le terrain, en fonction de leurs tags respectifs.
-   Au départ, nous avions aussi envisagé de repérer la position des gradins et des matières premières grâce à leurs propres tags, mais ceux-ci se sont révélés trop petits pour être détectés par nos caméras, qui — il faut bien l’avouer — ne sont pas d’une qualité exceptionnelle. Toutes ces informations sont ensuite transmises au robot par liaison Bluetooth.
-
-   Pour les curieux, le code source est en open source sur GitHub : [Vision et positionnement du robot](https://github.com/eagletech-robotic/vision).
+Pour les curieux, le code source est en open source sur GitHub : [Vision et positionnement du robot](https://github.com/eagletech-robotic/vision).
 
 ![Simulateur du robot](/blog-images/20250531-pilotage-du-robot/vision.jpg)
 
----
-
-2. Le code du robot
-   Grâce aux informations sur l’environnement transmises par l’algorithme de vision, notre robot peut alors calculer ses mouvements à l’aide de sa carte STM32. Les différentes étapes de ce calcul sont représentées dans l’algorigramme ci-dessous.
+## Le code du robot
+Grâce aux informations sur l’environnement transmises par l’algorithme de vision, notre robot peut alors calculer ses mouvements à l’aide de sa carte STM32. Les différentes étapes de ce calcul sont représentées dans l’algorigramme ci-dessous.
 
    **Trois remarques**
    Si, lorsqu’il n’y a pas de ressources dans la pince, le robot “va vers la zone de matières premières la plus proche en utilisant la descente de gradient”, c’est parce qu’il nous est impossible de savoir quelles matières premières ont déjà été prises par les autres robots. Comme expliqué précédemment, nous ne pouvons pas localiser précisément les gradins et les matières premières. La solution trouvée : le robot se rend simplement là où les matières premières sont censées être et, s’il n’en détecte pas, il essaie un autre emplacement. 
@@ -43,11 +39,9 @@ Le programme du robot se divise en trois grandes parties :
 
 ![Algorigramme du robot](/blog-images/20250531-pilotage-du-robot/algorigramme-du-robot.png)
 
----
+## Le Simulateur pour tester le code du robot
+Écrit en React / Javascript, notre simulateur permet de rejouer une partie complète directement dans un navigateur. Cela nous offre la possibilité de tester les modifications apportées au code du robot sans devoir tout installer physiquement. On peut même y faire s’affronter notre robot contre lui-même, ce qui est idéal pour tester et améliorer nos stratégies d’évitement.
 
-3. Le Simulateur pour tester le code du robot
-   Écrit en React / Javascript, notre simulateur permet de rejouer une partie complète directement dans un navigateur. Cela nous offre la possibilité de tester les modifications apportées au code du robot sans devoir tout installer physiquement. On peut même y faire s’affronter notre robot contre lui-même, ce qui est idéal pour tester et améliorer nos stratégies d’évitement.
-
-   Pour les curieux, le code source est en open source sur GitHub : [Simulateur](https://github.com/eagletech-robotic/simulator).
+Pour les curieux, le code source est en open source sur GitHub : [Simulateur](https://github.com/eagletech-robotic/simulator).
 
 ![Simulateur du robot](/blog-images/20250531-pilotage-du-robot/simulateur.png)
