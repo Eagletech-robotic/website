@@ -27,15 +27,15 @@ Pour les curieux, le code source est en open source sur GitHub : [Vision et posi
 ## Le code du robot
 Grâce aux informations sur l’environnement transmises par l’algorithme de vision, notre robot peut alors calculer ses mouvements à l’aide de sa carte STM32. Les différentes étapes de ce calcul sont représentées dans l’algorigramme ci-dessous.
 
-   **Trois remarques**
-   Si, lorsqu’il n’y a pas de ressources dans la pince, le robot “va vers la zone de matières premières la plus proche en utilisant la descente de gradient”, c’est parce qu’il nous est impossible de savoir quelles matières premières ont déjà été prises par les autres robots. Comme expliqué précédemment, nous ne pouvons pas localiser précisément les gradins et les matières premières. La solution trouvée : le robot se rend simplement là où les matières premières sont censées être et, s’il n’en détecte pas, il essaie un autre emplacement. 
+**Trois remarques :**
+- Si, lorsqu’il n’y a pas de ressources dans la pince, le robot “va vers la zone de matières premières la plus proche en utilisant la descente de gradient”, c’est parce qu’il nous est impossible de savoir quelles matières premières ont déjà été prises par les autres robots. Comme expliqué précédemment, nous ne pouvons pas localiser précisément les gradins et les matières premières. La solution trouvée : le robot se rend simplement là où les matières premières sont censées être et, s’il n’en détecte pas, il essaie un autre emplacement. 
    
-   Avec la descente de gradient, le robot voit le terrain comme une carte topographique : les points d’intérêt sont représentés par des dépressions, et les obstacles par des collines. Il se comporte alors comme une bille : poussé par la gravité, il atteint naturellement le point le plus bas. À chaque étape, il analyse son environnement et avance dans la direction la plus “descendante”.
+- Avec la descente de gradient, le robot voit le terrain comme une carte topographique : les points d’intérêt sont représentés par des dépressions, et les obstacles par des collines. Il se comporte alors comme une bille : poussé par la gravité, il atteint naturellement le point le plus bas. À chaque étape, il analyse son environnement et avance dans la direction la plus “descendante”.
 
-   Notre robot n’est pas capable de monter des structures : il se contente de pousser les matières premières vers les zones de construction, ce qui permet de réaliser un gradin de niveau 1. Pour en savoir plus sur les règles du jeu, voir l'article de blog [En quoi consiste la Coupe de France de Robotique ?](https://eagletech-robotics.netlify.app/blog/posts/00xi1m3l)
+- Notre robot n’est pas capable de monter des structures : il se contente de pousser les matières premières vers les zones de construction, ce qui permet de réaliser un gradin de niveau 1. Pour en savoir plus sur les règles du jeu, voir l'article de blog [En quoi consiste la Coupe de France de Robotique ?](https://eagletech-robotics.netlify.app/blog/posts/00xi1m3l)
 
 
-   Pour les curieux, le code source est en open source sur GitHub : [Code du robot](https://github.com/Eagletech-robotic/the_code).
+Pour les curieux, le code source est en open source sur GitHub : [Code du robot](https://github.com/Eagletech-robotic/the_code).
 
 ![Algorigramme du robot](/blog-images/20250531-pilotage-du-robot/algorigramme-du-robot.png)
 
