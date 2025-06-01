@@ -4,7 +4,7 @@ date: 2025-05-31
 tags: []
 draft: false
 author: Louis Monnier
-summary: xxxx
+summary: Envie de découvrir comment un robot analyse son environnement et prend des décisions ? Je vous explique les algorithme de vision, de pilotage et comment fonctionne notre simulateur pour tester notre code.
 
 ---
 
