@@ -15,6 +15,7 @@ import { VFile } from 'vfile-matter/lib'
 
 import { loadMarkdownFiles } from './markdown'
 import ImageViewer from '../components/Post/ImageViewer'
+import LinkViewer from '../components/Post/LinkViewer'
 
 import * as React from 'react'
 import * as jsxRuntime from 'react/jsx-runtime'
@@ -110,7 +111,8 @@ async function processPost(post: Post): Promise<BlogPost | null> {
             jsxs: jsxRuntime.jsxs,
             Fragment: jsxRuntime.Fragment,
             components: {
-                img: (props: any) => ImageViewer(props),
+                img: (props: any) => <ImageViewer {...props} />,
+                a: (props: any) => <LinkViewer {...props} />,
             },
         })
         .use(() => (_tree: any, file: VFile) => matter(file))
@@ -122,7 +124,7 @@ async function processPost(post: Post): Promise<BlogPost | null> {
         path: post.path,
     }
 
-    const blogPost = toBlogPost(await processedPost, post.path)
+    const blogPost = toBlogPost(processedPost, post.path)
 
     if (shouldDisplay(blogPost)) return blogPost
     else return null
