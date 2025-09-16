@@ -12,6 +12,10 @@
 /build
 /dist
 
+# IDEs
+.vscode/
+.idea/
+
 # misc
 .DS_Store
 .env.local

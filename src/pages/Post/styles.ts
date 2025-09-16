@@ -269,7 +269,9 @@ export const Content = styled.div`
             font-size: 0;
             color: ${colors.primary};
             text-decoration: none;
-            transition: opacity 0.2s ease-in-out, visibility 0s linear 0.2s;
+            transition:
+                opacity 0.2s ease-in-out,
+                visibility 0s linear 0.2s;
 
             @media (min-width: ${breakpoints.tablet}) {
                 padding: 1em;
@@ -335,6 +337,7 @@ export const Content = styled.div`
     img {
         width: 100%;
         border-radius: ${borderRadius};
+        cursor: zoom-in;
     }
 
     blockquote {
@@ -423,7 +426,6 @@ export const EndOfPageLinkText = styled.span`
         bottom: 0.05em;
         height: 2px;
         transition: background-color 0.2s ${hoverTransitionTimingFunction};
-        background-color: 2px solid transparent;
     }
 `
 

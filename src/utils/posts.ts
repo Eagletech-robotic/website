@@ -5,15 +5,19 @@ import remarkMath from 'remark-math'
 import remarkFrontmatter from 'remark-frontmatter'
 import remarkRehype from 'remark-rehype'
 import rehypeKatex from 'rehype-katex'
-import rehypeStringify from 'rehype-stringify'
+import rehypeReact from 'rehype-react'
 import rehypePrettyCode from 'rehype-pretty-code'
 import { transformerCopyButton } from '@rehype-pretty/transformers'
 import { visit } from 'unist-util-visit'
 import { matter } from 'vfile-matter'
 import { ElementContent, Root } from 'hast'
-import * as React from 'react'
-import { loadMarkdownFiles } from './markdown'
 import { VFile } from 'vfile-matter/lib'
+
+import { loadMarkdownFiles } from './markdown'
+import ImageViewer from '../components/Post/ImageViewer'
+
+import * as React from 'react'
+import * as jsxRuntime from 'react/jsx-runtime'
 
 export function checkFrontMatter(
     post: Post
@@ -63,8 +67,7 @@ export function useBlogPosts(): { blogPosts: BlogPost[]; loading: boolean } {
 }
 
 export async function getBlogPostById(id: string): Promise<BlogPost | null> {
-    const blogPost = (await fetchBlogPosts(id))[0]
-    return blogPost
+    return (await fetchBlogPosts(id))[0]
 }
 
 async function fetchBlogPosts(id?: string): Promise<BlogPost[]> {
@@ -77,9 +80,7 @@ async function fetchBlogPosts(id?: string): Promise<BlogPost[]> {
         return processPost(post)
     })
 
-    const blogPosts = (await Promise.all(promises)).filter((item) => item != null)
-
-    return blogPosts
+    return (await Promise.all(promises)).filter((item) => item != null)
 }
 
 async function processPost(post: Post): Promise<BlogPost | null> {
@@ -104,13 +105,20 @@ async function processPost(post: Post): Promise<BlogPost | null> {
         .use(wrapTables)
         .use(addAnchorToHeadings)
         .use(addCodeTypeProperties)
-        .use(rehypeStringify)
+        .use(rehypeReact, {
+            jsx: jsxRuntime.jsx,
+            jsxs: jsxRuntime.jsxs,
+            Fragment: jsxRuntime.Fragment,
+            components: {
+                img: (props: any) => ImageViewer(props),
+            },
+        })
         .use(() => (_tree: any, file: VFile) => matter(file))
         .process(post.value)
 
     const processedPost: Post = {
         data: (await vfile).data as any,
-        value: (await vfile).value as string,
+        value: (await vfile).result as string,
         path: post.path,
     }
 
@@ -204,12 +212,10 @@ function shouldDisplay(post: BlogPost): boolean {
 }
 
 function toBlogPost(post: Post, path: string): BlogPost {
-    const blogPost = {
+    return {
         post,
         id: hash(path),
     }
-
-    return blogPost
 }
 
 function hash(input: string): string {

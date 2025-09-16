@@ -61,7 +61,7 @@ export default function Post() {
 
                 <Separator />
 
-                <Content dangerouslySetInnerHTML={{ __html: post.post.value }} />
+                <Content>{post.post.value}</Content>
             </Page>
 
             <ScrollToTopButton onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
